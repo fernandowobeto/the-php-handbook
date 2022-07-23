@@ -271,3 +271,336 @@ PHP has the following types:
 
 and a few other more advanced ones.
 
+## How to Print the Value of a Variable in PHP
+We can use the `var_dump()` built-in function to get the value of a variable:
+```php
+$name = 'Flavio';
+
+var_dump($name);
+```
+
+The `var_dump($name)` instruction will print `string(6) "Flavio"` to the page, which tells us the variable is a string of 6 characters.
+
+If we used this code:
+```php
+$age = 20;
+
+var_dump($age);
+```
+
+we’d have `int(20)` back, saying the value is 20 and it’s an integer.
+
+`var_dump()` is one of the essential tools in your PHP debugging tool belt.
+
+## How Operators Work in PHP
+Once you have a few variables you can make operations with them:
+```php
+$base = 20;
+$height = 10;
+
+$area = $base * $height;
+```
+
+The `*`  I used to multiply $base by $height is the multiplication operator.
+
+We have quite a few operators – so let’s do a quick roundup of the main ones.
+
+To start with, here are the arithmetic operators: `+`, `-`, `*`, `/` (division), `%` (remainder) and `**` (exponential).
+
+We have the assignment operator `=`, which we already used to assign a value to a variable.
+
+Next up we have comparison operators, like `<`, `>`, `<=`, `>=`. Those work like they do in math.
+```php
+2 < 1; //false
+1 <= 1; // true
+1 <= 2; // true
+```
+
+`==` returns true if the two operands are equal.
+
+`===` returns true if the two operands are identical.
+
+What’s the difference?
+
+You’ll find it with experience, but for example:
+```php
+1 == '1'; //true
+1 === '1'; //false
+```
+
+We also have `!=` to detect if operands are not equal:
+```php
+1 != 1; //false
+1 != '1'; //false
+1 != 2; //true
+
+//hint: <> works in the same way as !=, 1 <> 1
+```
+
+and `!==` to detect if operands are not identical:
+```php
+1 !== 1; //false
+1 !== '1'; //true
+```
+
+Logical operators work with boolean values:
+```php
+// Logical AND with && or "and"
+
+true && true; //true
+true && false; //false
+false && true; //false
+false && false; //false
+
+true and true; //true
+true and false; //false
+false and true; //false
+false and false; //false
+
+// Logical OR with || or "or"
+
+true || true; // true
+true || false //true
+false || true //true
+false || false //false
+
+true or true; // true
+true or false //true
+false or true //true
+false or false //false
+
+// Logical XOR (one of the two is true, but not both)
+
+true xor true; // false
+true xor false //true
+false xor true //true
+false xor false //false
+```
+
+We also have the not operator:
+```php
+$test = true
+
+!$test //false
+```
+
+I used the boolean values true and false here, but in practice you’ll use expressions that evaluate to either true or false, for example:
+```php
+1 > 2 || 2 > 1; //true
+
+1 !== 2 && 2 > 2; //false
+```
+
+All of the operators listed above are binary, meaning they involve 2 operands.
+
+PHP also has 2 unary operators: `++` and `--`:
+```php
+$age = 20;
+$age++;
+//age is now 21
+
+$age--;
+//age is now 20
+```
+
+## How to Work with Strings in PHP
+I introduced the use of strings before when we talked about variables and we defined a string using this notation:
+```php
+$name = 'Flavio'; //string defined with single quotes
+
+$name = "Flavio"; //string defined with double quotes
+```
+
+The big difference between using single and double quotes is that with double quotes we can expand variables in this way:
+```php
+$test = 'an example';
+
+$example = "This is $test"; //This is an example
+```
+
+and with double quotes we can use escape characters (think new lines `\n` or tabs `\t`):
+```php
+$example = "This is a line\nThis is a line";
+
+/*
+output is:
+
+This is a line
+This is a line
+*/
+```
+
+PHP offers you a very comprehensive functions in its standard library (the library of functionalities that the language offers by default).
+
+First, we can concatenate two strings using the `.` operator:
+```php
+$firstName = 'Flavio';
+$lastName = 'Copes';
+
+$fullName = $firstName . ' ' . $lastName;
+```
+
+We can check the length of a string using the `strlen()` function:
+```php
+$name = 'Flavio';
+strlen($name); //6
+```
+
+This is the first time we've used a function.
+
+A function is composed of an identifier (`strlen` in this case) followed by parentheses. Inside those parentheses, we pass one or more arguments to the function. In this case, we have one argument.
+
+The function does something and when it’s done it can return a value. In this case, it returns the number `6`. If there’s no value returned, the function returns `null`.
+
+We’ll see how to define our own functions later.
+
+We can get a portion of a string using `substr()`:
+```php
+$name = 'Flavio';
+substr($name, 3); //"vio" - start at position 3, get all the rest
+substr($name, 2, 2); //"av" - start at position 2, get 2 items
+```
+
+We can replace a portion of a string using str_replace():
+```php
+$name = 'Flavio';
+str_replace('avio', 'ower', $name); //"Flower"
+```
+
+Of course we can assign the result to a new variable:
+```php
+$name = 'Flavio';
+$itemObserved = str_replace('avio', 'ower', $name); //"Flower"
+```
+
+Here is a brief non-comprehensive list just to show you the possibilities:
+* `trim()` strips white space at the beginning and end of a string
+* `strtoupper()` makes a string uppercase
+* `strtolower()` makes a string lowercase
+* `ucfirst()` makes the first character uppercase
+* `strpos()` finds the firsts occurrence of a substring in the string
+* `explode()` to split a string into an array
+* `implode()` to join array elements in a string
+
+You can find a full list [here](https://www.php.net/manual/en/book.strings.php).
+
+## How to Use Built-in Functions for Numbers in PHP
+I previously listed the few functions we commonly use for strings.
+
+Let’s make a list of the functions we use with numbers:
+* `round()` to round a decimal number, up/down depending if the value is > 0.5 or smaller
+* `ceil()` to round a a decimal number up
+* `floor()` to round a decimal number down
+* `rand()` generates a random integer
+* `min()` finds the lowest number in the numbers passed as arguments
+* `max()` finds the highest number in the numbers passed as arguments
+* `is_nan()` returns true if the number is not a number
+
+There are a ton of different functions for all sorts of math operations like sine, cosine, tangents, logarithms, and so on. You can find a full list [here](https://www.php.net/manual/en/book.math.php).
+
+## How Arrays Work in PHP
+Arrays are lists of values grouped under a common name.
+
+You can define an empty array in two different ways:
+```php
+$list = [];
+
+$list = array();
+```
+
+An array can be initialized with values:
+```php
+$list = [1, 2];
+
+$list = array(1, 2);
+```
+
+Arrays can hold values of any type:
+```php
+$list = [1, 'test'];
+```
+
+Even other arrays:
+```php
+$list = [1, [2, 'test']];
+```
+
+You can access the element in an array using this notation:
+```php
+$list = ['a', 'b'];
+$list[0]; //'a' --the index starts at 0
+$list[1]; //'b'
+```
+
+Once an array is created, you can append values to it in this way:
+```php
+$list = ['a', 'b'];
+$list[] = 'c';
+
+/*
+$list == [
+  "a",
+  "b",
+  "c",
+]
+*/
+```
+
+You can use `array_unshift()` to add the item at the beginning of the array instead:
+```php
+$list = ['b', 'c'];
+array_unshift($list, 'a');
+
+/*
+$list == [
+  "a",
+  "b",
+  "c",
+]
+*/
+```
+
+Count how many items are in an array using the built-in `count()` function:
+```php
+$list = ['a', 'b'];
+
+count($list); //2
+```
+
+Check if an array contains an item using the `in_array()` built-in function:
+```php
+$list = ['a', 'b'];
+
+in_array('b', $list); //true
+```
+
+If in addition to confirming existence, you need the index, use `array_search()`:
+```php
+$list = ['a', 'b'];
+
+array_search('b', $list) //1
+```
+
+## Useful Functions for Arrays in PHP
+As with strings and numbers, PHP provides lots of very useful functions for arrays. We’ve seen `count()`, `in_array()`, `array_search()` – let’s see some more:
+
+* `is_array()` to check if a variable is an array
+* `array_unique()` to remove duplicate values from an array
+* `array_search()` to search a value in the array and return the key
+* `array_reverse()` to reverse an array
+* `array_reduce()` to reduce an array to a single value using a callback function
+* `array_map()` to apply a callback function to each item in the array. 
+Typically used to create a new array by modifying the values of an existing array, without altering it.
+* `array_filter()` to filter an array to a single value using a callback function
+* `max()` to get the maximum value contained in the array
+* `min()` to get the minimum value contained in the array
+* `array_rand()` to get a random item from the array
+* `array_count_values()` to count all the values in the array
+* `implode()` to turn an array into a string
+* `array_pop()` to remove the last item of the array and return its value
+* `array_shift()` same as `array_pop()` but removes the first item instead of the last
+* `sort()` to sort an array
+* `rsort()` to sort an array in reverse order
+* `array_walk()` similarly to `array_map()` does something for every item in the array, but in addition it can change values in the existing array
+
+## How to Use Associative Arrays in PHP
