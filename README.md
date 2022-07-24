@@ -4,58 +4,61 @@
 
 > Traduzido por [Fernando Wobeto](https://www.fernandowobeto.com)
 
-PHP is an incredibly popular programming language.
+PHP é uma incrível e popular linguagem de programação.
 
-Statistics say it’s used by 80% of all websites. It’s the language that powers WordPress, the widely used content management system for websites.
+As estatísticas dizem que ela é usada por 80% de todos os sites. 
 
-And it also powers a lot of different frameworks that make Web Development easier, like Laravel. Speaking of Laravel, it may be one of the most compelling reasons to learn PHP these days.
+Statistics say it’s used by 80% of all websites. É a linguagem que alimenta o WordPress, o sistema de gerenciamento de conteúdo amplamente utilizado para sites.
 
-Why Learn PHP?
+E também alimenta muitos frameworks diferentes que facilitam o desenvolvimento da Web, como o Laravel. Falando em Laravel, pode ser uma das razões mais convincentes para aprender PHP nos dias de hoje.
+
+Porque aprender PHP?
 --------------
 
-PHP is quite a polarizing language. Some people love it, and some people hate it. If we move a step above the emotions and look at the language as a tool, PHP has a lot to offer.
+PHP é uma linguagem bastante polarizadora. Algumas pessoas adoram, e algumas pessoas odeiam. Se dermos um passo acima das emoções e olharmos para a linguagem como uma ferramenta, o PHP tem muito a oferecer.
 
-Sure it’s not perfect. But let me tell you – no language is.
+Claro que não é perfeita. Mas deixe-me dizer-lhe – nenhuma linguagem é.
 
-In this handbook, I’m going to help you learn PHP.
+Neste manual, vou ajudá-lo a aprender PHP.
 
-This book is a perfect introduction if you’re new to the language. It’s also perfect if you’ve done “some PHP” in the past and you want to get back to it.
+Este manual é uma introdução perfeita se você é novo na linguagem. Também é perfeito se você já fez “algum PHP” no passado e deseja voltar a ele.
 
-I’ll explain modern PHP, version 8+.
+Eu vou explicar PHP moderno, versão 8+.
 
-PHP has evolved a lot in the last few years. So if the last time you tried it was PHP 5 or even PHP 4, you’ll be surprised at all the good things that PHP now offers.
+O PHP evoluiu muito nos últimos anos. Então, se a última vez que você tentou foi PHP 5 ou mesmo PHP 4, você ficará surpreso com todas as coisas boas que o PHP oferece agora.
 
-Let’s go!
+Vamos lá!
 
-Here's what we'll cover in this handbook:
+Aqui está o que abordaremos neste manual:
 
-1.  [Introduction to PHP](#introduction-to-php)
-2.  [What Kind of Language is PHP?](#what-kind-of-language-is-php)
-3.  [How to Setup PHP](#how-to-setup-php)
-4.  [How to Code Your First PHP Program](#how-to-code-your-first-php-program)
-5.  [PHP Language Basics](#php-language-basics)
-6.  [How to Work with Strings in PHP](#how-to-work-with-strings-in-php)
-7.  [How to Use Built-in Functions for Numbers in PHP](#how-to-use-built-in-functions-for-numbers-in-php)
-8.  [How Arrays Work in PHP](#how-arrays-work-in-php)
-9.  [How Conditionals Work in PHP](#how-conditionals-work-in-php)
-10.  [How Loops Work in PHP](#how-loops-work-in-php)
-11.  [How Functions Work in PHP](#how-functions-work-in-php)
-12.  [How to Loop Through Arrays with `map()`, `filter()`, and `reduce()` in PHP](#id="how-to-loop-through-arrays-with-map-filter-and-reduce-in-php)
-13.  [Object Oriented Programming in PHP](#object-oriented-programming-in-php)
-14.  [How to Include Other PHP Files](#how-to-include-other-php-files)
-15.  [Useful Constants, Functions and Variables for Filesystem in PHP](#useful-constants-functions-and-variables-for-filesystem-in-php)
-16.  [How to Handle Errors in PHP](#how-to-handle-errors-in-php)
-17.  [How to Handle Exceptions in PHP](#how-to-handle-exceptions-in-php)
-18.  [How to Work with Dates in PHP](#how-to-work-with-dates-in-php)
-19.  [How to Use Constants and Enums in PHP](#how-to-use-constants-and-enums-in-php)
-20.  [How to Use PHP as a Web App Development Platform](#how-to-use-php-as-a-web-app-development-platform)
-21.  [How to Use Composer and Packagist](#how-to-use-composer-and-packagist)
-22.  [How to Deploy a PHP Application](#how-to-deploy-a-php-application)
-23.  [Conclusion](#conclusion)
+1.  [Introdução ao PHP](#introduction-to-php)
+2.  [Que tipo de linguagem é o PHP?](#what-kind-of-language-is-php)
+3.  [Como configurar o PHP](#how-to-setup-php)
+4.  [Como codificar seu primeiro programa em PHP](#how-to-code-your-first-php-program)
+5.  [O básico do PHP](#php-language-basics)
+6.  [Como trabalhar com Strings no PHP](#how-to-work-with-strings-in-php)
+7.  [Como usar funções nativas para números em PHP](#how-to-use-built-in-functions-for-numbers-in-php)
+8.  [Como funcionam os arrays em PHP](#how-arrays-work-in-php)
+9.  [Como funcionam as condicionais no PHP](#how-conditionals-work-in-php)
+10.  [Como funcionam os Loops em PHP](#how-loops-work-in-php)
+11.  [Como funcionam as funções em PHP](#how-functions-work-in-php)
+12.  [Como fazer um loop através de arrays com `map()`, `filter()`, e `reduce()` no PHP](#id="how-to-loop-through-arrays-with-map-filter-and-reduce-in-php)
+13.  [Programação Orientada a Objetos no PHP](#object-oriented-programming-in-php)
+14.  [Como incluir outros arquivos PHP](#how-to-include-other-php-files)
+15.  [Constantes, funções e variáveis úteis para sistema de arquivos em PHP](#useful-constants-functions-and-variables-for-filesystem-in-php)
+16.  [Como lidar com erros em PHP](#how-to-handle-errors-in-php)
+17.  [Como lidar com exceções em PHP](#how-to-handle-exceptions-in-php)
+18.  [Como trabalhar com datas no PHP](#how-to-work-with-dates-in-php)
+19.  [Como usar constantes e enumeradores no PHP](#how-to-use-constants-and-enums-in-php)
+20.  [Como usar o PHP como uma plataforma de desenvolvimento de aplicativos da Web](#how-to-use-php-as-a-web-app-development-platform)
+21.  [Como usar Composer e Packagist](#how-to-use-composer-and-packagist)
+22.  [Como efetuar deploy de uma aplicação PHP](#how-to-deploy-a-php-application)
+23.  [Conclusão](#conclusion)
 
-Note that you can get a [PDF, ePub, or Mobi](https://thevalleyofcode.com/download/php/) version of this handbook for easier reference, or for reading on your Kindle or tablet.
 
-Introduction to PHP
+Note que você por pegar uma versão em [PDF, ePub, or Mobi](https://thevalleyofcode.com/download/php/) desse manual para referência mais fácil, ou para leitura no seu Kindle ou table.
+
+Introdução ao PHP
 -------------------
 
 PHP is a programming language that many devs use to create Web Applications, among other things.
