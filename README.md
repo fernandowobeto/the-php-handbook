@@ -61,17 +61,17 @@ Note que você por pegar uma versão em [PDF, ePub, or Mobi](https://thevalleyof
 Introdução ao PHP
 -------------------
 
-PHP is a programming language that many devs use to create Web Applications, among other things.
+PHP é uma linguagem de programação que muitos desenvolvedores usam para criar aplicações web, entre outras coisas.
 
-As a language, it had a humble beginning. It was first created in 1994 by Rasmus Lerdorf to build his personal website. He didn’t know at the time it would eventually become one of the most popular programming languages in the world. It became popular later on, in 1997/8, and exploded in the 2000s when PHP 4 landed.
+Como linguagem, teve um começo humilde. Foi criado em 1994 por Rasmus Lerdorf para construir seu site pessoal. Ele não sabia na época que se tornaria uma das linguagens de programação mais populares do mundo. Tornou-se popular mais tarde, em 1997/8, e explodiu nos anos 2000, quando o PHP 4 chegou.
 
-You can use PHP to add a little interactivity to an HTML page.
+Você pode usar o PHP para adicionar um pouco de interatividade a uma página HTML.
 
-Or you can use it as a Web Application engine that creates HTML pages dynamically and sends them to the browser.
+Ou você pode usá-lo como um mecanismo de aplicação Web que cria páginas HTML dinamicamente e as envia para o navegador.
 
-It can scale to millions of page views.
+Ele pode ser dimensionado para milhões de visualizações.
 
-Did you know Facebook is powered by PHP? Ever heard of Wikipedia? Slack? Etsy?
+Você sabia que o Facebook é alimentado por PHP? Já ouviu falar da Wikipédia? SLack? Etsy?
 
 What Kind of Language is PHP?
 -----------------------------
