@@ -825,58 +825,58 @@ foreach ($list as $key => $value) {
 ### How to Use a `for` Loop in PHP
 
 The `for` loop is similar to while, but instead of defining the variable used in the conditional before the loop, and instead of incrementing the index variable manually, it’s all done in the first line:
+```php
+for ($i = 0; $i < 10; $i++) {
+  echo $i;
+}
 
-    for ($i = 0; $i < 10; $i++) {
-      echo $i;
-    }
-    
-    //result: 0123456789
-    
+//result: 0123456789
+```    
 
 You can use the for loop to iterate over an array in this way:
+```php
+$list = ['a', 'b', 'c'];
 
-    $list = ['a', 'b', 'c'];
-    
-    for ($i = 0; $i < count($list); $i++) {
-      echo $list[$i];
-    }
-    
-    //result: abc
-    
+for ($i = 0; $i < count($list); $i++) {
+  echo $list[$i];
+}
+
+//result: abc
+```    
 
 ### How to Use the `break` and `continue` Statements in PHP
 
 In many cases you want the ability to stop a loop on demand.
 
 For example you want to stop a `for` loop when the value of the variable in the array is `'b'`:
+```php
+$list = ['a', 'b', 'c'];
 
-    $list = ['a', 'b', 'c'];
-    
-    for ($i = 0; $i < count($list); $i++) {
-    	if ($list[$i] == 'b') {
-        break;
-      }
-      echo $list[$i];
-    }
-    
-    //result: a
-    
+for ($i = 0; $i < count($list); $i++) {
+  if ($list[$i] == 'b') {
+    break;
+  }
+  echo $list[$i];
+}
+
+//result: a
+```    
 
 This makes the loop completely stop at that point, and the program execution continues at the next instruction after the loop.
 
 If you just want to skip the current loop iteration and keep looking, use `continue` instead:
+```php
+$list = ['a', 'b', 'c'];
 
-    $list = ['a', 'b', 'c'];
-    
-    for ($i = 0; $i < count($list); $i++) {
-    	if ($list[$i] == 'b') {
-        continue;
-      }
-      echo $list[$i];
-    }
-    
-    //result: ac
-    
+for ($i = 0; $i < count($list); $i++) {
+  if ($list[$i] == 'b') {
+    continue;
+  }
+  echo $list[$i];
+}
+
+//result: ac
+```    
 
 How Functions Work in PHP
 -------------------------
@@ -886,89 +886,89 @@ Functions are one of the most important concepts in programming.
 You can use functions to group together multiple instructions or multiple lines of code, and give them a name.
 
 For example you can make a function that sends an email. Let’s call it `sendEmail`, and we'll define it like this:
-
-    function sendEmail() {
-      //send an email
-    }
-    
+```php
+function sendEmail() {
+  //send an email
+}
+```    
 
 And you can _call it_ anywhere else by using this syntax:
-
-    sendEmail();
-    
+```php
+sendEmail();
+```    
 
 You can also pass arguments to a function. For example when you send an email, you want to send it to someone – so you add the email as the first argument:
-
-    sendEmail('test@test.com');
-    
+```php
+sendEmail('test@test.com');
+```    
 
 Inside the function definition we get this parameter in this way (we call them _parameters_ inside the function definition, and _arguments_ when we call the function):
-
-    function sendEmail($to) {
-      echo "send an email to $to";
-    }
-    
+```php
+function sendEmail($to) {
+  echo "send an email to $to";
+}
+```    
 
 You can send multiple arguments by separating them with commas:
-
-    sendEmail('test@test.com', 'subject', 'body of the email');
-    
+```php
+sendEmail('test@test.com', 'subject', 'body of the email');
+```    
 
 And we can get those parameters in the order they were defined:
-
-    function sendEmail($to, $subject, $body) {
-      //...
-    }
-    
+```php
+function sendEmail($to, $subject, $body) {
+  //...
+}
+```    
 
 We can **optionally** set the type of parameters:
-
-    function sendEmail(string $to, string $subject, string $body) {
-      //...
-    }
-    
+```php
+function sendEmail(string $to, string $subject, string $body) {
+  //...
+}
+```    
 
 Parameters can have a default value, so if they are omitted we can still have a value for them:
+```php
+function sendEmail($to, $subject = 'test', $body = 'test') {
+  //...
+}
 
-    function sendEmail($to, $subject = 'test', $body = 'test') {
-      //...
-    }
-    
-    sendEmail('test@test.com')
-    
+sendEmail('test@test.com')
+```    
 
 A function can return a value. Only one value can be returned from a function, not more than one. You do that using the `return` keyword. If omitted, the function returns `null`.
 
 The returned value is super useful as it tells you the result of the work done in the function, and lets you use its result after calling it:
+```php
+function sendEmail($to) {
+  return true;
+}
 
-    function sendEmail($to) {
-    	return true;
-    }
-    
-    $success = sendEmail('test@test.com');
-    
-    if ($success) {
-      echo 'email sent successfully';
-    } else {
-      echo 'error sending the email';
-    }
-    
+$success = sendEmail('test@test.com');
+
+if ($success) {
+  echo 'email sent successfully';
+} else {
+  echo 'error sending the email';
+}
+```    
 
 We can **optionally** set the return type of a function using this syntax:
-
-    function sendEmail($to): bool {
-    	return true;
-    }
-    
+```php
+function sendEmail($to): bool {
+  return true;
+}
+```    
 
 When you define a variable inside a function, that variable is **local** to the function, which means it’s not visible from outside. When the function ends, it just stops existing:
+```php
+function sendEmail($to) {
+  $test = 'a';
+}
 
-    function sendEmail($to) {
-    	$test = 'a';
-    }
-    
-    var_dump($test); //PHP Warning:  Undefined variable $test
-    
+var_dump($test); //PHP Warning:  Undefined variable $test
+```    
 
 Variables defined outside of the function are **not** accessible inside the function.
 
@@ -977,43 +977,43 @@ This enforces a good programming practice as we can be sure the function does no
 Instead you return a value from the function, and the outside code that calls the function will take responsibility for updating the outside variable.
 
 Like this:
+```php
+$character = 'a';
 
-    $character = 'a';
-    
-    function test() {
-      return 'b';
-    }
-    
-    $character = test();
-    
+function test() {
+  return 'b';
+}
+
+$character = test();
+```    
 
 You can pass the value of a variable by passing it as an argument to the function:
+```php
+$character = 'a';
 
-    $character = 'a';
-    
-    function test($c) {
-      echo $c;
-    }
-    
-    test($character);
-    
+function test($c) {
+  echo $c;
+}
+
+test($character);
+```    
 
 But you can’t modify that value from within the function.
 
 It’s **passed by value**, which means the function receives a copy of it, not the reference to the original variable.
 
 That is still possible using this syntax (notice I used `&` in the parameter definition):
+```php
+$character = 'a';
 
-    $character = 'a';
-    
-    function test(&$c) {
-      $c = 'b';
-    }
-    
-    test($character);
-    
-    echo $character; //'b'
-    
+function test(&$c) {
+  $c = 'b';
+}
+
+test($character);
+
+echo $character; //'b'
+```    
 
 The functions we've defined so far are **named functions**.
 
@@ -1022,60 +1022,60 @@ They have a name.
 We also have **anonymous functions**, which can be useful in a lot of cases.
 
 They don’t have a name, per se, but they are assigned to a variable. To call them, you invoke the variable with parentheses at the end:
+```php
+$myfunction = function() {
+  //do something here
+};
 
-    $myfunction = function() {
-      //do something here
-    };
-    
-    $myfunction()
-    
+$myfunction()
+```    
 
 Note that you need a semicolon after the function definition, but then they work like named functions for return values and parameters.
 
 Interestingly, they offer a way to access a variable defined outside the function through `use()`:
+```php
+$test = 'test';
 
-    $test = 'test';
-    
-    $myfunction = function() use ($test) {
-      echo $test;
-      return 'ok';
-    };
-    
-    $myfunction()
-    
+$myfunction = function() use ($test) {
+  echo $test;
+  return 'ok';
+};
+
+$myfunction()
+```    
 
 Another kind of function is an **arrow function**.
 
 An arrow function is an anonymous function that’s just one expression (one line), and implicitly returns the value of that expression.
 
 You define it in this way:
-
-    fn (arguments) => expression;
-    
+```php
+fn (arguments) => expression;
+``` 
 
 Here’s an example:
+```php
+$printTest = fn() => 'test';
 
-    $printTest = fn() => 'test';
-    
-    $printTest(); //'test'
-    
+$printTest(); //'test'
+```    
 
 You can pass parameters to an arrow function:
+```php
+$multiply = fn($a, $b) => $a * $b;
 
-    $multiply = fn($a, $b) => $a * $b;
-    
-    $multiply(2, 4) //8
-    
+$multiply(2, 4) //8
+```    
 
 Note that as the next example shows, arrow functions have automatic access to the variables of the enclosing scope, without the need of `use()`.
+```php
+$a = 2;
+$b = 4;
 
-    $a = 2;
-    $b = 4;
-    
-    $multiply = fn() => $a * $b;
-    
-    $multiply()
-    
+$multiply = fn() => $a * $b;
+
+$multiply()
+```    
 
 Arrow functions are super useful when you need to pass a callback function. We’ll see how to use them to perform some array operations later.
 
@@ -1091,29 +1091,29 @@ Another important set of looping structures, often used in functional programmin
 Those 3 built-in PHP functions take an array, and a callback function that in each iteration takes each item in the array.
 
 `array_map()` returns a new array that contains the result of running the callback function on each item in the array:
+```php
+$numbers = [1, 2, 3, 4];
+$doubles = array_map(fn($value) => $value * 2, $numbers);
 
-    $numbers = [1, 2, 3, 4];
-    $doubles = array_map(fn($value) => $value * 2, $numbers);
-    
-    //$doubles is now [2, 4, 6, 8]
-    
+//$doubles is now [2, 4, 6, 8]
+```    
 
 `array_filter()` generates a new array by only getting the items whose callback function returns `true`:
+```php
+$numbers = [1, 2, 3, 4];
+$even = array_filter($numbers, fn($value) => $value % 2 === 0)
 
-    $numbers = [1, 2, 3, 4];
-    $even = array_filter($numbers, fn($value) => $value % 2 === 0)
-    
-    //$even is now [2, 4]
-    
+//$even is now [2, 4]
+```    
 
 `array_reduce()` is used to _reduce_ an array to a single value.
 
 For example we can use it to multiply all items in an array:
+```php
+$numbers = [1, 2, 3, 4];
 
-    $numbers = [1, 2, 3, 4];
-    
-    $result = array_reduce($numbers, fn($carry, $value) => $carry * $value, 1)
-    
+$result = array_reduce($numbers, fn($carry, $value) => $carry * $value, 1)
+```    
 
 Notice the last parameter – it’s the initial value. If you omit that, the default value is `0` but that would not work for our multiplication example.
 
@@ -1133,26 +1133,26 @@ To start with, you have classes and objects.
 A class is a blueprint, or type, of object.
 
 For example you have the class `Dog`, defined in this way:
+```php
+class Dog {
 
-    class Dog {
-    
-    }
-    
+}
+```    
 
 Note that the class must be defined in uppercase.
 
 Then you can create objects from this class – specific, individual dogs.
 
 An object is assigned to a variable, and it’s instantiated using the `new Classname()` syntax:
-
-    $roger = new Dog();
-    
+```php
+$roger = new Dog();
+```    
 
 You can create multiple objects from the same class, by assigning each object to a different variable:
-
-    $roger = new Dog();
-    $syd = new Dog();
-    
+```php
+$roger = new Dog();
+$syd = new Dog();
+```    
 
 ### How to Use Properties in PHP
 
@@ -1161,40 +1161,40 @@ Those objects will all share the same characteristics defined by the class. But 
 For example, a Dog has a name, an age, and a fur color.
 
 So we can define those as properties in the class:
-
-    class Dog {
-      public $name;
-      public $age;
-      public $color;
-    }
-    
+```php
+class Dog {
+  public $name;
+  public $age;
+  public $color;
+}
+```    
 
 They work like variables, but they are attached to the object, once it's instantiated from the class. The `public` keyword is the _access modifier_ and sets the property to be publicly accessible.
 
 You can assign values to those properties in this way:
+```php
+class Dog {
+  public $name;
+  public $age;
+  public $color;
+}
 
-    class Dog {
-      public $name;
-      public $age;
-      public $color;
-    }
-    
-    $roger = new Dog();
-    
-    $roger->name = 'Roger';
-    $roger->age = 10;
-    $roger->color = 'gray';
-    
-    var_dump($roger);
-    
-    /*
-    object(Dog)#1 (3) {
-      ["name"]=> string(5) "Roger"
-    	["age"]=> int(10)
-    	["color"]=> string(4) "gray"
-    }
-    */
-    
+$roger = new Dog();
+
+$roger->name = 'Roger';
+$roger->age = 10;
+$roger->color = 'gray';
+
+var_dump($roger);
+
+/*
+object(Dog)#1 (3) {
+  ["name"]=> string(5) "Roger"
+  ["age"]=> int(10)
+  ["color"]=> string(4) "gray"
+}
+*/
+```    
 
 Notice that the property is defined as `public`.
 
@@ -1207,136 +1207,136 @@ We’ll see more about protected when we’ll talk about inheritance.
 Did I say method? What is a method?
 
 A method is a function defined inside the class, and it’s defined in this way:
-
-    class Dog {
-      public function bark() {
-        echo 'woof!';
-      }
-    }
-    
+```php
+class Dog {
+  public function bark() {
+    echo 'woof!';
+  }
+}
+```    
 
 Methods are very useful to attach a behavior to an object. In this case we can make a dog bark.
 
 Notice that I use the `public` keyword. That’s to say that you can invoke a method from outside the class. Like for properties, you can mark methods as `private` too, or `protected`, to restrict their access.
 
 You invoke a method on the object instance like this:
+```php
+class Dog {
+  public function bark() {
+    echo 'woof!';
+  }
+}
 
-    class Dog {
-      public function bark() {
-        echo 'woof!';
-      }
-    }
-    
-    $roger = new Dog();
-    
-    $roger->bark();
-    
+$roger = new Dog();
+
+$roger->bark();
+```    
 
 A method, just like a function, can define parameters and a return value, too.
 
 Inside a method we can access the object’s properties using the special built-in `$this` variable, which, when referenced inside a method, points to the current object instance:
+```php
+class Dog {
+  public $name;
 
-    class Dog {
-      public $name;
-    
-      public function bark() {
-        echo $this->name . ' barked!';
-      }
-    }
-    
-    $roger = new Dog();
-    $roger->name = 'Roger';
-    $roger->bark();
-    
+  public function bark() {
+    echo $this->name . ' barked!';
+  }
+}
+
+$roger = new Dog();
+$roger->name = 'Roger';
+$roger->bark();
+```    
 
 Notice I used `$this->name` to set and access the `$name` property, and not `$this->$name`.
 
 ### How to Use the Constructor Method in PHP
 
 A special kind of method named `__construct()` is called a **constructor**.
+```php
+class Dog {
+  public function __construct() {
 
-    class Dog {
-    	public function __construct() {
-    
-      }
-    }
-    
+  }
+}
+```    
 
 You use this method to initialize the properties of an object when you create it, as it’s automatically invoked when calling `new Classname()`.
+```php
+class Dog {
+  public $name;
 
-    class Dog {
-      public $name;
-    
-    	public function __construct($name) {
-    		$this->name = $name;
-      }
-    
-      public function bark() {
-        echo $this->name . ' barked!';
-      }
-    }
-    
-    $roger = new Dog('Roger');
-    $roger->bark();
-    
+  public function __construct($name) {
+    $this->name = $name;
+  }
+
+  public function bark() {
+    echo $this->name . ' barked!';
+  }
+}
+
+$roger = new Dog('Roger');
+$roger->bark();
+```    
 
 This is such a common thing that PHP (starting in PHP 8) includes something called **constructor promotion** where it automatically does this thing:
+```php
+class Dog {
+  public $name;
 
-    class Dog {
-      public $name;
-    
-    	public function __construct($name) {
-    		$this->name = $name;
-      }
-    
-      //...
-    
+  public function __construct($name) {
+    $this->name = $name;
+  }
+
+  //...
+```    
 
 By using the access modifier, the assignment from the parameter of the constructor to the local variable happens automatically:
+```php
+class Dog {
+  public function __construct(public $name) {
+  }
 
-    class Dog {
-    	public function __construct(public $name) {
-      }
-    
-      public function bark() {
-        echo $this->name . ' barked!';
-      }
-    }
-    
-    $roger = new Dog('Roger');
-    $roger->name; //'Roger'
-    $roger->bark(); //'Roger barked!'
-    
+  public function bark() {
+    echo $this->name . ' barked!';
+  }
+}
+
+$roger = new Dog('Roger');
+$roger->name; //'Roger'
+$roger->bark(); //'Roger barked!'
+```    
 
 Properties can be **typed**.
 
 You can require the name to be a string using `public string $name`:
+```php
+class Dog {
+  public string $name;
 
-    class Dog {
-      public string $name;
-    
-    	public function __construct($name) {
-    		$this->name = $name;
-      }
-    
-      public function bark() {
-        echo $this->name . ' barked!';
-      }
-    }
-    
-    $roger = new Dog('Roger');
-    $roger->name; //'Roger'
-    $roger->bark(); //'Roger barked!'
-    
+  public function __construct($name) {
+    $this->name = $name;
+  }
+
+  public function bark() {
+    echo $this->name . ' barked!';
+  }
+}
+
+$roger = new Dog('Roger');
+$roger->name; //'Roger'
+$roger->bark(); //'Roger barked!'
+```    
 
 Now all works fine in this example, but try changing that to `public int $name` to require it to be an integer.
 
 PHP will raise an error if you initialize `$name` with a string:
-
-    TypeError: Dog::__construct():
+```php
+TypeError: Dog::__construct():
     Argument #1 ($name) must be of type int,
     string given on line 14
-    
+```
 
 Interesting, right?
 
@@ -1347,35 +1347,35 @@ We can enforce properties to have a specific type between `string`, `int`, `floa
 The fun in object oriented programming starts when we allow classes to inherit properties and methods from other classes.
 
 Suppose you have an `Animal` class:
-
-    class Animal {
+```php
+class Animal {
     
-    }
-    
+}
+```
 
 Every animal has an age, and every animal can eat. So we add an `age` property and an `eat()` method:
+```php
+class Animal {
+  public $age;
 
-    class Animal {
-      public $age;
-    
-      public function eat() {
-        echo 'the animal is eating';
-      }
-    }
-    
+  public function eat() {
+    echo 'the animal is eating';
+  }
+}
+```    
 
 A dog is an animal and has an age and can eat too, so the `Dog` class – instead of reimplementing the same things we have in `Animal` – can extend that class:
+```php
+class Dog extends Animal {
 
-    class Dog extends Animal {
-    
-    }
-    
+}
+```    
 
 We can now instantiate a new object of class `Dog` and we have access to the properties and methods defined in `Animal`:
-
-    $roger = new Dog();
-    $roger->eat();
-    
+```php
+$roger = new Dog();
+$roger->eat();
+```    
 
 In this case we call Dog the **child class** and Animal the **parent class**.
 
@@ -1396,21 +1396,21 @@ Now that we've introduced inheritance, we can discuss `protected`. We already sa
 ### How to Override Methods in PHP
 
 What happens if we have an `eat()` method in `Animal` and we want to customize it in `Dog`? We can **override** that method.
+```php
+class Animal {
+  public $age;
 
-    class Animal {
-      public $age;
-    
-      public function eat() {
-        echo 'the animal is eating';
-      }
-    }
-    
-    class Dog extends Animal {
-      public function eat() {
-        echo 'the dog is eating';
-      }
-    }
-    
+  public function eat() {
+    echo 'the animal is eating';
+  }
+}
+
+class Dog extends Animal {
+  public function eat() {
+    echo 'the dog is eating';
+  }
+}
+```    
 
 Now any instance of `Dog` will use the `Dog`'s implementation of the `eat()` method.
 
@@ -1423,41 +1423,40 @@ Sometimes it’s useful to assign those to the class itself.
 When this happens we call them **static**, and to reference or call them we don’t need to create an object from the class.
 
 Let’s start with static properties. We define them with the `static` keyword:
-
-    class Utils {
-      public static $version = '1.0';
-    }
-    
+```php
+class Utils {
+  public static $version = '1.0';
+}
+```    
 
 We reference them from inside the class using the keyword `self`, which points to the class:
-
-    self::$version;
-    
+```php
+self::$version;
+``` 
 
 and from outside the class using:
-
-    
-    Utils::version
-    
+```php
+Utils::version
+```
 
 This is what happens for static methods:
-
-    class Utils {
-      public static function version() {
-        return '1.0';
-      }
-    }
-    
+```php
+class Utils {
+  public static function version() {
+    return '1.0';
+  }
+}
+```    
 
 From the outside of the class we can call them in this way:
-
-    Utils::version();
-    
+```php
+Utils::version();
+```    
 
 From inside the class, we can reference them using the `self` keyword, which refers to the current class:
-
-    self::version();
-    
+```php
+self::version();
+```    
 
 ### How to Compare Objects in PHP
 
@@ -1470,49 +1469,49 @@ When we use those operators to compare objects, `==` will check if the two objec
 `===` on the other hand will check if they also refer to the same instance (object).
 
 For example:
+```php
+class Dog {
+  public $name = 'Good dog';
+}
 
-    class Dog {
-      public $name = 'Good dog';
-    }
-    
-    $roger = new Dog();
-    $syd = new Dog();
-    
-    echo $roger == $syd; //true
-    
-    echo $roger === $syd; //false
-    
+$roger = new Dog();
+$syd = new Dog();
+
+echo $roger == $syd; //true
+
+echo $roger === $syd; //false
+```    
 
 ### How to Iterate over Object Properties in PHP
 
 You can loop over all the public properties in an object using a `foreach` loop, like this:
+```php
+class Dog {
+  public $name = 'Good dog';
+  public $age = 10;
+  public $color = 'gray';
+}
 
-    class Dog {
-      public $name = 'Good dog';
-      public $age = 10;
-      public $color = 'gray';
-    }
-    
-    $dog = new Dog();
-    
-    foreach ($dog as $key => $value) {
-      echo $key . ': ' . $value . '<br>';
-    }
-    
+$dog = new Dog();
+
+foreach ($dog as $key => $value) {
+  echo $key . ': ' . $value . '<br>';
+}
+```    
 
 ### How to Clone Objects in PHP
 
 When you have an object, you can clone it using the `clone` keyword:
+```php
+class Dog {
+  public $name;
+}
 
-    class Dog {
-      public $name;
-    }
-    
-    $roger = new Dog();
-    $roger->name = 'Roger';
-    
-    $syd = clone $roger;
-    
+$roger = new Dog();
+$roger->name = 'Roger';
+
+$syd = clone $roger;
+```    
 
 This performs a _shallow clone_, which means that references to other variables will be copied as references – there will not a “recursive cloning” of them.
 
@@ -1529,21 +1528,21 @@ We’ve seen `__construct()` before.
 That’s a magic method.
 
 There are others. For example we can set a “cloned” boolean property to true when the object is cloned:
+```php
+class Dog {
+  public $name;
 
-    class Dog {
-      public $name;
-    
-      public function __clone() {
-        $this->cloned = true;
-      }
-    }
-    
-    $roger = new Dog();
-    $roger->name = 'Roger';
-    
-    $syd = clone $roger;
-    echo $syd->cloned;
-    
+  public function __clone() {
+    $this->cloned = true;
+  }
+}
+
+$roger = new Dog();
+$roger->name = 'Roger';
+
+$syd = clone $roger;
+echo $syd->cloned;
+```    
 
 Other magic methods include `__call()`, `__get()`, `__set()`, `__isset()`, `__toString()` and others.
 
@@ -1573,29 +1572,29 @@ My rule of thumb is to never use `include` or `require` because you might load t
 Use `include_once` when you want to conditionally load a file, for example “load this file instead of that”. In all other cases, use `require_once`.
 
 Here’s an example:
+```php
+require_once('test.php');
 
-    require_once('test.php');
-    
-    //now we have access to the functions, classes
-    //and variables defined in the `test.php` file
-    
+//now we have access to the functions, classes
+//and variables defined in the `test.php` file
+```    
 
 The above syntax includes the `test.php` file from the current folder, the file where this code is.
 
 You can use relative paths:
-
-    require_once('../test.php');
-    
+```php
+require_once('../test.php');
+```    
 
 to include a file in the parent folder or to go in a subfolder:
-
-    require_once('test/test.php');
-    
+```php
+require_once('test/test.php');
+```    
 
 You can use absolute paths:
-
-    require_once('/var/www/test/file.php');
-    
+```php
+require_once('/var/www/test/file.php');
+```    
 
 In modern PHP codebases that use a framework, files are generally loaded automatically so you’ll have less need to use the above functions.
 
@@ -1658,11 +1657,11 @@ It’s called `php.ini`.
 The exact location of this file depends on your setup.
 
 To find out where is yours, the easiest way is to add this to a PHP file and run it in your browser:
-
-    <?php
-    phpinfo();
-    ?>
-    
+```php
+<?php
+phpinfo();
+?>
+```    
 
 You will then see the location under “Loaded Configuration File”:
 
