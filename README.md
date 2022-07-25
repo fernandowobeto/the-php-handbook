@@ -73,34 +73,34 @@ Ele pode ser dimensionado para milhões de visualizações.
 
 Você sabia que o Facebook é alimentado por PHP? Já ouviu falar da Wikipédia? SLack? Etsy?
 
-What Kind of Language is PHP?
+Que tipo de linguagem é o PHP?
 -----------------------------
 
-Let’s get into some technical jargon.
+Vamos entrar em algum jargão técnico.
 
-Programming languages are divided into groups depending on their characteristics. For example interpreted/compiled, strongly/loosely typed, dynamically/statically typed.
+As linguagens de programação são divididas em grupos, dependendo de suas características. Por exemplo interpretado/compilado, tipado forte/fraca, tipado dinamicamente/estaticamente.
 
-PHP is often called a “scripting language” and it’s an **interpreted language**. If you’ve used compiled languages like C or Go or Swift, the main difference is that you don’t need to compile a PHP program before you run it.
+O PHP é frequentemente chamado de “linguagem de script” e é uma **linguagem interpretada**. Se você usou linguagens compiladas como C ou Go ou Swift, a principal diferença é que você não precisa compilar um programa PHP antes de executá-lo.
 
-Those languages are compiled and the compiler generates an executable program that you then run. It’s a 2-steps process.
+Essas linguagens são compiladas e o compilador gera um programa executável que você executa. É um processo de 2 etapas.
 
-The PHP _interpreter_ is responsible for interpreting the instructions written in a PHP program when it’s executed. It’s just one step. You tell the interpreter to run the program. It's a completely different workflow.
+O PHP _interpreter_ é responsável por interpretar as instruções escritas em um programa PHP quando ele é executado. É apenas um passo. Você diz ao interpretador para executar o programa. É um fluxo de trabalho completamente diferente.
 
-PHP is a **dynamically typed language**. The types of variables are checked at runtime, rather than before the code is executed as happens for statically typed languages. (These also happen to be compiled – the two characteristics often go hand in hand.)
+PHP é uma **linguagem tipada dinamicamente**. Os tipos de variáveis ​​são verificados em tempo de execução, e não antes que o código seja executado, como acontece com linguagens de tipagem estática. (Estes também são compilados – as duas características geralmente andam de mãos dadas.)
 
-PHP is also loosely (weakly) typed. Compared to strongly typed languages like Swift, Go, C or Java, you don’t need to declare the types of your variables.
+O PHP também é vagamente (fracamente) tipado. Comparado com linguagens fortemente tipadas como Swift, Go, C ou Java, você não precisa declarar os tipos de suas variáveis.
 
-Being interpreted and loosely/dynamically typed will make bugs harder to find before they happen at runtime.
+Ser interpretado e tipado de forma flexível/dinamicamente tornará os bugs mais difíceis de encontrar antes que eles aconteçam em tempo de execução.
 
-In compiled languages, you can often catch errors at compile time, something that does not happen in interpreted languages.
+Em linguagens compiladas, muitas vezes você pode detectar erros em tempo de compilação, algo que não acontece em linguagens interpretadas.
 
-But on the other hand, an interpreted language has more flexibility.
+Mas, por outro lado, uma linguagem interpretada tem mais flexibilidade.
 
-Fun fact: PHP is written internally in C, a compiled and statically typed language.
+Curiosidade: PHP é escrito internamente em C, uma linguagem compilada e estaticamente tipada.
 
-In its nature, PHP is similar to JavaScript, another dynamically typed, loosely typed, and interpreted language.
+Em sua natureza, o PHP é semelhante ao JavaScript, outra linguagem dinamicamente tipada, livremente tipada e interpretada.
 
-PHP supports object-oriented programming, and also functional programming. You can use it as you prefer.
+PHP suporta programação orientada a objetos e também programação funcional. Você pode usar como preferir.
 
 How to Setup PHP
 ----------------
