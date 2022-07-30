@@ -102,58 +102,58 @@ Em sua natureza, o PHP é semelhante ao JavaScript, outra linguagem dinamicament
 
 PHP suporta programação orientada a objetos e também programação funcional. Você pode usar como preferir.
 
-How to Setup PHP
+Como configurar o PHP
 ----------------
 
-There are many ways to install PHP on your local machine.
+Existem muitas maneiras de instalar o PHP em sua máquina local.
 
-The most convenient way I’ve found to install PHP locally is to use MAMP.
+A maneira mais conveniente que encontrei para instalar o PHP localmente é usar o MAMP.
 
-MAMP is a tool that’s freely available for all the Operating Systems – Mac, Windows and Linux. It is a package that gives you all the tools you need to get up and running.
+MAMP é uma ferramenta que está disponível gratuitamente para todos os sistemas operacionais – Mac, Windows e Linux. É um pacote que lhe dá todas as ferramentas que você precisa para começar a trabalhar.
 
-PHP is run by a HTTP Server, which is responsible for responding to HTTP requests, the ones made by the browser. So you access a URL with your browser, Chrome or Firefox or Safari, and the HTTP server responds with some HTML content.
+O PHP é executado por um Servidor HTTP, que é responsável por responder às requisições HTTP, aquelas feitas pelo navegador. Então você acessa uma URL com seu navegador, Chrome ou Firefox ou Safari, e o servidor HTTP responde com algum conteúdo HTML.
 
-The server is typically Apache or NGINX.
+O servidor normalmente é Apache ou NGINX.
 
-Then to do anything non-trivial you’ll need a database, like MySQL.
+Então, para fazer qualquer coisa não trivial, você precisará de um banco de dados, como o MySQL.
 
-MAMP is a package that provides all of that, and more, and gives you a nice interface to start/stop everything at once.
+O MAMP é um pacote que fornece tudo isso e muito mais, e oferece uma interface agradável para iniciar/parar tudo de uma vez.
 
-Of course, you can set up each piece on its own if you like, and many tutorials explain how to do that. But I like simple and practical tools, and MAMP is one of those.
+Claro, você pode configurar cada peça por conta própria, se quiser, e muitos tutoriais explicam como fazer isso. Mas eu gosto de ferramentas simples e práticas, e o MAMP é uma delas.
 
-You can follow this handbook with any kind of PHP installation method, not just MAMP.
+Você pode seguir este manual com qualquer tipo de método de instalação PHP, não apenas MAMP.
 
-That said, if you don’t have PHP installed yet and you want to use MAMP, go to [https://www.mamp.info](https://www.mamp.info/) and install it.
+Dito isso, se você ainda não tem o PHP instalado e quer usar o MAMP, vá para [https://www.mamp.info](https://www.mamp.info/) e instale ele.
 
-The process will depend on your operating system, but once you’re done with the installation, you will have a “MAMP” application installed.
+O processo dependerá do seu sistema operacional, mas assim que terminar a instalação, você terá um aplicativo “MAMP” instalado.
 
-Start that, and you will see a window similar to this:
+Inicie isso e você verá uma janela semelhante a esta:
 
 ![Screen Shot 2022-06-24 at 15.14.05.jpg](images/how_to_setup.jpg)
 
-Make sure the PHP version selected is the latest available.
+Certifique-se de que a versão do PHP selecionada seja a mais recente disponível.
 
-At the time of writing MAMP lets you pick 8.0.8.
+No momento em que escrevo, o MAMP permite que você escolha 8.0.8.
 
-NOTE: I noticed MAMP has a version that’s a bit behind, not the latest. You can install a more recent version of PHP by enabling the MAMP PRO Demo, then install the latest release from the MAMP PRO settings (in my case it was 8.1.0). Then close it and reopen MAMP (non-pro version). MAMP PRO has more features so you might want to use it, but it’s not necessary to follow this handbook.
+NOTA: Percebi que o MAMP tem uma versão um pouco atrasada, não a mais recente. Você pode instalar uma versão mais recente do PHP ativando a demonstração do MAMP PRO e, em seguida, instalar a versão mais recente das configurações do MAMP PRO (no meu caso foi 8.1.0). Em seguida, feche-o e reabra o MAMP (versão não profissional). O MAMP PRO tem mais recursos, então você pode querer usá-lo, mas não é necessário seguir este manual.
 
-Press the Start button at the top right. This will start the Apache HTTP server, with PHP enabled, and the MySQL database.
+Pressione o botão Iniciar no canto superior direito. Isso iniciará o servidor Apache HTTP, com PHP habilitado, e o banco de dados MySQL.
 
-Go to the URL [http://localhost:8888](http://localhost:8888/) and you will see a page similar to this:
+Vá para a url [http://localhost:8888](http://localhost:8888/) e você verá uma página similar a esta:
 
 ![Screen Shot 2022-06-24 at 15.19.05.jpg](images/how_to_setup_ready.jpg)
 
-We’re ready to write some PHP!
+Nós estamos prontos para escrever algum PHP!
 
-Open the folder listed as “Document root”. If you're using MAMP on a Mac it’s by default `/Applications/MAMP/htdocs`.
+Abra a pasta listada como “Document root”. Se você está usando MAMP em um Mac, é por padrão `/Applications/MAMP/htdocs`.
 
-On Windows it’s `C:\MAMP\htdocs`.
+No windows é `C:\MAMP\htdocs`.
 
-Yours might be different depending on your configuration. Using MAMP you can find it in the user interface of the application.
+O seu pode ser diferente dependendo da sua configuração. Usando o MAMP, você pode encontrá-lo na interface do usuário do aplicativo.
 
-In there, you will find a file named `index.php`.
+Lá, você encontrará um arquivo chamado `index.php`.
 
-That is responsible for printing the page shown above.
+Que é responsável por imprimir a página mostrada acima.
 
 ![Screen Shot 2022-06-24 at 15.17.58.jpg](images/how_to_setup_index_folder.jpg)
 
