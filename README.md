@@ -157,22 +157,22 @@ Que é responsável por imprimir a página mostrada acima.
 
 ![Screen Shot 2022-06-24 at 15.17.58.jpg](images/how_to_setup_index_folder.jpg)
 
-How to Code Your First PHP Program
+Como codificar seu primeiro programa em PHP
 ----------------------------------
 
-When learning a new programming language we have this tradition of creating a “Hello, World!” application. Something that prints those strings.
+Ao aprender uma nova linguagem de programação, temos essa tradição de criar uma aplicação “Hello, World!”. Algo que imprima essas strings.
 
-Make sure MAMP is running, and open the `htdocs` folder as explained above.
+Certifique-se de que o MAMP esteja rodando e abra a pasta `htdocs` como explicado acima.
 
-Open the `index.php` file in a code editor.
+Abra o arquivo `index.php` em um editor de código.
 
-I recommend using [VS Code](https://code.visualstudio.com), as it’s a very simple and powerful code editor. You can check out [https://flaviocopes.com/vscode/](https://flaviocopes.com/vscode/) for an introduction.
+Eu recomendo usar o [VS Code](https://code.visualstudio.com), pois é um editor de código muito simples e poderoso. Você pode conferir em [https://flaviocopes.com/vscode/](https://flaviocopes.com/vscode/) para uma introdução.
 
 ![Screen Shot 2022-06-24 at 15.37.36.jpg](images/first_code_vscode.jpg)
 
-This is the code that generates the “Welcome to MAMP” page you saw in the browser.
+Este é o código que gera a página “Bem-vindo ao MAMP” que você viu no navegador.
 
-Delete everything and replace it with:
+Apague tudo e substitua por:
 ```php
 <?php
 echo 'Hello World';
