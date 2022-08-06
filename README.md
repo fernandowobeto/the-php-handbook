@@ -179,33 +179,33 @@ echo 'Hello World';
 ?>
 ``` 
 
-Save, refresh the page on [http://localhost:8888](http://localhost:8888), you should see this:
+Salve, atualize a página em [http://localhost:8888](http://localhost:8888), você deve ver o seguinte:
 
 ![Screen Shot 2022-06-24 at 15.39.00.jpg](images/first_code_hello_world.jpg)
 
-Great! That was your first PHP program.
+Excelente! Esse foi o seu primeiro programa PHP.
 
-Let’s explain what is happening here.
+Vamos explicar o que está acontecendo aqui.
 
-We have the Apache HTTP server listening on port `8888` on localhost, your computer.
+Temos o servidor Apache HTTP escutando na porta `8888` no localhost, seu computador.
 
-When we access [http://localhost:8888](http://localhost:8888) with the browser, we’re making an HTTP request, asking for the content of the route `/`, the base URL.
+Quando nós acessamos [http://localhost:8888](http://localhost:8888) com o navegador, nós estamos fazendo uma requisição HTTP, solicitando o conteúdo da rota `/`, a URL base.
 
-Apache, by default, is configured to serve that route serving the `index.html` file included in the `htdocs` folder. That file does not exist – but as we have configured Apache to work with PHP, it will then search for an `index.php` file.
+O Apache, por padrão, está configurado para servir essa rota servindo o arquivo `index.html` incluído na pasta `htdocs`. Esse arquivo não existe – mas como configuramos o Apache para trabalhar com PHP, ele procurará por um arquivo `index.php`.
 
-This file exists, and PHP code is executed server-side before Apache sends the page back to the browser.
+Esse arquivo existe e o código PHP é executado no lado do servidor antes que o Apache envie a página de volta ao navegador.
 
-In the PHP file, we have a `<?php` opening, which says “here starts some PHP code”.
+No arquivo PHP, temos uma abertura `<?php`, que diz “aqui começa algum código PHP”.
 
-We have an ending `?>` that closes the PHP code snippet, and inside it, we use the `echo` instruction to print the string enclosed into quotes into the HTML.
+Temos um final `?>` que fecha o trecho de código PHP, e dentro dele, usamos a instrução `echo` para imprimir a string entre aspas no HTML.
 
-A semicolon is required at the end of every statement.
+Um ponto e vírgula é necessário no final de cada instrução.
 
-We have this opening/closing structure because we can embed PHP inside HTML. PHP is a scripting language, and its goal is to be able to “decorate” an HTML page with dynamic data.
+Temos essa estrutura de abertura/fechamento porque podemos embutir PHP dentro de HTML. PHP é uma linguagem de script, e seu objetivo é poder “decorar” uma página HTML com dados dinâmicos.
 
-Note that with modern PHP, we generally avoid mixing PHP into the HTML. Instead, we use PHP as a “framework to generate the HTML” – for example using tools like Laravel. But we'll discuss _plain PHP_ in this book, so it makes sense to start from the basics.
+Observe que, com o PHP moderno, geralmente evitamos misturar PHP no HTML. Em vez disso, usamos PHP como um “framework para gerar o HTML” – por exemplo, usando ferramentas como Laravel. Mas vamos discutir PHP simples neste livro, então faz sentido começar do básico.
 
-For example, something like this will give you the same result in the browser:
+Por exemplo, algo assim lhe dará o mesmo resultado no navegador:
 ```php
 Hello
 <?php
@@ -213,9 +213,9 @@ echo 'World';
 ?>
 ``` 
 
-To the final user, who looks at the browser and has no idea of the code behind the scenes, there’s no difference at all.
+Para o usuário final, que olha para o navegador e não tem ideia do código nos bastidores, não há diferença alguma.
 
-The page is technically an HTML page, even though it does not contain HTML tags but just a `Hello World` string. But the browser can figure out how to display that in the window.
+A página é tecnicamente uma página HTML, embora não contenha tags HTML, mas apenas uma string `Hello World`. Mas o navegador pode descobrir como exibir isso na janela.
 
 PHP Language Basics
 -------------------
