@@ -217,10 +217,10 @@ Para o usuário final, que olha para o navegador e não tem ideia do código nos
 
 A página é tecnicamente uma página HTML, embora não contenha tags HTML, mas apenas uma string `Hello World`. Mas o navegador pode descobrir como exibir isso na janela.
 
-PHP Language Basics
+Fundamentos da Linguagem PHP
 -------------------
 
-After the first “Hello World”, it’s time to dive into the language features with more details.
+Após o primeiro “Hello World”, é hora de mergulhar nos recursos do idioma com mais detalhes.
 
 ### How Variables Work in PHP
 
