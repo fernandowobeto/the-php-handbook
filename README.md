@@ -222,36 +222,34 @@ Fundamentos da Linguagem PHP
 
 Após o primeiro “Hello World”, é hora de mergulhar nos recursos do idioma com mais detalhes.
 
-### How Variables Work in PHP
+### Como as variáveis funcionam no PHP
 
-Variables in PHP start with the dollar sign `$`, followed by an identifier, which is a set of alphanumeric chars and the underscore `_` char.
+Variáveis em PHP começam com o cifrão `$`, seguido por um identificador, que é um conjunto de caracteres alfanuméricos e o caractere de sublinhado `_`.
 
-You can assign a variable any type of value, like strings (defined using single or double quotes):
+Você pode atribuir a uma variável qualquer tipo de valor, como strings (definidas usando aspas simples ou duplas):
 ```php
 $name = 'Flavio';
-
-$name = "Flavio";
 ```    
 
-Or numbers:
+Ou números:
 
 ```php
 $age = 20;
 ```
 
-or any other type that PHP allows, as we’ll later see.
+ou qualquer outro tipo permitido pelo PHP, como veremos mais tarde.
 
-Once a variable is assigned a value, for example a string, we can reassign it a different type of value, like a number:
+Uma vez que uma variável recebe um valor, por exemplo, uma string, podemos reatribuir a ela um tipo diferente de valor, como um número:
 
 ```php
 $name = 3;
 ```
 
-PHP won’t complain that now the type is different.
+O PHP não vai reclamar que agora o tipo é diferente.
 
-Variable names are case-sensitive. `$name` is different from `$Name`.
+Os nomes de variáveis diferenciam maiúsculas de minúsculas. `$name` é diferente de `$Name`.
 
-It’s not a hard rule, but generally variable names are written in camelCase format, like this: `$brandOfCar` or `$ageOfDog`. We keep the first letter lowercase, and the letters of the subsequent words uppercase.
+Não é uma regra rígida, mas geralmente os nomes das variáveis são escritos no formato camelCase, como este: `$brandOfCar` ou `$ageOfDog`. Mantemos a primeira letra minúscula e as letras das palavras seguintes em maiúsculas.
 
 ### How to Write Comments in PHP
 
