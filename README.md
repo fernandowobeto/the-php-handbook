@@ -251,34 +251,34 @@ Os nomes de variáveis diferenciam maiúsculas de minúsculas. `$name` é difere
 
 Não é uma regra rígida, mas geralmente os nomes das variáveis são escritos no formato camelCase, como este: `$brandOfCar` ou `$ageOfDog`. Mantemos a primeira letra minúscula e as letras das palavras seguintes em maiúsculas.
 
-### How to Write Comments in PHP
+### Como escrever comentários no PHP
 
-A very important part of any programming language is how you write comments.
+Uma parte muito importante de qualquer linguagem de programação é como você escreve comentários.
 
-You write single-line comments in PHP in this way:
+Você escreve comentários de linha única em PHP desta forma:
 ```php
-// single line comment
+// comentário de linha única
 ``` 
 
-Multi-line comments are defined in this way:
+Comentários de várias linhas são definidos desta maneira:
 ```php
 /*
 
-this is a comment
+isto é um comentário
 
 */
 
-//or
+//ou
 
 /*
   *
-  * this is a comment
+  * isto é um comentário
   *
   */
 
-//or to comment out a portion of code inside a line:
+//ou para comentar uma parte do código dentro de uma linha:
 
-/* this is a comment */
+/* isto é um comentário */
 ```    
 
 ### What are Types in PHP?
