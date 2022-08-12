@@ -281,21 +281,21 @@ isto é um comentário
 /* isto é um comentário */
 ```    
 
-### What are Types in PHP?
+### O que são tipos em PHP?
 
-I mentioned strings and numbers.
+Eu mencionei strings e numéros.
 
-PHP has the following types:
+PHP tem os seguintes tipos:
 
-*   `bool` boolean values (true/false)
-*   `int` integer numbers (no decimals)
-*   `float` floating-point numbers (decimals)
+*   `bool` valores boleanos (true/false)
+*   `int` números inteiros (no decimals)
+*   `float` números de ponto flutuante (decimals)
 *   `string` strings
 *   `array` arrays
-*   `object` objects
-*   `null` a value that means “no value assigned”
+*   `object` objetos
+*   `null` um valor que significa “nenhum valor atribuído”
 
-and a few other more advanced ones.
+e alguns outros mais avançados.
 
 ### How to Print the Value of a Variable in PHP
 
