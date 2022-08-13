@@ -297,27 +297,27 @@ PHP tem os seguintes tipos:
 
 e alguns outros mais avançados.
 
-### How to Print the Value of a Variable in PHP
+### Como imprimir o valor de uma variável em PHP
 
-We can use the `var_dump()` built-in function to get the value of a variable:
+Podemos usar a função interna `var_dump()` para obter o valor de uma variável:
 ```php
 $name = 'Flavio';
 
 var_dump($name);
 ``` 
 
-The `var_dump($name)` instruction will print `string(6) "Flavio"` to the page, which tells us the variable is a string of 6 characters.
+A instrução `var_dump($name)` imprimirá `string(6) "Flavio"` na página, o que nos diz que a variável é uma string de 6 caracteres.
 
-If we used this code:
+Se usássemos este código:
 ```php
 $age = 20;
     
 var_dump($age);
 ```    
 
-we’d have `int(20)` back, saying the value is 20 and it’s an integer.
+teríamos `int(20)` de volta, dizendo que o valor é 20 e é um inteiro.
 
-`var_dump()` is one of the essential tools in your PHP debugging tool belt.
+`var_dump()` é uma das ferramentas essenciais em seu cinto de ferramentas de depuração PHP.
 
 ### How Operators Work in PHP
 
