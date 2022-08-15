@@ -319,9 +319,9 @@ teríamos `int(20)` de volta, dizendo que o valor é 20 e é um inteiro.
 
 `var_dump()` é uma das ferramentas essenciais em seu cinto de ferramentas de depuração PHP.
 
-### How Operators Work in PHP
+### Como funcionam os operadores em PHP
 
-Once you have a few variables you can make operations with them:
+Uma vez que você tenha algumas variáveis, você pode fazer operações com elas:
 ```php
 $base = 20;
 $height = 10;
@@ -329,15 +329,15 @@ $height = 10;
 $area = $base * $height;
 ``` 
 
-The `*` I used to multiply $base by $height is the multiplication operator.
+O `*` que usei para multiplicar $base por $height é o operador de multiplicação.
 
-We have quite a few operators – so let’s do a quick roundup of the main ones.
+Temos alguns operadores - então vamos fazer um rápido resumo dos principais.
 
-To start with, here are the arithmetic operators: `+`, `-`, `*`, `/` (division), `%` (remainder) and `**` (exponential).
+Para começar, aqui estão os operadores aritméticos: `+`, `-`, `*`, `/` (divisão), `%` (restante) e `**` (exponencial).
 
-We have the assignment operator `=`, which we already used to assign a value to a variable.
+Temos o operador de atribuição `=`, que já usamos para atribuir um valor a uma variável.
 
-Next up we have comparison operators, like `<`, `>`, `<=`, `>=`. Those work like they do in math.
+Em seguida, temos operadores de comparação, como `<`, `>`, `<=`, `>=`. Aqueles funcionam como eles fazem em matemática.
 
 ```php
 2 < 1; //false
@@ -346,38 +346,38 @@ Next up we have comparison operators, like `<`, `>`, `<=`, `>=`. Those work like
 ```
     
 
-`==` returns true if the two operands are equal.
+`==` retorna true se os dois operandos são iguais.
 
-`===` returns true if the two operands are identical.
+`===` retorna true se os dois operandos são idênticos.
 
-What’s the difference?
+Qual a diferença?
 
-You’ll find it with experience, but for example:
+Você vai encontrá-lo com experiência, mas por exemplo:
 
 ```php
 1 == '1'; //true
 1 === '1'; //false
 ```
 
-We also have `!=` to detect if operands are _not_ equal:
+Também temos `!=` para detectar se os operandos NÃO são iguais:
 
 ```php
 1 != 1; //false
 1 != '1'; //false
 1 != 2; //true
 
-//hint: <> works in the same way as !=, 1 <> 1
+//dica: <> funciona da mesma forma como !=, 1 <> 1
 ``` 
 
-and `!==` to detect if operands are not identical:
+e `!==` para detectar se os operandos não são idênticos:
 ```php
 1 !== 1; //false
 1 !== '1'; //true
 ```
 
-Logical operators work with boolean values:
+Operadores lógicos trabalham com valores booleanos:
 ```php
-// Logical AND with && or "and"
+// Lógico AND com && ou "and"
 
 true && true; //true
 true && false; //false
@@ -389,7 +389,7 @@ true and false; //false
 false and true; //false
 false and false; //false
 
-// Logical OR with || or "or"
+// Lógico OR com || ou "or"
 
 true || true; // true
 true || false //true
@@ -401,7 +401,7 @@ true or false //true
 false or true //true
 false or false //false
 
-// Logical XOR (one of the two is true, but not both)
+// Lógico XOR (um dos dois é true, mas não ambos)
 
 true xor true; // false
 true xor false //true
@@ -409,30 +409,30 @@ false xor true //true
 false xor false //false
 ``` 
 
-We also have the _not_ operator:
+Nós temos também o operador NOT:
 ```php
 $test = true
 
 !$test //false
 ``` 
 
-I used the boolean values `true` and `false` here, but in practice you’ll use expressions that evaluate to either true or false, for example:
+Eu usei os valores booleanos `true` e `false` aqui, mas na prática você usará expressões que avaliam como true ou false, por exemplo:
 ```php
 1 > 2 || 2 > 1; //true
 
 1 !== 2 && 2 > 2; //false
 ``` 
 
-All of the operators listed above are _binary_, meaning they involve 2 operands.
+Todos os operadores listados acima são _binários_, o que significa que envolvem 2 operandos.
 
-PHP also has 2 unary operators: `++` and `--`:
+PHP também tem 2 operadores unários: `++` e `--`:
 ```php
 $age = 20;
 $age++;
-//age is now 21
+//age agora é 21
 
 $age--;
-//age is now 20
+//age agora é 20
 ```    
 
 How to Work with Strings in PHP
