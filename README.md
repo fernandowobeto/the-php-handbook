@@ -435,38 +435,38 @@ $age--;
 //age agora é 20
 ```    
 
-How to Work with Strings in PHP
+Como trabalhar com strings em PHP
 -------------------------------
 
-I introduced the use of strings before when we talked about variables and we defined a string using this notation:
+Eu introduzi o uso de strings antes quando falamos sobre variáveis e definimos uma string usando esta notação:
 ```php
-$name = 'Flavio'; //string defined with single quotes
+$name = 'Flavio'; //string definida com aspas simples
     
-$name = "Flavio"; //string defined with double quotes
+$name = "Flavio"; //string definida com aspas duplas
 ``` 
 
-The big difference between using single and double quotes is that with double quotes we can expand variables in this way:
+A grande diferença entre usar aspas simples e duplas é que com aspas duplas podemos expandir as variáveis desta forma:
 ```php
 $test = 'an example';
 
 $example = "This is $test"; //This is an example
 ```    
 
-and with double quotes we can use _escape characters_ (think new lines `\n` or tabs `\t`):
+e com aspas duplas podemos usar caracteres de escape (pense em novas linhas `\n` ou tabulações `\t`):
 ```php
 $example = "This is a line\nThis is a line";
 
 /*
-output is:
+a saída será:
 
 This is a line
 This is a line
 */
 ```    
 
-PHP offers you a very comprehensive functions in its standard library (the library of functionalities that the language offers by default).
+O PHP oferece funções muito abrangentes em sua biblioteca padrão (a biblioteca de funcionalidades que a linguagem oferece por padrão).
 
-First, we can concatenate two strings using the `.` operator:
+Primeiro, podemos concatenar duas strings usando o operador `.`:
 ```php
 $firstName = 'Flavio';
 $lastName = 'Copes';
@@ -474,52 +474,52 @@ $lastName = 'Copes';
 $fullName = $firstName . ' ' . $lastName;
 ```
 
-We can check the length of a string using the `strlen()` function:
+Podemos verificar o comprimento de uma string usando a função `strlen()`:
 ```php
 $name = 'Flavio';
 strlen($name); //6
 ```    
 
-This is the first time we've used a function.
+Esta é a primeira vez que usamos uma função.
 
-A function is composed of an identifier (`strlen` in this case) followed by parentheses. Inside those parentheses, we pass one or more arguments to the function. In this case, we have one argument.
+Uma função é composta por um identificador (`strlen` neste caso) seguido por parênteses. Dentro desses parênteses, passamos um ou mais argumentos para a função. Neste caso, temos um argumento.
 
-The function does _something_ and when it’s done it can return a value. In this case, it returns the number `6`. If there’s no value returned, the function returns `null`.
+A função faz faz alguma coisa e quando termina pode retornar um valor. Neste caso, ele retorna o número `6`. Se não houver valor retornado, a função retornará `null`.
 
-We’ll see how to define our own functions later.
+Veremos como definir nossas próprias funções mais tarde.
 
-We can get a portion of a string using `substr()`:
+Podemos obter uma parte de uma string usando `substr()`:
 ```php
 $name = 'Flavio';
-substr($name, 3); //"vio" - start at position 3, get all the rest
-substr($name, 2, 2); //"av" - start at position 2, get 2 items
+substr($name, 3); //"vio" - começa na posição 3, pega todo o resto
+substr($name, 2, 2); //"av" - começa na posição 2, pega 2 itens
 ```    
 
-We can replace a portion of a string using `str_replace()`:
+Podemos substituir uma parte de uma string usando `str_replace()`:
 ```php
 $name = 'Flavio';
 str_replace('avio', 'ower', $name); //"Flower"
 ```    
 
-Of course we can assign the result to a new variable:
+Claro que podemos atribuir o resultado a uma nova variável:
 ```php
 $name = 'Flavio';
 $itemObserved = str_replace('avio', 'ower', $name); //"Flower"
 ```    
 
-There are a lot more built-in functions you can use to work with strings.
+Há muito mais funções internas que você pode usar para trabalhar com strings.
 
-Here is a brief non-comprehensive list just to show you the possibilities:
+Aqui está uma breve lista não abrangente apenas para mostrar as possibilidades:
 
-*   [`trim()`](https://www.php.net/manual/en/function.trim.php) strips white space at the beginning and end of a string
-*   [`strtoupper()`](https://www.php.net/manual/en/function.strtoupper.php) makes a string uppercase
-*   [`strtolower()`](https://www.php.net/manual/en/function.strtolower.php) makes a string lowercase
-*   [`ucfirst()`](https://www.php.net/manual/en/function.ucfirst.php) makes the first character uppercase
-*   [`strpos()`](https://www.php.net/manual/en/function.strpos.php) finds the firsts occurrence of a substring in the string
-*   [`explode()`](https://www.php.net/manual/en/function.explode.php) to split a string into an array
-*   [`implode()`](https://www.php.net/manual/en/function.implode.php) to join array elements in a string
+*   [`trim()`](https://www.php.net/manual/en/function.trim.php) remove o espaço em branco no início e no final de uma string
+*   [`strtoupper()`](https://www.php.net/manual/en/function.strtoupper.php) faz uma string maiúscula
+*   [`strtolower()`](https://www.php.net/manual/en/function.strtolower.php) faz uma string minúscula
+*   [`ucfirst()`](https://www.php.net/manual/en/function.ucfirst.php) torna o primeiro caractere maiúsculo
+*   [`strpos()`](https://www.php.net/manual/en/function.strpos.php) encontra a primeira ocorrência de uma substring na string
+*   [`explode()`](https://www.php.net/manual/en/function.explode.php) para dividir uma string em um array
+*   [`implode()`](https://www.php.net/manual/en/function.implode.php) para juntar elementos de array em uma string
 
-You can find a full list [here](https://www.php.net/manual/en/book.strings.php).
+Você pode encontrar uma lista completa [aqui](https://www.php.net/manual/en/book.strings.php).
 
 How to Use Built-in Functions for Numbers in PHP
 ------------------------------------------------
