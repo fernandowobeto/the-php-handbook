@@ -521,22 +521,22 @@ Aqui está uma breve lista não abrangente apenas para mostrar as possibilidades
 
 Você pode encontrar uma lista completa [aqui](https://www.php.net/manual/en/book.strings.php).
 
-How to Use Built-in Functions for Numbers in PHP
+Como usar funções internas para números em PHP
 ------------------------------------------------
 
-I previously listed the few functions we commonly use for strings.
+Eu listei anteriormente as poucas funções que normalmente usamos para strings.
 
-Let’s make a list of the functions we use with numbers:
+Vamos fazer uma lista das funções que usamos com números:
 
-*   [`round()`](https://www.php.net/manual/en/function.round.php) to round a decimal number, up/down depending if the value is > 0.5 or smaller
-*   [`ceil()`](https://www.php.net/manual/en/function.ceil.php) to round a a decimal number up
-*   [`floor()`](https://www.php.net/manual/en/function.floor.php) to round a decimal number down
-*   [`rand()`](https://www.php.net/manual/en/function.rand.php) generates a random integer
-*   [`min()`](https://www.php.net/manual/en/function.min.php) finds the lowest number in the numbers passed as arguments
-*   [`max()`](https://www.php.net/manual/en/function.max.php) finds the highest number in the numbers passed as arguments
-*   [`is_nan()`](https://www.php.net/manual/en/function.is-nan.php) returns true if the number is not a number
+*   [`round()`](https://www.php.net/manual/en/function.round.php) para arredondar um número decimal, para cima/para baixo, dependendo se o valor for > 0,5 ou menor
+*   [`ceil()`](https://www.php.net/manual/en/function.ceil.php) arredondar um número decimal para cima
+*   [`floor()`](https://www.php.net/manual/en/function.floor.php) para arredondar um número decimal para baixo
+*   [`rand()`](https://www.php.net/manual/en/function.rand.php) gera um inteiro aleatório
+*   [`min()`](https://www.php.net/manual/en/function.min.php) encontra o número mais baixo nos números passados como argumentos
+*   [`max()`](https://www.php.net/manual/en/function.max.php) encontra o número mais alto nos números passados como argumentos
+*   [`is_nan()`](https://www.php.net/manual/en/function.is-nan.php) retorna true se o número não for um número
 
-There are a ton of different functions for all sorts of math operations like sine, cosine, tangents, logarithms, and so on. You can find a full list [here](https://www.php.net/manual/en/book.math.php).
+Há uma tonelada de funções diferentes para todos os tipos de operações matemáticas, como seno, cosseno, tangentes, logaritmos e assim por diante. Você pode encontrar uma lista completa [aqui](https://www.php.net/manual/en/book.math.php).
 
 How Arrays Work in PHP
 ----------------------
