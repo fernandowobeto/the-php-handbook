@@ -538,43 +538,43 @@ Vamos fazer uma lista das funções que usamos com números:
 
 Há uma tonelada de funções diferentes para todos os tipos de operações matemáticas, como seno, cosseno, tangentes, logaritmos e assim por diante. Você pode encontrar uma lista completa [aqui](https://www.php.net/manual/en/book.math.php).
 
-How Arrays Work in PHP
+Como os arrays funcionam em PHP
 ----------------------
 
-Arrays are lists of values grouped under a common name.
+Arrays são listas de valores agrupados sob um nome comum.
 
-You can define an empty array in two different ways:
+Você pode definir um array vazio de duas maneiras diferentes:
 ```php
 $list = [];
 
 $list = array();
 ```    
 
-An array can be initialized with values:
+Um array pode ser inicializado com valores:
 ```php
 $list = [1, 2];
 
 $list = array(1, 2);
 ```    
 
-Arrays can hold values of any type:
+Arrays podem conter valores de qualquer tipo:
 ```php
 $list = [1, 'test'];
 ```    
 
-Even other arrays:
+Mesmo de outros arrays:
 ```php
 $list = [1, [2, 'test']];
 ```    
 
-You can access the element in an array using this notation:
+Você pode acessar o elemento em um array usando esta notação:
 ```php
 $list = ['a', 'b'];
-$list[0]; //'a' --the index starts at 0
+$list[0]; //'a' --o índice começa em 0
 $list[1]; //'b'
 ```
 
-Once an array is created, you can append values to it in this way:
+Depois que um array é criado, você pode anexar valores a ele desta maneira:
 ```php
 $list = ['a', 'b'];
 $list[] = 'c';
@@ -588,7 +588,7 @@ $list == [
 */
 ```    
 
-You can use `array_unshift()` to add the item at the beginning of the array instead:
+Você pode usar `array_unshift()` para adicionar o item no início do array:
 ```php
 $list = ['b', 'c'];
 array_unshift($list, 'a');
@@ -602,21 +602,21 @@ $list == [
 */
 ```    
 
-Count how many items are in an array using the built-in `count()` function:
+Conte quantos itens estão em um array usando a função interna `count()`:
 ```php
 $list = ['a', 'b'];
 
 count($list); //2
 ```    
 
-Check if an array contains an item using the `in_array()` built-in function:
+Verifique se um array contém um item usando a função interna `in_array()`:
 ```php
 $list = ['a', 'b'];
 
 in_array('b', $list); //true
 ```    
 
-If in addition to confirming existence, you need the index, use `array_search()`:
+Se além de confirmar a existência, você precisa do índice, use `array_search()`:
 ```php
 $list = ['a', 'b'];
 
