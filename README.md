@@ -623,27 +623,27 @@ $list = ['a', 'b'];
 array_search('b', $list) //1
 ```    
 
-### Useful Functions for Arrays in PHP
+### Funções úteis para arrays em PHP
 
-As with strings and numbers, PHP provides lots of very useful functions for arrays. We’ve seen `count()`, `in_array()`, `array_search()` – let’s see some more:
+Assim como com strings e números, o PHP fornece muitas funções muito úteis para arrays. Nós vimos `count()`, `in_array()`, `array_search()` – vamos ver um pouco mais:
 
-*   `is_array()` to check if a variable is an array
-*   `array_unique()` to remove duplicate values from an array
-*   `array_search()` to search a value in the array and return the key
-*   `array_reverse()` to reverse an array
-*   `array_reduce()` to reduce an array to a single value using a callback function
-*   `array_map()` to apply a callback function to each item in the array. Typically used to create a new array by modifying the values of an existing array, without altering it.
-*   `array_filter()` to filter an array to a single value using a callback function
-*   `max()` to get the maximum value contained in the array
-*   `min()` to get the minimum value contained in the array
-*   `array_rand()` to get a random item from the array
-*   `array_count_values()` to count all the values in the array
-*   `implode()` to turn an array into a string
-*   `array_pop()` to remove the last item of the array and return its value
-*   `array_shift()` same as `array_pop()` but removes the first item instead of the last
-*   `sort()` to sort an array
-*   `rsort()` to sort an array in reverse order
-*   `array_walk()` similarly to `array_map()` does something for every item in the array, but in addition it can change values in the existing array
+*   `is_array()` para verificar se uma variável é um array
+*   `array_unique()` para remover valores duplicados de um array
+*   `array_search()` para pesquisar um valor no array e retornar a chave
+*   `array_reverse()` para inverter um array
+*   `array_reduce()` para reduzir um array a um único valor usando uma função de retorno de chamada
+*   `array_map()` para aplicar uma função de retorno de chamada a cada item no array. Normalmente usado para criar um novo array modificando os valores de um array existente, sem alterá-lo.
+*   `array_filter()` para filtrar um array para um único valor usando uma função de retorno de chamada
+*   `max()` para obter o valor máximo contido no array
+*   `min()` para obter o valor mínimo contido no array
+*   `array_rand()` para obter um item aleatório do array
+*   `array_count_values()` para contar todos os valores no array
+*   `implode()` transformar um array em uma string
+*   `array_pop()` para remover o último item do array e retornar seu valor
+*   `array_shift()` igual a `array_pop()` mas remove o primeiro item em vez do último
+*   `sort()` para ordenar um array
+*   `rsort()` para classificar um array na ordem inversa
+*   `array_walk()` da mesma forma que `array_map()` faz algo para cada item no array, mas além disso pode alterar valores no array existente
 
 ### How to Use Associative Arrays in PHP
 
