@@ -645,11 +645,11 @@ Assim como com strings e números, o PHP fornece muitas funções muito úteis p
 *   `rsort()` para classificar um array na ordem inversa
 *   `array_walk()` da mesma forma que `array_map()` faz algo para cada item no array, mas além disso pode alterar valores no array existente
 
-### How to Use Associative Arrays in PHP
+### Como usar arrays associativos em PHP
 
-So far we’ve used arrays with an incremental, numeric index: 0, 1, 2…
+Até agora usamos arrays com um índice numérico incremental: 0, 1, 2…
 
-You can also use arrays with named indexes (keys), and we call them associative arrays:
+Você também pode usar arrays com índices nomeados (chaves), e nós os chamamos de arrays associativos:
 ```php
 $list = ['first' => 'a', 'second' => 'b'];
 
@@ -657,17 +657,17 @@ $list['first'] //'a'
 $list['second'] //'b'
 ```    
 
-We have some functions that are especially useful for associative arrays:
+Temos algumas funções que são especialmente úteis para arrays associativos:
 
-*   `array_key_exists()` to check if a key exists in the array
-*   `array_keys()` to get all the keys from the array
-*   `array_values()` to get all the values from the array
-*   `asort()` to sort an associative array by value
-*   `arsort()` to sort an associative array in descending order by value
-*   `ksort()` to sort an associative array by key
-*   `krsort()` to sort an associative array in descending order by key
+*   `array_key_exists()` para verificar se existe uma chave no array
+*   `array_keys()` para obter todas as chaves do array
+*   `array_values()` para obter todos os valores do array
+*   `asort()` para classificar um array associativo por valor
+*   `arsort()` para classificar um array associativo em ordem decrescente por valor
+*   `ksort()` para classificar um array associativo por chave
+*   `krsort()` para classificar um array associativo em ordem decrescente por chave
 
-You can see all array-related functions [here](https://www.php.net/manual/en/ref.array.php).
+Você pode ver todas as funções relacionadas a array [aqui](https://www.php.net/manual/en/ref.array.php).
 
 How Conditionals Work in PHP
 ----------------------------
