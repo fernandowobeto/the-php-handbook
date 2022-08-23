@@ -669,18 +669,19 @@ Temos algumas funções que são especialmente úteis para arrays associativos:
 
 Você pode ver todas as funções relacionadas a array [aqui](https://www.php.net/manual/en/ref.array.php).
 
-How Conditionals Work in PHP
+Como funcionam as condicionais em PHP
 ----------------------------
 
-I previously introduced comparison operators: `<`, `>`, `<=`, `>=`, `==`, `===` , `!=`, `!==`... and so on.
+Anteriormente, apresentei operadores de comparação: `<`, `>`, `<=`, `>=`, `==`, `===` , `!=`, `!==`... e assim sobre.
 
-Those operators are going to be super useful for one thing: **conditionals**.
+Esses operadores serão super úteis para uma coisa:
+ **condicionais**.
 
-Conditionals are the first control structure we see.
+As condicionais são a primeira estrutura de controle que vemos.
 
-We can decide to do something, or something else, based on a comparison.
+Podemos decidir fazer algo, ou outra coisa, com base em uma comparação.
 
-For example:
+Por exemplo:
 ```php
 $age = 17;
 
@@ -689,9 +690,9 @@ if ($age > 18) {
 }
 ```    
 
-The code inside the parentheses only executes if the condition evaluates to `true`.
+O código dentro dos parênteses só é executado se a condição for avaliada como `true`.
 
-Use `else` to do something _else_ in case the condition is `false`:
+Use `else` para fazer algo caso a condição seja `false`:
 ```php
 $age = 17;
 
@@ -702,9 +703,9 @@ if ($age > 18) {
 }
 ```    
 
-NOTE: I used `cannot` instead of `can't` because the single quote would terminate my string before it should. In this case you could escape the `'` in this way: `echo 'You can\'t enter the pub';`
+NOTA: Eu usei `cannot` em vez de `can't` porque as aspas simples terminariam minha string antes que deveria. Neste caso você pode escapar do `'` desta forma: `echo 'You can\'t enter the pub';`
 
-You can have multiple `if` statements chained using `elseif`:
+Você pode ter várias instruções `if` encadeadas usando `elseif`:
 ```php
 $age = 17;
 
@@ -717,9 +718,9 @@ if ($age > 20) {
 }
 ```    
 
-In addition to `if`, we have the `switch` statement.
+Além de `if`, temos a instrução `switch`.
 
-We use this when we have a variable that could have a few different values, and we don’t have to have a long if / elseif block:
+Usamos isso quando temos uma variável que pode ter alguns valores diferentes, e não precisamos ter um bloco if/elseif longo:
 ```php
 $age = 17
 
@@ -741,21 +742,21 @@ switch($age) {
 }
 ```    
 
-I know the example does not have any logic, but I think it can help you understand how `switch` works.
+Eu sei que o exemplo não tem lógica, mas acho que pode te ajudar a entender como o `switch` funciona.
 
-The `break;` statement after each case is essential. If you don’t add that and the age is 17, you’d see this:
+A instrução `break;` após cada case é essencial. Se você não adicionar isso e a idade for 17, você verá isso:
 ```
 You are 17
 You are 18
 You are 17
 ```    
 
-Instead of just this:
+Em vez de apenas isso:
 ```
 You are 17
 ```    
 
-as you’d expect.
+como você esperaria.
 
 How Loops Work in PHP
 ---------------------
