@@ -758,14 +758,14 @@ You are 17
 
 como você esperaria.
 
-How Loops Work in PHP
+Como os loops funcionam em PHP
 ---------------------
 
-Loops are another super useful control structure.
+Loops são outra estrutura de controle super útil.
 
-We have a few different kinds of loops in PHP: `while`, `do while`, `for`, and `foreach`.
+Temos alguns tipos diferentes de loops em PHP: `while`, `do while`, `for` e `foreach`.
 
-Let’s see them all!
+Vamos ver todos eles!
 
 ### How to Use a `while` loop in PHP
 
