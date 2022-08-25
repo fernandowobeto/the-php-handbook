@@ -767,16 +767,16 @@ Temos alguns tipos diferentes de loops em PHP: `while`, `do while`, `for` e `for
 
 Vamos ver todos eles!
 
-### How to Use a `while` loop in PHP
+### Como usar um loop `while` em PHP
 
-A `while` loop is the simplest one. It keeps iterating while the condition evaluates to `true`:
+Um loop `while` é o mais simples. Ele continua iterando enquanto a condição é avaliada como `true`:
 ```php
 while (true) {
   echo 'looping';
 }
 ```    
 
-This would be an infinite loop, which is why we use variables and comparisons:
+Isso seria um loop infinito, e é por isso que usamos variáveis e comparações:
 ```php
 $counter = 0;
 
