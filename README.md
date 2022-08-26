@@ -786,9 +786,9 @@ while ($counter < 10) {
 }
 ```    
 
-### How to Use a `do while` loop in PHP
+### Como usar um loop `do while` em PHP
 
-`do while` is similar, but slightly different in how the first iteration is performed:
+`do while` é semelhante, mas um pouco diferente em como a primeira iteração é executada:
 ```php
 $counter = 0;
 
@@ -798,13 +798,13 @@ do {
 } while ($counter < 10);
 ```    
 
-In the `do while` loop, first we do the first iteration, _then_ we check the condition.
+No loop `do while`, primeiro fazemos a primeira iteração, depois verificamos a condição.
 
-In the `while` loop, _first_ we check the condition, then we do the iteration.
+No loop `while`, primeiro verificamos a condição, depois fazemos a iteração.
 
-Do a simple test by setting `$counter` to 15 in the above examples, and see what happens.
+Faça um teste simples configurando `$counter` para 15 nos exemplos acima e veja o que acontece.
 
-You'll want to choose one kind of loop, or the other, depending on your use case.
+Você vai querer escolher um tipo de loop ou outro, dependendo do seu caso de uso.
 
 ### How to Use a `foreach` Loop in PHP
 
