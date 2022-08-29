@@ -806,9 +806,9 @@ Faça um teste simples configurando `$counter` para 15 nos exemplos acima e veja
 
 Você vai querer escolher um tipo de loop ou outro, dependendo do seu caso de uso.
 
-### How to Use a `foreach` Loop in PHP
+### Como usar um loop `foreach` em PHP
 
-You can use the `foreach` loop to easily iterate over an array:
+Você pode usar o loop `foreach` para iterar facilmente em um array:
 ```php
 $list = ['a', 'b', 'c'];
 
@@ -817,7 +817,7 @@ foreach ($list as $value) {
 }
 ```    
 
-You can also get the value of the index (or key in an associative array) in this way:
+Você também pode obter o valor do índice (ou chave em um array associativo) desta forma:
 ```php
 $list = ['a', 'b', 'c'];
 
