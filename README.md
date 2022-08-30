@@ -826,18 +826,20 @@ foreach ($list as $key => $value) {
 }
 ```    
 
-### How to Use a `for` Loop in PHP
+### Como usar um loop `for` em PHP
 
-The `for` loop is similar to while, but instead of defining the variable used in the conditional before the loop, and instead of incrementing the index variable manually, it’s all done in the first line:
+O loop `for` é semelhante ao while, mas ao invés de definir a variável usada na condicional antes do loop, e ao invés de incrementar a variável index manualmente, tudo é feito na primeira linha:
 ```php
 for ($i = 0; $i < 10; $i++) {
   echo $i;
 }
 
-//result: 0123456789
+//resultado: 0123456789
 ```    
 
-You can use the for loop to iterate over an array in this way:
+62 / 5.000
+Resultados de tradução
+Você pode usar o loop for para iterar sobre um array desta maneira:
 ```php
 $list = ['a', 'b', 'c'];
 
@@ -845,7 +847,7 @@ for ($i = 0; $i < count($list); $i++) {
   echo $list[$i];
 }
 
-//result: abc
+//resultado: abc
 ```    
 
 ### How to Use the `break` and `continue` Statements in PHP
