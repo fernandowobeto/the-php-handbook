@@ -850,11 +850,11 @@ for ($i = 0; $i < count($list); $i++) {
 //resultado: abc
 ```    
 
-### How to Use the `break` and `continue` Statements in PHP
+### Como usar as instruções `break` e `continue` em PHP
 
-In many cases you want the ability to stop a loop on demand.
+Em muitos casos, você deseja interromper um loop sob demanda.
 
-For example you want to stop a `for` loop when the value of the variable in the array is `'b'`:
+Por exemplo, você deseja parar um loop `for` quando o valor da variável no array for `'b'`:
 ```php
 $list = ['a', 'b', 'c'];
 
@@ -865,12 +865,12 @@ for ($i = 0; $i < count($list); $i++) {
   echo $list[$i];
 }
 
-//result: a
+//resultado: a
 ```    
 
-This makes the loop completely stop at that point, and the program execution continues at the next instruction after the loop.
+Isso faz com que o loop pare completamente nesse ponto e a execução do programa continue na próxima instrução após o loop.
 
-If you just want to skip the current loop iteration and keep looking, use `continue` instead:
+Se você quiser apenas pular a iteração do loop atual e continuar procurando, use `continue`:
 ```php
 $list = ['a', 'b', 'c'];
 
@@ -881,7 +881,7 @@ for ($i = 0; $i < count($list); $i++) {
   echo $list[$i];
 }
 
-//result: ac
+//resultado: ac
 ```    
 
 How Functions Work in PHP
