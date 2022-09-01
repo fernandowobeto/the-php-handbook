@@ -884,57 +884,57 @@ for ($i = 0; $i < count($list); $i++) {
 //resultado: ac
 ```    
 
-How Functions Work in PHP
+Como as funções funcionam em PHP
 -------------------------
 
-Functions are one of the most important concepts in programming.
+As funções são um dos conceitos mais importantes na programação.
 
-You can use functions to group together multiple instructions or multiple lines of code, and give them a name.
+Você pode usar funções para agrupar várias instruções ou várias linhas de código e dar a elas um nome.
 
-For example you can make a function that sends an email. Let’s call it `sendEmail`, and we'll define it like this:
+Por exemplo, você pode fazer uma função que envia um email. Vamos chamá-lo de `sendEmail`, e vamos defini-lo assim:
 ```php
 function sendEmail() {
-  //send an email
+  //envia um e-mail
 }
 ```    
 
-And you can _call it_ anywhere else by using this syntax:
+E você pode chamá-la em qualquer outro lugar usando esta sintaxe:
 ```php
 sendEmail();
 ```    
 
-You can also pass arguments to a function. For example when you send an email, you want to send it to someone – so you add the email as the first argument:
+Você também pode passar argumentos para uma função. Por exemplo, quando você envia um e-mail, você deseja enviá-lo para alguém – então você adiciona o e-mail como o primeiro argumento:
 ```php
 sendEmail('test@test.com');
 ```    
 
-Inside the function definition we get this parameter in this way (we call them _parameters_ inside the function definition, and _arguments_ when we call the function):
+Dentro da definição da função obtemos este parâmetro desta forma (nós os chamamos de "parâmetros" dentro da definição da função, e "argumentos" quando chamamos a função):
 ```php
 function sendEmail($to) {
   echo "send an email to $to";
 }
 ```    
 
-You can send multiple arguments by separating them with commas:
+Você pode enviar vários argumentos separando-os com vírgulas:
 ```php
 sendEmail('test@test.com', 'subject', 'body of the email');
 ```    
 
-And we can get those parameters in the order they were defined:
+E podemos obter esses parâmetros na ordem em que foram definidos:
 ```php
 function sendEmail($to, $subject, $body) {
   //...
 }
 ```    
 
-We can **optionally** set the type of parameters:
+Podemos **opcionalmente** definir o tipo de parâmetros:
 ```php
 function sendEmail(string $to, string $subject, string $body) {
   //...
 }
 ```    
 
-Parameters can have a default value, so if they are omitted we can still have a value for them:
+Os parâmetros podem ter um valor padrão, portanto, se forem omitidos, ainda podemos ter um valor para eles:
 ```php
 function sendEmail($to, $subject = 'test', $body = 'test') {
   //...
@@ -943,9 +943,9 @@ function sendEmail($to, $subject = 'test', $body = 'test') {
 sendEmail('test@test.com')
 ```    
 
-A function can return a value. Only one value can be returned from a function, not more than one. You do that using the `return` keyword. If omitted, the function returns `null`.
+Uma função pode retornar um valor. Apenas um valor pode ser retornado de uma função, não mais de um. Você faz isso usando a palavra-chave `return`. Se omitido, a função retorna `null`.
 
-The returned value is super useful as it tells you the result of the work done in the function, and lets you use its result after calling it:
+O valor retornado é super útil, pois informa o resultado do trabalho realizado na função e permite que você use seu resultado após chamá-lo:
 ```php
 function sendEmail($to) {
   return true;
@@ -960,14 +960,14 @@ if ($success) {
 }
 ```    
 
-We can **optionally** set the return type of a function using this syntax:
+Podemos **opcionalmente** definir o tipo de retorno de uma função usando esta sintaxe:
 ```php
 function sendEmail($to): bool {
   return true;
 }
 ```    
 
-When you define a variable inside a function, that variable is **local** to the function, which means it’s not visible from outside. When the function ends, it just stops existing:
+Quando você define uma variável dentro de uma função, essa variável é **local** para a função, o que significa que não é visível de fora. Quando a função termina, ela simplesmente para de existir:
 ```php
 function sendEmail($to) {
   $test = 'a';
@@ -976,13 +976,13 @@ function sendEmail($to) {
 var_dump($test); //PHP Warning:  Undefined variable $test
 ```    
 
-Variables defined outside of the function are **not** accessible inside the function.
+Variáveis definidas fora da função **não** são acessíveis dentro da função.
 
-This enforces a good programming practice as we can be sure the function does not modify external variables and cause “side effects”.
+Isso impõe uma boa prática de programação, pois podemos ter certeza de que a função não modifica variáveis externas e causa “efeitos colaterais”.
 
-Instead you return a value from the function, and the outside code that calls the function will take responsibility for updating the outside variable.
+Em vez disso, você retorna um valor da função e o código externo que chama a função assumirá a responsabilidade de atualizar a variável externa.
 
-Like this:
+Assim:
 ```php
 $character = 'a';
 
@@ -993,7 +993,7 @@ function test() {
 $character = test();
 ```    
 
-You can pass the value of a variable by passing it as an argument to the function:
+Você pode passar o valor de uma variável passando-a como argumento para a função:
 ```php
 $character = 'a';
 
@@ -1004,11 +1004,11 @@ function test($c) {
 test($character);
 ```    
 
-But you can’t modify that value from within the function.
+Mas você não pode modificar esse valor de dentro da função.
 
-It’s **passed by value**, which means the function receives a copy of it, not the reference to the original variable.
+Ela é **passada por valor**, o que significa que a função recebe uma cópia dela, não a referência à variável original.
 
-That is still possible using this syntax (notice I used `&` in the parameter definition):
+Isso ainda é possível usando esta sintaxe (observe que usei `&` na definição do parâmetro):
 ```php
 $character = 'a';
 
@@ -1021,24 +1021,24 @@ test($character);
 echo $character; //'b'
 ```    
 
-The functions we've defined so far are **named functions**.
+As funções que definimos até agora são **funções nomeadas**.
 
-They have a name.
+Eles têm um nome.
 
-We also have **anonymous functions**, which can be useful in a lot of cases.
+Também temos **funções anônimas**, que podem ser úteis em muitos casos.
 
-They don’t have a name, per se, but they are assigned to a variable. To call them, you invoke the variable with parentheses at the end:
+Eles não têm um nome, por si só, mas são atribuídos a uma variável. Para chamá-los, você invoca a variável com parênteses no final:
 ```php
 $myfunction = function() {
-  //do something here
+  //faz alguma coisa aqui
 };
 
 $myfunction()
 ```    
 
-Note that you need a semicolon after the function definition, but then they work like named functions for return values and parameters.
+Observe que você precisa de um ponto e vírgula após a definição da função, mas eles funcionam como funções nomeadas para valores de retorno e parâmetros.
 
-Interestingly, they offer a way to access a variable defined outside the function through `use()`:
+Curiosamente, eles oferecem uma maneira de acessar uma variável definida fora da função através de `use()`:
 ```php
 $test = 'test';
 
@@ -1050,30 +1050,30 @@ $myfunction = function() use ($test) {
 $myfunction()
 ```    
 
-Another kind of function is an **arrow function**.
+Outro tipo de função é uma **função de seta**.
 
-An arrow function is an anonymous function that’s just one expression (one line), and implicitly returns the value of that expression.
+Uma função de seta é uma função anônima que é apenas uma expressão (uma linha) e retorna implicitamente o valor dessa expressão.
 
-You define it in this way:
+Você define assim:
 ```php
 fn (arguments) => expression;
 ``` 
 
-Here’s an example:
+Aqui está um exemplo:
 ```php
 $printTest = fn() => 'test';
 
 $printTest(); //'test'
 ```    
 
-You can pass parameters to an arrow function:
+Você pode passar parâmetros para uma função de seta:
 ```php
 $multiply = fn($a, $b) => $a * $b;
 
 $multiply(2, 4) //8
 ```    
 
-Note that as the next example shows, arrow functions have automatic access to the variables of the enclosing scope, without the need of `use()`.
+Observe que, como mostra o próximo exemplo, as funções de seta têm acesso automático às variáveis do escopo delimitador, sem a necessidade de `use()`.
 ```php
 $a = 2;
 $b = 4;
@@ -1082,12 +1082,11 @@ $multiply = fn() => $a * $b;
 
 $multiply()
 ```    
+As **Arrow functions** são super úteis quando você precisa passar uma função de retorno de chamada. Veremos como usá-los para realizar algumas operações de array mais tarde.
 
-Arrow functions are super useful when you need to pass a callback function. We’ll see how to use them to perform some array operations later.
+Portanto, temos no total 3 tipos de funções: **funções nomeadas**, **funções anônimas** e **arrow functions**.
 
-So we have in total 3 kinds of functions: **named functions**, **anonymous functions**, and **arrow functions**.
-
-Each of them has its place, and you’ll learn how to use them properly over time, with practice.
+Cada um deles tem seu lugar e você aprenderá a usá-los corretamente ao longo do tempo, com a prática.
 
 How to Loop Through Arrays with `map()`, `filter()`, and `reduce()` in PHP
 --------------------------------------------------------------------------
