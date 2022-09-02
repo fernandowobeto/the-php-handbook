@@ -1088,41 +1088,41 @@ Portanto, temos no total 3 tipos de funções: **funções nomeadas**, **funçõ
 
 Cada um deles tem seu lugar e você aprenderá a usá-los corretamente ao longo do tempo, com a prática.
 
-How to Loop Through Arrays with `map()`, `filter()`, and `reduce()` in PHP
+Como percorrer arrays com `map()`, `filter()` e `reduce()` em PHP
 --------------------------------------------------------------------------
 
-Another important set of looping structures, often used in functional programming, is the set of `array_map()` / `array_filter()` / `array_reduce()`.
+Outro conjunto importante de estruturas de loop, frequentemente usado em programação funcional, é o conjunto de `array_map()` / `array_filter()` / `array_reduce()`.
 
-Those 3 built-in PHP functions take an array, and a callback function that in each iteration takes each item in the array.
+Essas 3 funções embutidas do PHP pegam um array e uma função de retorno de chamada que em cada iteração pega cada item do array.
 
-`array_map()` returns a new array that contains the result of running the callback function on each item in the array:
+`array_map()` retorna um novo array que contém o resultado da execução da função callback em cada item do array:
 ```php
 $numbers = [1, 2, 3, 4];
 $doubles = array_map(fn($value) => $value * 2, $numbers);
 
-//$doubles is now [2, 4, 6, 8]
+//$doubles agora é [2, 4, 6, 8]
 ```    
 
-`array_filter()` generates a new array by only getting the items whose callback function returns `true`:
+`array_filter()` gera um novo array pegando apenas os itens cuja função de retorno de chamada retorna `true`:
 ```php
 $numbers = [1, 2, 3, 4];
 $even = array_filter($numbers, fn($value) => $value % 2 === 0)
 
-//$even is now [2, 4]
+//$even agora é [2, 4]
 ```    
 
-`array_reduce()` is used to _reduce_ an array to a single value.
+`array_reduce()` é usado para reduzir um array para um único valor.
 
-For example we can use it to multiply all items in an array:
+Por exemplo, podemos usá-lo para multiplicar todos os itens em um array:
 ```php
 $numbers = [1, 2, 3, 4];
 
 $result = array_reduce($numbers, fn($carry, $value) => $carry * $value, 1)
 ```    
 
-Notice the last parameter – it’s the initial value. If you omit that, the default value is `0` but that would not work for our multiplication example.
+Observe o último parâmetro – é o valor inicial. Se você omitir isso, o valor padrão é '0', mas isso não funcionaria para o nosso exemplo de multiplicação.
 
-Note that in `array_map()` the order of the arguments is reversed. First you have the callback function and then the array. This is because we can pass multiple arrays using commas (`array_map(fn($value) => $value * 2, $numbers, $otherNumbers, $anotherArray);`). Ideally we’d like more consistency, but that’s what it is.
+Observe que em `array_map()` a ordem dos argumentos é invertida. Primeiro você tem a função de retorno de chamada e depois o array. Isso ocorre porque podemos passar vários arrays usando vírgulas (`array_map(fn($value) => $value * 2, $numbers, $otherNumbers, $anotherArray);`). Idealmente, gostaríamos de mais consistência, mas é isso que é.
 
 Object Oriented Programming in PHP
 ----------------------------------
