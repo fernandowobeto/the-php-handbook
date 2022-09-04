@@ -1124,12 +1124,12 @@ Observe o último parâmetro – é o valor inicial. Se você omitir isso, o val
 
 Observe que em `array_map()` a ordem dos argumentos é invertida. Primeiro você tem a função de retorno de chamada e depois o array. Isso ocorre porque podemos passar vários arrays usando vírgulas (`array_map(fn($value) => $value * 2, $numbers, $otherNumbers, $anotherArray);`). Idealmente, gostaríamos de mais consistência, mas é isso que é.
 
-Object Oriented Programming in PHP
+Programação Orientada a Objetos em PHP
 ----------------------------------
 
-Let’s now jump head first into a big topic: object-oriented programming with PHP.
+Vamos agora pular de cabeça em um grande tópico: programação orientada a objetos com PHP.
 
-Object-oriented programming lets you create useful abstractions and make your code simpler to understand and manage.
+A programação orientada a objetos permite criar abstrações úteis e tornar seu código mais simples de entender e gerenciar.
 
 ### How to Use Classes and Objects in PHP
 
