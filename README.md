@@ -1131,29 +1131,29 @@ Vamos agora pular de cabeça em um grande tópico: programação orientada a obj
 
 A programação orientada a objetos permite criar abstrações úteis e tornar seu código mais simples de entender e gerenciar.
 
-### How to Use Classes and Objects in PHP
+### Como usar classes e objetos em PHP
 
-To start with, you have classes and objects.
+Para começar, você tem classes e objetos.
 
-A class is a blueprint, or type, of object.
+Uma classe é um blueprint, ou tipo, de objeto.
 
-For example you have the class `Dog`, defined in this way:
+Por exemplo, você tem a classe `Dog`, definida desta forma:
 ```php
 class Dog {
 
 }
 ```    
 
-Note that the class must be defined in uppercase.
+Observe que a classe deve ser definida em letras maiúsculas.
 
-Then you can create objects from this class – specific, individual dogs.
+Então você pode criar objetos desta classe – cães (Dogs) específicos e individuais.
 
-An object is assigned to a variable, and it’s instantiated using the `new Classname()` syntax:
+Um objeto é atribuído a uma variável e é instanciado usando a sintaxe `new Nomeclasse()`:
 ```php
 $roger = new Dog();
 ```    
 
-You can create multiple objects from the same class, by assigning each object to a different variable:
+Você pode criar vários objetos da mesma classe, atribuindo cada objeto a uma variável diferente:
 ```php
 $roger = new Dog();
 $syd = new Dog();
