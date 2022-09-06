@@ -1159,13 +1159,13 @@ $roger = new Dog();
 $syd = new Dog();
 ```    
 
-### How to Use Properties in PHP
+### Como usar propriedades em PHP
 
-Those objects will all share the same characteristics defined by the class. But once they are instantiated, they will have a life of their own.
+Esses objetos compartilharão as mesmas características definidas pela classe. Mas, uma vez instanciados, eles terão vida própria.
 
-For example, a Dog has a name, an age, and a fur color.
+Por exemplo, um cão tem um nome, uma idade e uma cor de pele.
 
-So we can define those as properties in the class:
+Assim, podemos defini-los como propriedades na classe:
 ```php
 class Dog {
   public $name;
@@ -1174,9 +1174,9 @@ class Dog {
 }
 ```    
 
-They work like variables, but they are attached to the object, once it's instantiated from the class. The `public` keyword is the _access modifier_ and sets the property to be publicly accessible.
+Eles funcionam como variáveis, mas são anexados ao objeto, uma vez que é instanciado a partir da classe. A palavra-chave `public` é o _modificador de acesso_ e define a propriedade como acessível publicamente.
 
-You can assign values to those properties in this way:
+Você pode atribuir valores a essas propriedades desta maneira:
 ```php
 class Dog {
   public $name;
@@ -1201,11 +1201,11 @@ object(Dog)#1 (3) {
 */
 ```    
 
-Notice that the property is defined as `public`.
+Observe que a propriedade é definida como `public`.
 
-That is called an access modifier. You can use two other kinds of access modifiers: `private` and `protected`. Private makes the property inaccessible from outside the object. Only methods defined inside the object can access it.
+Isso é chamado de modificador de acesso. Você pode usar dois outros tipos de modificadores de acesso: `private` e `protected`. Private torna a propriedade inacessível de fora do objeto. Apenas métodos definidos dentro do objeto podem acessá-lo.
 
-We’ll see more about protected when we’ll talk about inheritance.
+Veremos mais sobre protegido quando falarmos sobre herança.
 
 ### How to Use Methods in PHP
 
