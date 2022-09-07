@@ -1207,11 +1207,11 @@ Isso é chamado de modificador de acesso. Você pode usar dois outros tipos de m
 
 Veremos mais sobre protegido quando falarmos sobre herança.
 
-### How to Use Methods in PHP
+### Como usar métodos em PHP
 
-Did I say method? What is a method?
+Eu disse método? O que é um método?
 
-A method is a function defined inside the class, and it’s defined in this way:
+Um método é uma função definida dentro da classe e é definida desta forma:
 ```php
 class Dog {
   public function bark() {
@@ -1220,11 +1220,11 @@ class Dog {
 }
 ```    
 
-Methods are very useful to attach a behavior to an object. In this case we can make a dog bark.
+Os métodos são muito úteis para anexar um comportamento a um objeto. Neste caso, podemos fazer um cachorro latir.
 
-Notice that I use the `public` keyword. That’s to say that you can invoke a method from outside the class. Like for properties, you can mark methods as `private` too, or `protected`, to restrict their access.
+Observe que eu uso a palavra-chave `public`. Isso quer dizer que você pode invocar um método de fora da classe. Assim como para propriedades, você também pode marcar métodos como `privados`, ou `protegidos`, para restringir seu acesso.
 
-You invoke a method on the object instance like this:
+Você invoca um método na instância do objeto assim:
 ```php
 class Dog {
   public function bark() {
@@ -1237,9 +1237,9 @@ $roger = new Dog();
 $roger->bark();
 ```    
 
-A method, just like a function, can define parameters and a return value, too.
+Um método, assim como uma função, também pode definir parâmetros e um valor de retorno.
 
-Inside a method we can access the object’s properties using the special built-in `$this` variable, which, when referenced inside a method, points to the current object instance:
+Dentro de um método podemos acessar as propriedades do objeto usando a variável interna especial `$this`, que, quando referenciada dentro de um método, aponta para a instância atual do objeto:
 ```php
 class Dog {
   public $name;
@@ -1254,7 +1254,7 @@ $roger->name = 'Roger';
 $roger->bark();
 ```    
 
-Notice I used `$this->name` to set and access the `$name` property, and not `$this->$name`.
+Observe que usei `$this->name` para definir e acessar a propriedade `$name`, e não `$this->$name`.
 
 ### How to Use the Constructor Method in PHP
 
