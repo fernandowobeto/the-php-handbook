@@ -1256,9 +1256,9 @@ $roger->bark();
 
 Observe que usei `$this->name` para definir e acessar a propriedade `$name`, e não `$this->$name`.
 
-### How to Use the Constructor Method in PHP
+### Como usar o método construtor em PHP
 
-A special kind of method named `__construct()` is called a **constructor**.
+Um tipo especial de método chamado `__construct()` é chamado de **construtor**.
 ```php
 class Dog {
   public function __construct() {
@@ -1267,7 +1267,7 @@ class Dog {
 }
 ```    
 
-You use this method to initialize the properties of an object when you create it, as it’s automatically invoked when calling `new Classname()`.
+Você usa esse método para inicializar as propriedades de um objeto ao criá-lo, pois ele é invocado automaticamente ao chamar `new Classname()`.
 ```php
 class Dog {
   public $name;
@@ -1285,7 +1285,7 @@ $roger = new Dog('Roger');
 $roger->bark();
 ```    
 
-This is such a common thing that PHP (starting in PHP 8) includes something called **constructor promotion** where it automatically does this thing:
+Isso é uma coisa tão comum que o PHP (começando no PHP 8) inclui algo chamado **promoção do construtor**, onde automaticamente faz isso:
 ```php
 class Dog {
   public $name;
@@ -1297,7 +1297,7 @@ class Dog {
   //...
 ```    
 
-By using the access modifier, the assignment from the parameter of the constructor to the local variable happens automatically:
+Ao usar o modificador de acesso, a atribuição do parâmetro do construtor para a variável local acontece automaticamente:
 ```php
 class Dog {
   public function __construct(public $name) {
@@ -1313,9 +1313,9 @@ $roger->name; //'Roger'
 $roger->bark(); //'Roger barked!'
 ```    
 
-Properties can be **typed**.
+As propriedades podem ser **tipadas**.
 
-You can require the name to be a string using `public string $name`:
+Você pode exigir que o nome seja uma string usando `public string $name`:
 ```php
 class Dog {
   public string $name;
@@ -1334,18 +1334,18 @@ $roger->name; //'Roger'
 $roger->bark(); //'Roger barked!'
 ```    
 
-Now all works fine in this example, but try changing that to `public int $name` to require it to be an integer.
+Agora tudo funciona bem neste exemplo, mas tente mudar isso para `public int $name` para exigir que seja um inteiro.
 
-PHP will raise an error if you initialize `$name` with a string:
+O PHP irá gerar um erro se você inicializar `$name` com uma string:
 ```php
 TypeError: Dog::__construct():
     Argument #1 ($name) must be of type int,
     string given on line 14
 ```
 
-Interesting, right?
+Interessante, certo?
 
-We can enforce properties to have a specific type between `string`, `int`, `float`, `string`, `object`, `array`, `bool` and [others](https://www.php.net/manual/en/language.types.declarations.php).
+Podemos impor propriedades para ter um tipo específico entre `string`, `int`, `float`, `string`, `object`, `array`, `bool` e [outras](https://www.php.net/manual/en/language.types.declarations.php).
 
 ### What is Inheritance in PHP?
 
