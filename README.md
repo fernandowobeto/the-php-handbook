@@ -1347,18 +1347,18 @@ Interessante, certo?
 
 Podemos impor propriedades para ter um tipo específico entre `string`, `int`, `float`, `string`, `object`, `array`, `bool` e [outras](https://www.php.net/manual/en/language.types.declarations.php).
 
-### What is Inheritance in PHP?
+### O que é herança em PHP?
 
-The fun in object oriented programming starts when we allow classes to inherit properties and methods from other classes.
+A diversão na programação orientada a objetos começa quando permitimos que classes herdem propriedades e métodos de outras classes.
 
-Suppose you have an `Animal` class:
+Suponha que você tenha uma classe `Animal`:
 ```php
 class Animal {
     
 }
 ```
 
-Every animal has an age, and every animal can eat. So we add an `age` property and an `eat()` method:
+Todo animal tem uma idade, e todo animal pode comer. Então adicionamos uma propriedade `age` e um método `eat()`:
 ```php
 class Animal {
   public $age;
@@ -1369,26 +1369,26 @@ class Animal {
 }
 ```    
 
-A dog is an animal and has an age and can eat too, so the `Dog` class – instead of reimplementing the same things we have in `Animal` – can extend that class:
+Um cachorro é um animal e tem uma idade e pode comer também, então a classe `Dog` – em vez de reimplementar as mesmas coisas que temos em `Animal` – pode estender essa classe:
 ```php
 class Dog extends Animal {
 
 }
 ```    
 
-We can now instantiate a new object of class `Dog` and we have access to the properties and methods defined in `Animal`:
+Agora podemos instanciar um novo objeto da classe `Dog` e temos acesso às propriedades e métodos definidos em `Animal`:
 ```php
 $roger = new Dog();
 $roger->eat();
 ```    
 
-In this case we call Dog the **child class** and Animal the **parent class**.
+Nesse caso, chamamos Dog a **classe filha** e Animal a **classe pai**.
 
-Inside the child class we can use `$this` to reference any property or method defined in the parent, as if they were defined inside the child class.
+Dentro da classe filha podemos usar `$this` para referenciar qualquer propriedade ou método definido no pai, como se estivessem definidos dentro da classe filha.
 
-It’s worth noting that while we can access the parent’s properties and methods from the child, we can’t do the reverse.
+Vale a pena notar que, embora possamos acessar as propriedades e métodos do pai a partir do filho, não podemos fazer o contrário.
 
-The parent class knows nothing about the child class.
+A classe pai não sabe nada sobre a classe filha.
 
 ### `protected` Properties and Methods in PHP
 
