@@ -1390,13 +1390,13 @@ Vale a pena notar que, embora possamos acessar as propriedades e métodos do pai
 
 A classe pai não sabe nada sobre a classe filha.
 
-### `protected` Properties and Methods in PHP
+### Propriedades e métodos `protected` em PHP
 
-Now that we've introduced inheritance, we can discuss `protected`. We already saw how we can use the `public` access modifier to set properties and methods callable from outside of a class, by the _public._
+Agora que introduzimos a herança, podemos discutir `protected`. Já vimos como podemos usar o modificador de acesso `public` para definir propriedades e métodos que podem ser chamados de fora de uma classe, pelo _public._
 
-`private` properties and methods can only be accessed from within the class.
+Propriedades e métodos `private` só podem ser acessados de dentro da classe.
 
-`protected` properties and methods can be accessed from within the class and from child classes.
+Propriedades e métodos `protected` podem ser acessados de dentro da classe e de classes filhas.
 
 ### How to Override Methods in PHP
 
