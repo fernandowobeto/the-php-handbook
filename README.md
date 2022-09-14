@@ -1398,9 +1398,9 @@ Propriedades e métodos `private` só podem ser acessados de dentro da classe.
 
 Propriedades e métodos `protected` podem ser acessados de dentro da classe e de classes filhas.
 
-### How to Override Methods in PHP
+### Como substituir métodos em PHP
 
-What happens if we have an `eat()` method in `Animal` and we want to customize it in `Dog`? We can **override** that method.
+O que acontece se tivermos um método `eat()` em `Animal` e quisermos personalizá-lo em `Dog`? Podemos **substituir** esse método.
 ```php
 class Animal {
   public $age;
@@ -1417,7 +1417,7 @@ class Dog extends Animal {
 }
 ```    
 
-Now any instance of `Dog` will use the `Dog`'s implementation of the `eat()` method.
+Agora qualquer instância de `Dog` usará a implementação do `Dog` do método `eat()`.
 
 ### Static Properties and Methods in PHP
 
