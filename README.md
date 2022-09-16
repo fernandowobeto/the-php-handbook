@@ -1419,32 +1419,32 @@ class Dog extends Animal {
 
 Agora qualquer instância de `Dog` usará a implementação do `Dog` do método `eat()`.
 
-### Static Properties and Methods in PHP
+### Propriedades e Métodos Estáticos em PHP
 
-We’ve seen how to define properties and methods that belong **to the instance of a class**, an object.
+Vimos como definir propriedades e métodos que pertencem **à instância de uma classe**, um objeto.
 
-Sometimes it’s useful to assign those to the class itself.
+Às vezes é útil atribuí-los à própria classe.
 
-When this happens we call them **static**, and to reference or call them we don’t need to create an object from the class.
+Quando isso acontece nós os chamamos de **static**, e para referenciar ou chamá-los não precisamos criar um objeto da classe.
 
-Let’s start with static properties. We define them with the `static` keyword:
+Vamos começar com propriedades estáticas. Nós as definimos com a palavra-chave `static`:
 ```php
 class Utils {
   public static $version = '1.0';
 }
 ```    
 
-We reference them from inside the class using the keyword `self`, which points to the class:
+Nós os referenciamos de dentro da classe usando a palavra-chave `self`, que aponta para a classe:
 ```php
 self::$version;
 ``` 
 
-and from outside the class using:
+e de fora da classe usando:
 ```php
 Utils::version
 ```
 
-This is what happens for static methods:
+Isto é o que acontece para métodos estáticos:
 ```php
 class Utils {
   public static function version() {
@@ -1453,12 +1453,12 @@ class Utils {
 }
 ```    
 
-From the outside of the class we can call them in this way:
+Do lado de fora da classe, podemos chamá-los desta forma:
 ```php
 Utils::version();
 ```    
 
-From inside the class, we can reference them using the `self` keyword, which refers to the current class:
+De dentro da classe, podemos referenciá-los usando a palavra-chave `self`, que se refere à classe atual:
 ```php
 self::version();
 ```    
