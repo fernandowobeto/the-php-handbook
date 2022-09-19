@@ -1463,15 +1463,15 @@ De dentro da classe, podemos referenciá-los usando a palavra-chave `self`, que 
 self::version();
 ```    
 
-### How to Compare Objects in PHP
+### Como comparar objetos em PHP
 
-When we talked about operators I mentioned we have the `==` operator to check if two values are equal and `===` to check if they are identical.
+Quando falamos de operadores que mencionei temos o operador `==` para verificar se dois valores são iguais e `===` para verificar se são idênticos.
 
-Mainly the difference is that `==` checks the object content, for example the `'5'` string is equal to the number `5`, but it’s not identical to it.
+Principalmente a diferença é que `==` verifica o conteúdo do objeto, por exemplo, a string `'5'` é igual ao número `5`, mas não é idêntica a ele.
 
-When we use those operators to compare objects, `==` will check if the two objects have the same class and have the same values assigned to them.
+Quando usamos esses operadores para comparar objetos, `==` verificará se os dois objetos têm a mesma classe e têm os mesmos valores atribuídos a eles.
 
-`===` on the other hand will check if they also refer to the same instance (object).
+`===` por outro lado irá verificar se eles também se referem à mesma instância (objeto).
 
 For example:
 ```php
