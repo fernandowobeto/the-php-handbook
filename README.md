@@ -1487,9 +1487,9 @@ echo $roger == $syd; //true
 echo $roger === $syd; //false
 ```    
 
-### How to Iterate over Object Properties in PHP
+### Como iterar sobre propriedades de objeto em PHP
 
-You can loop over all the public properties in an object using a `foreach` loop, like this:
+Você pode fazer um loop sobre todas as propriedades públicas em um objeto usando um loop `foreach`, assim:
 ```php
 class Dog {
   public $name = 'Good dog';
