@@ -1504,9 +1504,9 @@ foreach ($dog as $key => $value) {
 }
 ```    
 
-### How to Clone Objects in PHP
+### Como clonar objetos em PHP
 
-When you have an object, you can clone it using the `clone` keyword:
+Quando você tem um objeto, você pode cloná-lo usando a palavra-chave `clone`:
 ```php
 class Dog {
   public $name;
@@ -1518,9 +1518,9 @@ $roger->name = 'Roger';
 $syd = clone $roger;
 ```    
 
-This performs a _shallow clone_, which means that references to other variables will be copied as references – there will not a “recursive cloning” of them.
+Isso executa um _clone superficial_, o que significa que as referências a outras variáveis serão copiadas como referências – não haverá uma “clonagem recursiva” delas.
 
-To do a _deep clone_ you will need to do some more work.
+Para fazer um _clone profundo_ você precisará fazer um pouco mais de trabalho.
 
 ### What are Magic Methods in PHP?
 
