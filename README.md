@@ -1522,17 +1522,17 @@ Isso executa um _clone superficial_, o que significa que as referências a outra
 
 Para fazer um _clone profundo_ você precisará fazer um pouco mais de trabalho.
 
-### What are Magic Methods in PHP?
+### O que são métodos mágicos em PHP?
 
-Magic methods are special methods that we define in classes to perform some behavior when something special happens.
+Métodos mágicos são métodos especiais que definimos em classes para realizar algum comportamento quando algo especial acontece.
 
-For example when a property is set, or accessed, or when the object is cloned.
+Por exemplo, quando uma propriedade é definida, acessada ou quando o objeto é clonado.
 
-We’ve seen `__construct()` before.
+Já vimos `__construct()` antes.
 
-That’s a magic method.
+Esse é um método mágico.
 
-There are others. For example we can set a “cloned” boolean property to true when the object is cloned:
+Há outros. Por exemplo, podemos definir uma propriedade booleana “clonada” para true quando o objeto for clonado:
 ```php
 class Dog {
   public $name;
@@ -1549,9 +1549,9 @@ $syd = clone $roger;
 echo $syd->cloned;
 ```    
 
-Other magic methods include `__call()`, `__get()`, `__set()`, `__isset()`, `__toString()` and others.
+Outros métodos mágicos incluem `__call()`, `__get()`, `__set()`, `__isset()`, `__toString()` e outros.
 
-You can see the full list [here](https://www.php.net/manual/en/language.oop5.magic.php)
+Você pode ver a lista completa [aqui](https://www.php.net/manual/en/language.oop5.magic.php)
 
 How to Include Other PHP Files
 ------------------------------
