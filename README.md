@@ -1553,55 +1553,55 @@ Outros métodos mágicos incluem `__call()`, `__get()`, `__set()`, `__isset()`, 
 
 Você pode ver a lista completa [aqui](https://www.php.net/manual/en/language.oop5.magic.php)
 
-How to Include Other PHP Files
+Como incluir outros arquivos PHP
 ------------------------------
 
-We’re now done talking about the object oriented features of PHP.
+Agora terminamos de falar sobre os recursos orientados a objetos do PHP.
 
-Let’s now explore some other interesting topics!
+Vamos agora explorar alguns outros tópicos interessantes!
 
-Inside a PHP file you can include other PHP files. We have the following methods, all used for this use case, but they're all slightly different: `include`, `include_once`, `require`, and `require_once`.
+Dentro de um arquivo PHP você pode incluir outros arquivos PHP. Temos os seguintes métodos, todos usados ​​para este caso de uso, mas todos são ligeiramente diferentes: `include`, `include_once`, `require` e `require_once`.
 
-`include` loads the content of another PHP file, using a relative path.
+`include` carrega o conteúdo de outro arquivo PHP, usando um caminho relativo.
 
-`require` does the same, but if there’s any error doing so, the program halts. `include` will only generate a warning.
+`require` faz o mesmo, mas se houver algum erro ao fazê-lo, o programa para. `include` só irá gerar um aviso.
 
-You can decide to use one or the other depending on your use case. If you want your program to exit if it can’t import the file, use `require`.
+Você pode decidir usar um ou outro dependendo do seu caso de uso. Se você quiser que seu programa saia se não puder importar o arquivo, use `require`.
 
-`include_once` and `require_once` do the same thing as their corresponding functions without `_once`, but they make sure the file is included/required only once during the execution of the program.
+`include_once` e `require_once` fazem a mesma coisa que suas funções correspondentes sem `_once`, mas garantem que o arquivo seja incluído/requerido apenas uma vez durante a execução do programa.
 
-This is useful if, for example, you have multiple files loading some other file, and you typically want to avoid loading that more than once.
+Isso é útil se, por exemplo, você tiver vários arquivos carregando algum outro arquivo e normalmente desejar evitar carregá-lo mais de uma vez.
 
-My rule of thumb is to never use `include` or `require` because you might load the same file twice. `include_once` and `require_once` help you avoid this problem.
+Minha regra geral é nunca usar `include` ou `require` porque você pode carregar o mesmo arquivo duas vezes. `include_once` e `require_once` ajudam a evitar este problema.
 
-Use `include_once` when you want to conditionally load a file, for example “load this file instead of that”. In all other cases, use `require_once`.
+Use `include_once` quando quiser carregar um arquivo condicionalmente, por exemplo “carregar este arquivo em vez daquele”. Em todos os outros casos, use `require_once`.
 
-Here’s an example:
+Aqui está um exemplo:
 ```php
 require_once('test.php');
 
-//now we have access to the functions, classes
-//and variables defined in the `test.php` file
+//agora temos acesso às funções, classes
+//e variáveis definidas no arquivo `test.php`
 ```    
 
-The above syntax includes the `test.php` file from the current folder, the file where this code is.
+A sintaxe acima inclui o arquivo `test.php` da pasta atual, o arquivo onde está este código.
 
-You can use relative paths:
+Você pode usar caminhos relativos:
 ```php
 require_once('../test.php');
 ```    
 
-to include a file in the parent folder or to go in a subfolder:
+para incluir um arquivo na pasta pai ou ir para uma subpasta:
 ```php
 require_once('test/test.php');
 ```    
 
-You can use absolute paths:
+Você pode usar caminhos absolutos:
 ```php
 require_once('/var/www/test/file.php');
 ```    
 
-In modern PHP codebases that use a framework, files are generally loaded automatically so you’ll have less need to use the above functions.
+Em bases de código PHP modernas que usam uma estrutura, os arquivos geralmente são carregados automaticamente, então você terá menos necessidade de usar as funções acima.
 
 Useful Constants, Functions and Variables for Filesystem in PHP
 ---------------------------------------------------------------
