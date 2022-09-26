@@ -1603,21 +1603,21 @@ require_once('/var/www/test/file.php');
 
 Em bases de código PHP modernas que usam uma estrutura, os arquivos geralmente são carregados automaticamente, então você terá menos necessidade de usar as funções acima.
 
-Useful Constants, Functions and Variables for Filesystem in PHP
+Constantes, funções e variáveis úteis para sistema de arquivos em PHP
 ---------------------------------------------------------------
 
-Speaking of paths, PHP offers you several utilities to help you work with paths.
+Falando em caminhos, o PHP oferece vários utilitários para ajudá-lo a trabalhar com caminhos.
 
-You can get the full path of the current file using:
+Você pode obter o caminho completo do arquivo atual usando:
 
-*   `__FILE__`, a _magic constant_
-*   `$_SERVER['SCRIPT_FILENAME']` (more on `$_SERVER` later!)
+*   `__FILE__`, uma _constante mágica_
+*   `$_SERVER['SCRIPT_FILENAME']` (mais sobre `$_SERVER` mais tarde!)
 
-You can get the full path of the folder where the current file is using:
+Você pode obter o caminho completo da pasta onde o arquivo atual está usando:
 
-*   the [`getcwd()`](https://www.php.net/manual/en/function.getcwd.php) built-in function
-*   `__DIR__`, another magic constant
-*   combine `__FILE__` with `dirname()` to get the current folder full path: `dirname(__FILE__)`
+*   a função interna [`getcwd()`](https://www.php.net/manual/en/function.getcwd.php)
+*   `__DIR__`, outra constante mágica
+*   combine `__FILE__` com `dirname()` para obter o caminho completo da pasta atual: `dirname(__FILE__)`
 *   use `$_SERVER['DOCUMENT_ROOT']`
 
 How to Handle Errors in PHP
