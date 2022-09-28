@@ -1,6 +1,6 @@
 # THE PHP HANDBOOK
 
-> Esta é uma tradução do artigo original de Flavio Copes em https://www.freecodecamp.org/news/the-php-handbook
+> Esta é uma tradução feita por mim Fernando Wobeto do artigo original de Flavio Copes em https://www.freecodecamp.org/news/the-php-handbook.
 
 > Traduzido por [Fernando Wobeto](https://www.fernandowobeto.com)
 
@@ -1711,47 +1711,47 @@ error_log('test');
 
 É comum usar um serviço de logger para erros, como [Monolog](https://github.com/Seldaek/monolog).
 
-How to Handle Exceptions in PHP
+Como lidar com exceções em PHP
 -------------------------------
 
-Sometimes errors are unavoidable. Like if something completely unpredictable happens.
+Às vezes, os erros são inevitáveis. Como se algo completamente imprevisível acontecesse.
 
-But many times, we can think ahead, and write code that can intercept an error, and do something sensible when this happens. Like showing a useful error message to the user, or trying a workaround.
+Mas muitas vezes, podemos pensar no futuro e escrever um código que possa interceptar um erro e fazer algo sensato quando isso acontecer. Como mostrar uma mensagem de erro útil para o usuário ou tentar uma solução alternativa.
 
-We do so using **exceptions**.
+Fazemos isso usando **exceções**.
 
-Exceptions are used to make us, developers, aware of a problem.
+Exceções são usadas para nos tornar, desenvolvedores, cientes de um problema.
 
-We wrap some code that can potentially raise an exception into a `try` block, and we have a `catch` block right after that. That catch block will be executed if there’s an exception in the try block:
+Envolvemos algum código que pode potencialmente gerar uma exceção em um bloco `try`, e temos um bloco `catch` logo após isso. Esse bloco catch será executado se houver uma exceção no bloco try:
 ```php
 try {
-  //do something
+  //faça alguma coisa
 } catch (Throwable $e) {
-  //we can do something here if an exception happens
+  //podemos fazer algo aqui se uma exceção acontecer
 }
 ```    
 
-Notice that we have an `Exception` object `$e` being passed to the `catch` block, and we can inspect that object to get more information about the exception, like this:
+Observe que temos um objeto `Exception $e` sendo passado para o bloco `catch`, e podemos inspecionar esse objeto para obter mais informações sobre a exceção, assim:
 ```php
 try {
-  //do something
+  //faça alguma coisa
 } catch (Throwable $e) {
   echo $e->getMessage();
 }
 ```    
 
-Let’s look at an example.
+Vejamos um exemplo.
 
-Let's say that by mistake I divide a number by zero:
+Digamos que por engano eu divida um número por zero:
 ```php
 echo 1 / 0;
 ```    
 
-This will trigger a fatal error and the program is halted on that line:
+Isso acionará um erro fatal e o programa será interrompido nessa linha:
 
 ![Screen Shot 2022-06-26 at 20.12.59.jpg](images/division_by_zero_error.jpg)
 
-Wrapping the operation in a try block and printing the error message in the catch block, the program ends successfully, telling me the problem:
+Envolvendo a operação em um bloco try e imprimindo a mensagem de erro no bloco catch, o programa termina com sucesso, informando o problema:
 ```php
 try {
   echo 1 / 0;
@@ -1762,11 +1762,11 @@ try {
 
 ![Screen Shot 2022-06-26 at 20.13.36.jpg](images/division_by_zero_catch.jpg)
 
-Of course this is a simple example but you can see the benefit: I can intercept the issue.
+Claro que este é um exemplo simples, mas você pode ver o benefício: eu posso interceptar o problema.
 
-Each exception has a different class. For example we can catch this as [`DivisionByZeroError`](https://www.php.net/manual/en/class.divisionbyzeroerror.php) and this lets me filter the possible problems and handle them differently.
+Cada exceção tem uma classe diferente. Por exemplo, podemos pegar isso com o [`DivisionByZeroError`](https://www.php.net/manual/en/class.divisionbyzeroerror.php) e isso me permite filtrar os possíveis problemas e tratá-los de forma diferente.
 
-I can have a catch-all for any throwable error at the end, like this:
+Eu posso ter um catch-all para qualquer erro jogável no final, assim:
 ```php
 try {
   echo 1 / 0;
@@ -1779,7 +1779,7 @@ try {
 
 ![Screen Shot 2022-06-26 at 20.15.47.jpg](images/division_by_zero_object_catch.jpg)
 
-And I can also append a `finally {}` block at the end of this try/catch structure to execute some code after the code is either executed successfully without problems, or there was a _catch_:
+E também posso anexar um bloco `finally {}` no final desta estrutura try/catch para executar algum código depois que o código for executado com sucesso sem problemas ou houve um _catch_:
 ```php
 try {
   echo 1 / 0;
@@ -1794,7 +1794,7 @@ try {
 
 ![Screen Shot 2022-06-26 at 20.17.33.jpg](images/division_by_zero_with_finally.jpg)
 
-You can use the [built-in exceptions](https://www.php.net/manual/en/reserved.exceptions.php) provided by PHP but you can also create your own exceptions.
+Você pode usar as [exceções incorporadas](https://www.php.net/manual/en/reserved.exceptions.php) fornecidas pelo PHP, mas também pode criar suas próprias exceções.
 
 How to Work with Dates in PHP
 -----------------------------
