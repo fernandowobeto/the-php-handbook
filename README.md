@@ -1796,26 +1796,26 @@ try {
 
 Você pode usar as [exceções incorporadas](https://www.php.net/manual/en/reserved.exceptions.php) fornecidas pelo PHP, mas também pode criar suas próprias exceções.
 
-How to Work with Dates in PHP
+Como trabalhar com datas em PHP
 -----------------------------
 
-Working with dates and times is very common in programming. Let’s see what PHP provides.
+Trabalhar com datas e horas é muito comum na programação. Vamos ver o que o PHP oferece.
 
-We can get the current timestamp (number of seconds since Jan 1 1970 00:00:00 GMT) using [`time()`](https://www.php.net/manual/en/function.time.php):
+Podemos obter o timestamp atual (número de segundos desde 1º de janeiro de 1970 00:00:00 GMT) usando [`time()`](https://www.php.net/manual/en/function.time.php):
 ```php
 $timestamp = time();
 ```    
 
-When you have a timestamp you can format that as a date using [`date()`](https://www.php.net/manual/en/function.date.php), in the format you prefer:
+Quando você tem um timestamp de data/hora, você pode formatá-lo como uma data usando [`date()`](https://www.php.net/manual/en/function.date.php), no formato que preferir:
 ```php
 echo date('Y-m-d', $timestamp);
 ```    
 
-`Y` is the 4-digit representation of the year, `m` is the month number (with a leading zero) and `d` is the number of the day of the month, with a leading zero.
+`Y` é a representação de 4 dígitos do ano, `m` é o número do mês (com um zero à esquerda) e `d` é o número do dia do mês, com um zero à esquerda.
 
-See the [full list of characters you can use to format the date here](https://www.php.net/manual/en/datetime.format.php).
+Veja a [lista completa de caracteres que você pode usar para formatar a data aqui](https://www.php.net/manual/en/datetime.format.php).
 
-We can convert any date into a timestamp using [`strtotime()`](https://www.php.net/manual/en/function.strtotime.php), which takes a string with a textual representation of a date and converts it into the number of seconds since Jan 1 1970:
+Podemos converter qualquer data em um timestamp usando [`strtotime()`](https://www.php.net/manual/en/function.strtotime.php), que recebe uma string com uma representação textual de uma data e converte para o número de segundos desde 1º de janeiro de 1970:
 ```php
 echo strtotime('now');
 echo strtotime('4 May 2020');
@@ -1824,9 +1824,9 @@ echo strtotime('+1 month');
 echo strtotime('last Sunday');
 ```
 
-...it’s pretty flexible.
+...é bastante flexível.
 
-For dates, it’s common to use libraries that offer a lot more functionality than what the language can. A good option is [Carbon](https://carbon.nesbot.com).
+Para datas, é comum usar bibliotecas que oferecem muito mais funcionalidades do que a linguagem pode oferecer. Uma boa opção é [Carbon](https://carbon.nesbot.com).
 
 How to Use Constants and Enums in PHP
 -------------------------------------
