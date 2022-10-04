@@ -1828,40 +1828,40 @@ echo strtotime('last Sunday');
 
 Para datas, é comum usar bibliotecas que oferecem muito mais funcionalidades do que a linguagem pode oferecer. Uma boa opção é [Carbon](https://carbon.nesbot.com).
 
-How to Use Constants and Enums in PHP
+Como usar constantes e enums em PHP
 -------------------------------------
 
-We can define constants in PHP using the `define()` built-in function:
+Podemos definir constantes em PHP usando a função interna `define()`:
 ```php
 define('TEST', 'some value');
 ```
 
-And then we can use `TEST` as if it was a variable, but without the `$` sign:
+E então podemos usar `TEST` como se fosse uma variável, mas sem o sinal `$`:
 ```php
 define('TEST', 'some value');
 
 echo TEST;
 ```    
 
-We use uppercase identifiers as a convention for constants.
+Usamos identificadores maiúsculos como uma convenção para constantes.
 
-Interestingly, inside classes we can define constant properties using the `const` keyword:
+Curiosamente, dentro das classes podemos definir propriedades constantes usando a palavra-chave `const`:
 ```php
 class Dog {
   const BREED = 'Siberian Husky';
 }
 ```    
 
-By default they are `public` but we can mark them as `private` or `protected`:
+Por padrão eles são `públicos` mas podemos marcá-los como `privados` ou `protegidos`:
 ```php
 class Dog {
   private const BREED = 'Siberian Husky';
 }
 ```    
 
-Enums allow you to group constants under a common “root”. For example you want to have a `Status` enum that has 3 states: `EATING` `SLEEPING` `RUNNING`, the 3 states of a dog’s day.
+Enums permitem que você agrupe constantes sob uma “raiz” comum. Por exemplo, você quer ter um enum `Status` que tenha 3 estados: `EATING` `SLEEPING` `RUNNING`, os 3 estados do dia de um cachorro.
 
-So you have:
+Então você tem:
 ```php
 enum Status {
   case EATING;
@@ -1870,7 +1870,7 @@ enum Status {
 }
 ```    
 
-Now we can reference those constants in this way:
+Agora podemos referenciar essas constantes desta forma:
 ```php
 class Dog {
   public Status $status;
@@ -1885,7 +1885,7 @@ if ($dog->status == Status::SLEEPING) {
 }
 ```    
 
-Enums are objects, they can have methods and lots more features than we can get into here in this short introduction.
+Enums são objetos, eles podem ter métodos e muito mais recursos do que podemos abordar aqui nesta breve introdução.
 
 How to Use PHP as a Web App Development Platform
 ------------------------------------------------
