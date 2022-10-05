@@ -1887,26 +1887,26 @@ if ($dog->status == Status::SLEEPING) {
 
 Enums são objetos, eles podem ter métodos e muito mais recursos do que podemos abordar aqui nesta breve introdução.
 
-How to Use PHP as a Web App Development Platform
+Como usar o PHP como uma plataforma de desenvolvimento de aplicações Web
 ------------------------------------------------
 
-PHP is a server-side language and it is typically used in two ways.
+PHP é uma linguagem do lado do servidor e normalmente é usada de duas maneiras.
 
-One is within an HTML page, so PHP is used to “add” stuff to the HTML which is manually defined in the `.php` file. This is a perfectly fine way to use PHP.
+Um está dentro de uma página HTML, então o PHP é usado para “adicionar” coisas ao HTML que é definido manualmente no arquivo `.php`. Esta é uma maneira perfeitamente boa de usar o PHP.
 
-Another way considers PHP more like the engine that is responsible for generating an “application”. You don't write the HTML in a `.php` file, but instead you use a templating language to generate the HTML, and everything is managed by what we call the **framework**.
+Outra forma considera o PHP mais como o motor que é responsável por gerar uma “aplicação”. Você não escreve o HTML em um arquivo `.php`, mas usa uma linguagem de modelagem para gerar o HTML, e tudo é gerenciado pelo que chamamos de **framework**.
 
-This is what happens when you use a modern framework like Laravel.
+Isso é o que acontece quando você usa um framework moderno como o Laravel.
 
-I would consider the first way a bit “out of fashion” these days, and if you’re just starting out you should know about those two different styles of using PHP.
+Eu consideraria a primeira maneira um pouco “fora de moda” nos dias de hoje, e se você está apenas começando, deve conhecer esses dois estilos diferentes de uso do PHP.
 
-But also consider using a framework like “easy mode” because frameworks give you tools to handle routing, tools to access data from a database, and they make it easier to build a more secure application. And they make it all faster to develop.
+Mas também considere usar um framework como “modo fácil” porque os frameworks fornecem ferramentas para lidar com roteamento, ferramentas para acessar dados de um banco de dados e facilitam a criação de uma aplicação mais segura. E eles tornam tudo mais rápido para desenvolver.
 
-That said, we’re not going to talk about using frameworks in this handbook. But I will talk about the basic, fundamental building blocks of PHP. They are essentials that any PHP developer must know.
+Dito isso, não vamos falar sobre o uso de frameworks neste manual. Mas vou falar sobre os blocos de construção básicos e fundamentais do PHP. Eles são essenciais que qualquer desenvolvedor PHP deve saber.
 
-Just know that “in the real world” you might use your favorite framework’s way of doing things rather than the _lower level_ features offered by PHP.
+Apenas saiba que “no mundo real” você pode usar a maneira de fazer as coisas do seu framework favorito, em vez dos recursos de _nível inferior_ oferecidos pelo PHP.
 
-This does not apply just to PHP of course – it’s an “issue” that happens with any programming language.
+Isso não se aplica apenas ao PHP, é claro – é um “problema” que acontece com qualquer linguagem de programação.
 
 ### How to Handle HTTP Requests in PHP
 
