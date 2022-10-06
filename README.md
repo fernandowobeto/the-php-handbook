@@ -1908,15 +1908,15 @@ Apenas saiba que “no mundo real” você pode usar a maneira de fazer as coisa
 
 Isso não se aplica apenas ao PHP, é claro – é um “problema” que acontece com qualquer linguagem de programação.
 
-### How to Handle HTTP Requests in PHP
+### Como lidar com solicitações HTTP em PHP
 
-Let’s start with handling HTTP requests.
+Vamos começar com o tratamento de solicitações HTTP.
 
-PHP offers file-based routing by default. You create an `index.php` file and that responds on the `/` path.
+O PHP oferece roteamento baseado em arquivo por padrão. Você cria um arquivo `index.php` e isso responde no caminho `/`.
 
-We saw that when we made the Hello World example in the beginning.
+Vimos isso quando fizemos o exemplo Hello World no começo.
 
-Similarly, you can create a `test.php` file and automatically that will be the file that Apache serves on the `/test` route.
+Da mesma forma, você pode criar um arquivo `test.php` e automaticamente esse será o arquivo que o Apache servirá na rota `/test`.
 
 ### How to Use `$_GET`, `$_POST` and `$_REQUEST` in PHP
 
