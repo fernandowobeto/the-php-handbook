@@ -1918,17 +1918,17 @@ Vimos isso quando fizemos o exemplo Hello World no começo.
 
 Da mesma forma, você pode criar um arquivo `test.php` e automaticamente esse será o arquivo que o Apache servirá na rota `/test`.
 
-### How to Use `$_GET`, `$_POST` and `$_REQUEST` in PHP
+### Como usar `$_GET`, `$_POST` e `$_REQUEST` no PHP
 
-Files respond to all HTTP requests, including GET, POST and other verbs.
+Os arquivos respondem a todas as solicitações HTTP, incluindo GET, POST e outros verbos.
 
-For any request you can access all the query string data using the `$_GET` object. It's called _superglobal_ and is automatically available in all our PHP files.
+Para qualquer solicitação, você pode acessar todos os dados da string de consulta usando o objeto `$_GET`. Chama-se _superglobal_ e está automaticamente disponível em todos os nossos arquivos PHP.
 
-This is of course most useful in GET requests, but also other requests can send data as a query string.
+Obviamente, isso é mais útil em solicitações GET, mas também outras solicitações podem enviar dados como uma string de consulta.
 
-For POST, PUT and DELETE requests you’re more likely to need the data posted as URL-encoded data or using the FormData object, which PHP makes available to you using `$_POST`.
+Para solicitações POST, PUT e DELETE, é mais provável que você precise dos dados postados como dados codificados por URL ou usando o objeto FormData, que o PHP disponibiliza para você usando `$_POST`.
 
-There is also `$_REQUEST` which contains all of `$_GET` and `$_POST` combined in a single variable.
+Há também `$_REQUEST` que contém todos os `$_GET` e `$_POST` combinados em uma única variável.
 
 ### How to Use the `$_SERVER` Object in PHP
 
