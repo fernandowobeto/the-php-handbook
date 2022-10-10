@@ -1930,24 +1930,24 @@ Para solicitações POST, PUT e DELETE, é mais provável que você precise dos 
 
 Há também `$_REQUEST` que contém todos os `$_GET` e `$_POST` combinados em uma única variável.
 
-### How to Use the `$_SERVER` Object in PHP
+### Como usar o objeto `$_SERVER` em PHP
 
-We also have the superglobal variable `$_SERVER`, which you use to get a lot of useful information.
+Também temos a variável superglobal `$_SERVER`, que você usa para obter muitas informações úteis.
 
-You saw how to use `phpinfo()` before. Let’s use it again to see what $\_SERVER offers us.
+Você viu como usar `phpinfo()` antes. Vamos usá-lo novamente para ver o que $\_SERVER nos oferece.
 
-In your `index.php` file in the root of MAMP run:
+No seu arquivo `index.php` na raiz do MAMP execute:
 ```php
 <?php
 phpinfo();
 ?>
 ```    
 
-Then generate the page at [localhost:8888](http://localhost:8888) and search `$_SERVER`. You will see all the configuration stored and the values assigned:
+Em seguida, gere a página em [localhost:8888](http://localhost:8888) e pesquise `$_SERVER`. Você verá toda a configuração armazenada e os valores atribuídos:
 
 ![Screen Shot 2022-06-27 at 13.46.50.jpg](images/php_ini_variables.jpg)
 
-Important ones you might use are:
+Os importantes que você pode usar são:
 
 *   `$_SERVER['HTTP_HOST']`
 *   `$_SERVER['HTTP_USER_AGENT']`
