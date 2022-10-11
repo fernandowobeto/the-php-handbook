@@ -1959,11 +1959,11 @@ Os importantes que você pode usar são:
 *   `$_SERVER['SCRIPT_NAME']`
 *   `$_SERVER['REMOTE_ADDR']`
 
-### How to Use Forms in PHP
+### Como usar formulários em PHP
 
-Forms are the way the Web platform allows users to interact with a page and send data to the server.
+Os formulários são a forma como a plataforma Web permite que os usuários interajam com uma página e enviem dados para o servidor.
 
-Here is a simple form in HTML:
+Aqui está um formulário simples em HTML:
 ```html
 <form>
   <input type="text" name="name" />
@@ -1971,19 +1971,19 @@ Here is a simple form in HTML:
 </form>
 ```    
 
-You can put this in your `index.php` file like it was called `index.html`.
+Você pode colocar isso em seu arquivo `index.php` como se chamasse `index.html`.
 
-A PHP file assumes you write HTML in it with some “PHP sprinkles” using `<?php ?>` so the Web Server can post that to the client. Sometimes the PHP part takes all of the page, and that’s when you generate all the HTML via PHP – it’s kind of the opposite of the approach we're taking here now.
+Um arquivo PHP assume que você escreve HTML nele com alguns “sprinkles PHP” usando `<?php ?>` para que o Servidor Web possa postar isso para o cliente. Às vezes, a parte do PHP ocupa toda a página, e é aí que você gera todo o HTML via PHP – é o oposto da abordagem que estamos adotando aqui agora.
 
-So we have this `index.php` file that generates this form using plain HTML:
+Então temos este arquivo `index.php` que gera este formulário usando HTML simples:
 
 ![Screen Shot 2022-06-27 at 13.53.47.jpg](images/html_form.jpg)
 
-Pressing the Submit button will make a GET request to the same URL sending the data via query string. Notice that the URL changed to [localhost:8888/?name=test](http://localhost:8888/?name=test).
+Pressionar o botão Enviar fará uma solicitação GET para a mesma URL enviando os dados via string de consulta. Observe que o URL mudou para[localhost:8888/?name=test](http://localhost:8888/?name=test).
 
 ![Screen Shot 2022-06-27 at 13.56.46.jpg](images/html_form_submited.jpg)
 
-We can add some code to check if that parameter is set using the [`isset()`](https://www.php.net/manual/en/function.isset.php) function:
+Podemos adicionar algum código para verificar se esse parâmetro está definido usando a função [`isset()`](https://www.php.net/manual/en/function.isset.php):
 ```php
 <form>
   <input type="text" name="name" />
@@ -1999,9 +1999,9 @@ if (isset($_GET['name'])) {
 
 ![Screen Shot 2022-06-27 at 13.56.35.jpg](images/html_form_submited_get.jpg)
 
-See? We can get the information from the [GET request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET) query string through `$_GET`.
+Viu? Nós podemos pegar a informação vinda da [requisição GET](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/GET) pela query string através de `$_GET`.
 
-What you usually do with forms, though is you perform a POST request:
+O que você costuma fazer com formulários, porém, é executar uma solicitação POST:
 ```php
 <form method="POST">
   <input type="text" name="name" />
@@ -2015,17 +2015,17 @@ if (isset($_POST['name'])) {
 ?>
 ```    
 
-See, now we got the same information but the URL didn’t change. The form information was not appended to the URL.
+Veja, agora temos as mesmas informações, mas a URL não mudou. As informações do formulário não foram anexadas ao URL.
 
 ![Screen Shot 2022-06-27 at 13.59.54.jpg](images/html_form_submited_post.jpg)
 
-This is because we’re using a [POST request](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST), which sends the data to the server in a different way, through URL-encoded data.
+Isto é porque estamos usando uma [requisição POST](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods/POST), que envia os dados para o servidor de forma diferente, por meio de dados URL-encoded.
 
-As mentioned above, PHP will still serve the `index.php` file as we’re still sending data to the same URL the form is on.
+Como mencionado acima, o PHP ainda servirá o arquivo `index.php`, pois ainda estamos enviando dados para a mesma URL em que o formulário está.
 
-We’re mixing a bunch of code and we could separate the form request handler from the code that generates the form.
+Estamos misturando um monte de código e podemos separar o manipulador de solicitação de formulário do código que gera o formulário.
 
-So we can have this in `index.php`:
+Então podemos ter isso em `index.php`:
 ```html
 <form method="POST" action="/post.php">
   <input type="text" name="name" />
@@ -2033,7 +2033,7 @@ So we can have this in `index.php`:
 </form>
 ```    
 
-and we can create a new `post.php` file with:
+e podemos criar um novo arquivo `post.php` com:
 ```php
 <?php
 if (isset($_POST['name'])) {
@@ -2042,9 +2042,9 @@ if (isset($_POST['name'])) {
 ?>
 ```    
 
-PHP will display this content now after we submit the form, because we set the `action` HTML attribute on the form.
+O PHP exibirá este conteúdo agora depois de enviarmos o formulário, porque definimos o atributo HTML `action` no formulário.
 
-This example is very simple, but the `post.php` file is where we could, for example, save the data to the database, or to a file.
+Este exemplo é muito simples, mas o arquivo `post.php` é onde poderíamos, por exemplo, salvar os dados no banco de dados ou em um arquivo.
 
 ### How to Use HTTP Headers in PHP
 
