@@ -2046,35 +2046,36 @@ O PHP exibirá este conteúdo agora depois de enviarmos o formulário, porque de
 
 Este exemplo é muito simples, mas o arquivo `post.php` é onde poderíamos, por exemplo, salvar os dados no banco de dados ou em um arquivo.
 
-### How to Use HTTP Headers in PHP
+### Como usar cabeçalhos HTTP em PHP
 
-PHP lets us set the HTTP headers of a response through the `header()` function.
+O PHP nos permite definir os cabeçalhos HTTP de uma resposta através da função `header()`.
 
-[HTTP Headers](https://flaviocopes.com/http-request-headers/) are a way to send information back to the browser.
+[Cabeçalhos HTTP](https://flaviocopes.com/http-request-headers/) são uma maneira de enviar informações de volta ao navegador.
 
-We can say the page generates a 500 Internal Server Error:
+Podemos dizer que a página gera um 500 Internal Server Error:
 ```php
 <?php
 header('HTTP/1.1 500 Internal Server Error');
 ?>
 ```    
 
-Now you should see the status if you access the page with the [Browser Developer Tools](https://flaviocopes.com/browser-dev-tools/) open:
+Agora você deve ver o status se acessar a página com o [Ferramentas do desenvolvedor do navegador](https://flaviocopes.com/browser-dev-tools/) open:
 
 ![Screen Shot 2022-06-27 at 14.10.29.jpg](images/browser_network.jpg)
 
-We can set the `content/type` of a response:
+
+Podemos definir o `content/type` de uma resposta:
 ```php
 header('Content-Type: text/json');
 ```    
 
-We can force a 301 redirect:
+Podemos forçar um redirecionamento 301:
 ```php
 header('HTTP/1.1 301 Moved Permanently');
 header('Location: https://flaviocopes.com');
 ```    
 
-We can use headers to say to the browser “cache this page”, “don’t cache this page”, and a lot more.
+Podemos usar cabeçalhos para dizer ao navegador “cache esta página”, “não armazene esta página em cache” e muito mais.
 
 ### How to Use Cookies in PHP
 
