@@ -2077,44 +2077,44 @@ header('Location: https://flaviocopes.com');
 
 Podemos usar cabeçalhos para dizer ao navegador “cache esta página”, “não armazene esta página em cache” e muito mais.
 
-### How to Use Cookies in PHP
+### Como usar cookies em PHP
 
-Cookies are a browser feature.
+Os cookies são um recurso do navegador.
 
-When we send a response to the browser, we can set a cookie which will be stored by the browser, client-side.
+Quando enviamos uma resposta ao navegador, podemos definir um cookie que será armazenado pelo navegador, do lado do cliente.
 
-Then, every request the browser makes will include the cookie back to us.
+Então, cada solicitação que o navegador fizer incluirá o cookie de volta para nós.
 
-We can do many things with cookies. They are mostly used to create a personalized experience without you having to login to a service.
+Podemos fazer muitas coisas com cookies. Eles são usados principalmente para criar uma experiência personalizada sem que você precise fazer login em um serviço.
 
-It’s important to note that cookies are domain-specific, so we can only read cookies we set on the current domain of our application, not other application’s cookies.
+É importante observar que os cookies são específicos do domínio, portanto, só podemos ler os cookies que definimos no domínio atual do nosso aplicativo, não os cookies de outros aplicativos.
 
-But JavaScript can read cookies (unless they are _HttpOnly cookies_ but we’re starting to go into a rabbit hole) so cookies should not store any sensitive information.
+Mas o JavaScript pode ler cookies (a menos que sejam _HttpOnly cookies_, mas estamos começando a entrar em uma toca de coelho), então os cookies não devem armazenar nenhuma informação sensível.
 
-We can use PHP to read the value of a cookie referencing the `$_COOKIE` superglobal:
+Podemos usar PHP para ler o valor de um cookie referenciando a superglobal `$_COOKIE`:
 ```php
 if (isset($_COOKIE['name'])) {
   $name = $_COOKIE['name'];
 }
 ```    
 
-The [`setcookie()`](https://www.php.net/manual/en/function.setcookie.php) function allows you to set a cookie:
+A função [`setcookie()`](https://www.php.net/manual/en/function.setcookie.php) permite você definir um cookie:
 ```php
 setcookie('name', 'Flavio');
 ```
 
-We can add a third parameter to say when the cookie will expire. If omitted, the cookie expires at the end of the session/when the browser is closed.
+Podemos adicionar um terceiro parâmetro para dizer quando o cookie irá expirar. Se omitido, o cookie expira no final da sessão/quando o navegador é fechado.
 
-Use this code to make the cookie expire in 7 days:
+Use este código para fazer o cookie expirar em 7 dias:
 ```php
 setcookie('name', 'Flavio', time() + 3600 * 24 * 7);
 ```
 
-We can only store a limited amount of data in a cookie, and users can clear the cookies client-side when they clear the browser data.
+Só podemos armazenar uma quantidade limitada de dados em um cookie, e os usuários podem limpar os cookies do lado do cliente quando limparem os dados do navegador.
 
-Also, they are specific to the browser / device, so we can set a cookie in the user’s browser, but if they change browser or device, the cookie will not be available.
+Além disso, eles são específicos para o navegador/dispositivo, portanto podemos definir um cookie no navegador do usuário, mas se ele mudar de navegador ou dispositivo, o cookie não estará disponível.
 
-Let’s do a simple example with the form we used before. We’re going to store the name entered as a cookie:
+Vamos fazer um exemplo simples com o formulário que usamos antes. Vamos armazenar o nome inserido como um cookie:
 ```php
 <?php
 if (isset($_POST['name'])) {
@@ -2135,11 +2135,11 @@ if (isset($_POST['name'])) {
 </form>
 ```    
 
-I added some conditionals to handle the case where the cookie was already set, and to display the name right after the form is submitted, when the cookie is not set yet (it will only be set for the next HTTP request).
+Adicionei algumas condicionais para tratar o caso em que o cookie já estava definido e para exibir o nome logo após o envio do formulário, quando o cookie ainda não estiver definido (ele será definido apenas para a próxima solicitação HTTP).
 
-If you open the Browser Developer Tools you should see the cookie in the Storage tab.
+Se você abrir as Ferramentas do desenvolvedor do navegador, deverá ver o cookie na guia Armazenamento.
 
-From there you can inspect its value, and delete it if you want.
+A partir daí, você pode inspecionar seu valor e excluí-lo, se desejar.
 
 ![Screen Shot 2022-06-27 at 14.46.09.jpg](images/html_form_submited_with_conditions.jpg)
 
