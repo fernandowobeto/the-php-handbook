@@ -2143,32 +2143,32 @@ A partir daí, você pode inspecionar seu valor e excluí-lo, se desejar.
 
 ![Screen Shot 2022-06-27 at 14.46.09.jpg](images/html_form_submited_with_conditions.jpg)
 
-### How to Use Cookie-based Sessions in PHP
+### Como usar sessões baseadas em cookies em PHP
 
-One very interesting use case for cookies is cookie-based sessions.
+Um caso de uso muito interessante para cookies são as sessões baseadas em cookies.
 
-PHP offers us a very easy way to create a cookie-based session using `session_start()`.
+PHP nos oferece uma maneira muito fácil de criar uma sessão baseada em cookies usando `session_start()`.
 
-Try adding this:
+Tente adicionar isso:
 ```php
 <?php
 session_start();
 ?>
 ```    
 
-in a PHP file, and load it in the browser.
+em um arquivo PHP e carregue-o no navegador.
 
-You will see a new cookie named by default `PHPSESSID` with a value assigned.
+Você verá um novo cookie chamado por padrão `PHPSESSID` com um valor atribuído.
 
-That’s the session ID. This will be sent for every new request and PHP will use that to identify the session.
+Esse é o ID da sessão. Isso será enviado para cada nova solicitação e o PHP usará isso para identificar a sessão.
 
 ![Screen Shot 2022-06-27 at 14.51.53.jpg](images/browser_session_start.jpg)
 
-Similarly to how we used cookies, we can now use `$_SESSION` to store the information sent by the user – but this time it’s not stored client-side.
+Da mesma forma que usamos cookies, agora podemos usar `$_SESSION` para armazenar as informações enviadas pelo usuário – mas desta vez não são armazenadas no lado do cliente.
 
-Only the session ID is.
+Apenas o ID da sessão é.
 
-The data is stored server-side by PHP.
+Os dados são armazenados no lado do servidor pelo PHP.
 ```php
 <?php
 session_start();
@@ -2193,11 +2193,11 @@ if (isset($_POST['name'])) {
 
 ![Screen Shot 2022-06-27 at 14.53.24.jpg](images/browser_session_name_property.jpg)
 
-This works for simple use cases, but of course for intensive data you will need a database.
+Isso funciona para casos de uso simples, mas é claro que para dados intensivos você precisará de um banco de dados.
 
-To clear the session data you can call `session_unset()`.
+Para limpar os dados da sessão você pode chamar `session_unset()`.
 
-To clear the session cookie use:
+Para limpar o cookie de sessão, use:
 ```php
 setcookie(session_name(), '');
 ```    
