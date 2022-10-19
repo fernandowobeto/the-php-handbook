@@ -2202,28 +2202,28 @@ Para limpar o cookie de sessão, use:
 setcookie(session_name(), '');
 ```    
 
-### How to Work with Files and Folders in PHP
+### Como trabalhar com arquivos e pastas em PHP
 
-PHP is a server-side language, and one of the handy things it provides is access to the filesystem.
+PHP é uma linguagem do lado do servidor, e uma das coisas úteis que ela fornece é o acesso ao sistema de arquivos.
 
-You can check if a file exists using `file_exists()`:
+Você pode verificar se existe um arquivo usando `file_exists()`:
 ```php
 file_exists('test.txt') //true
 ```    
 
-Get the size of a file using `filesize()`:
+Obtenha o tamanho de um arquivo usando `filesize()`:
 ```php
 filesize('test.txt')
 ```
 
-You can open a file using `fopen()`. Here we open the `test.txt` file in **read-only mode** and we get what we call a **file descriptor** in `$file`:
+Você pode abrir um arquivo usando `fopen()`. Aqui, abrimos o arquivo `test.txt` em **modo somente leitura** e obtemos o que chamamos de **descritor de arquivo** em `$file`:
 ```php
 $file = fopen('test.txt', 'r')
 ```
 
-We can terminate the file access by calling `fclose($fd)`.
+Podemos encerrar o acesso ao arquivo chamando `fclose($fd)`.
 
-Read the content of a file into a variable like this:
+Leia o conteúdo de um arquivo em uma variável como esta:
 ```php
 $file = fopen('test.txt', 'r')
 
@@ -2236,9 +2236,9 @@ while (!feof($file)) {
 }
 ```
 
-`feof()` checks that we haven’t reached the end of the file as `fgets` reads 5000 bytes at a time.
+`feof()` verifica se não chegamos ao final do arquivo, pois `fgets` lê 5000 bytes por vez.
 
-You can also read a file line by line using `fgets()`:
+Você também pode ler um arquivo linha por linha usando `fgets()`:
 ```php
 $file = fopen('test.txt', 'r')
 
@@ -2248,7 +2248,7 @@ while(!feof($file)) {
 }
 ```
 
-To write to a file you must first open it in **write mode**, then use `fwrite()`:
+Para gravar em um arquivo, você deve primeiro abri-lo no **modo de gravação**, depois usar `fwrite()`:
 ```php
 $data = 'test';
 $file = fopen('test.txt', 'w')
@@ -2256,12 +2256,12 @@ fwrite($file, $data);
 fclose($file);
 ```
 
-We can delete a file using `unlink()`:
+Podemos deletar um arquivo usando `unlink()`:
 ```php
 unlink('test.txt')
 ```  
 
-Those are the basics, but of course there are [more functions to work with files](https://www.php.net/manual/en/ref.filesystem.php).
+Esses são os básicos, mas é claro que existem [mais funções para trabalhar com arquivos](https://www.php.net/manual/en/ref.filesystem.php).
 
 ### PHP and Databases
 
