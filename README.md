@@ -2275,11 +2275,11 @@ I won't cover this in the handbook because I think this is a big topic and one t
 
 I am also tempted to say that if you need a database you should use a framework or ORM that would save you security issues with SQL injection. [Laravel’s Eloquent](https://laravel.com/docs/eloquent) is a great example.
 
-### How to Work with JSON in PHP
+### Como trabalhar com JSON em PHP
 
-[JSON](https://flaviocopes.com/json/) is a portable data format we use to represent data and send data from client to server.
+[JSON](https://flaviocopes.com/json/) é um formato de dados portátil que usamos para representar dados e enviar dados do cliente para o servidor.
 
-Here’s an example of a JSON representation of an object that contains a string and a number:
+Aqui está um exemplo de uma representação JSON de um objeto que contém uma string e um número:
 ```json
 {
   "name": "Flavio",
@@ -2287,18 +2287,18 @@ Here’s an example of a JSON representation of an object that contains a string
 }
 ``` 
 
-PHP offers us two utility functions to work with JSON:
+O PHP nos oferece duas funções utilitárias para trabalhar com JSON:
 
-*   `json_encode()` to encode a variable into JSON
-*   `json_decode()` to decode a JSON string into a data type (object, array…)
+* `json_encode()` para codificar uma variável em JSON
+* `json_decode()` para decodificar uma string JSON em um tipo de dados (objeto, array…)
 
-Example:
+Exemplo:
 ```php
 $test = ['a', 'b', 'c'];
 
-$encoded = json_encode($test); // "["a","b","c"]" (a string)
+$encoded = json_encode($test); // "["a","b","c"]" (uma string)
 
-$decoded = json_decode($encoded); // [ "a", "b", "c" ] (an array)
+$decoded = json_decode($encoded); // [ "a", "b", "c" ] (um array)
 ```
 
 ### How to Send Emails with PHP
