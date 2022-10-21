@@ -8,7 +8,7 @@ PHP é uma incrível e popular linguagem de programação.
 
 As estatísticas dizem que ela é usada por 80% de todos os sites. 
 
-Statistics say it’s used by 80% of all websites. É a linguagem que alimenta o WordPress, o sistema de gerenciamento de conteúdo amplamente utilizado para sites.
+É a linguagem que alimenta o WordPress, o sistema de gerenciamento de conteúdo amplamente utilizado para sites.
 
 E também alimenta muitos frameworks diferentes que facilitam o desenvolvimento da Web, como o Laravel. Falando em Laravel, pode ser uma das razões mais convincentes para aprender PHP nos dias de hoje.
 
@@ -2301,18 +2301,18 @@ $encoded = json_encode($test); // "["a","b","c"]" (uma string)
 $decoded = json_decode($encoded); // [ "a", "b", "c" ] (um array)
 ```
 
-### How to Send Emails with PHP
+### Como enviar e-mails com PHP
 
-One of the things that I like about PHP is the conveniences, like sending an email.
+Uma das coisas que eu gosto no PHP são as conveniências, como enviar um e-mail.
 
-Send an email using [`mail()`](https://www.php.net/manual/en/function.mail.php):
+Envie um e-mail usando [`mail()`](https://www.php.net/manual/en/function.mail.php):
 ```php
-mail('test@test.com', 'this subject', 'the body');
+mail('test@test.com', 'o assunto', 'o corpo');
 ```
 
-To send emails at scale we can’t rely on this solution, as these emails tend to reach the spam folder more often than not. But for quick testing this is just helpful.
+Para enviar e-mails em escala, não podemos contar com essa solução, pois esses e-mails tendem a chegar à pasta de spam com mais frequência. Mas para testes rápidos, isso é apenas útil.
 
-Libraries like [https://github.com/PHPMailer/PHPMailer](https://github.com/PHPMailer/PHPMailer) will be super helpful for more solid needs, using an SMTP server.
+Biblioteca como [https://github.com/PHPMailer/PHPMailer](https://github.com/PHPMailer/PHPMailer) será super útil para necessidades mais sólidas, usando um servidor SMTP.
 
 How to Use Composer and Packagist
 ---------------------------------
