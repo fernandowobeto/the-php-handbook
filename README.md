@@ -2314,27 +2314,27 @@ Para enviar e-mails em escala, não podemos contar com essa solução, pois esse
 
 Biblioteca como [https://github.com/PHPMailer/PHPMailer](https://github.com/PHPMailer/PHPMailer) será super útil para necessidades mais sólidas, usando um servidor SMTP.
 
-How to Use Composer and Packagist
+Como usar o Composer e o Packagist
 ---------------------------------
 
-[Composer](https://getcomposer.org) is the package manager of PHP.
+[Composer](https://getcomposer.org) é o gerenciador de pacotes do PHP.
 
-It allows you to easily install packages into your projects.
+Ele permite que você instale facilmente pacotes em seus projetos.
 
-Install it on your machine ([Linux/Mac](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos) or [Windows](https://getcomposer.org/doc/00-intro.md#installation-windows)) and once you’re done you should have a `composer` command available on your terminal.
+Instale-o em sua máquina ([Linux/Mac](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-macos) ou [Windows](https://getcomposer.org/doc/00-intro.md#installation-windows)) e quando terminar, você deverá ter um comando `composer` disponível em seu terminal.
 
 ![Screen Shot 2022-06-27 at 16.25.43.jpg](images/composer_terminal.jpg)
 
-Now inside your project you can run `composer require <lib>` and it will be installed locally. For example let's install [the Carbon library](https://carbon.nesbot.com) that helps us work with dates in PHP
+Agora dentro do seu projeto você pode executar o `composer require <lib>` e ele será instalado localmente. Por exemplo, vamos instalar [a biblioteca Carbon](https://carbon.nesbot.com) que nos ajuda a trabalhar com datas em PHP
 ```bash
 composer require nesbot/carbon
 ```
 
-It will do some work:
+Ele vai fazer algum trabalho:
 
 ![Screen Shot 2022-06-27 at 16.27.11.jpg](images/composer_require_carbon.jpg)
 
-Once it’s done, you will find some new things in the folder `composer.json` that lists the new configuration for the dependencies:
+Feito isso, você encontrará algumas coisas novas na pasta `composer.json` que lista a nova configuração para as dependências:
 ```json
 {
     "require": {
@@ -2343,9 +2343,9 @@ Once it’s done, you will find some new things in the folder `composer.json` th
 }
 ```
 
-`composer.lock` is used to “lock” the versions of the package in time, so the exact same installation you have can be replicated on another server. The `vendor` folder contains the library just installed and its dependencies.
+`composer.lock` é usado para “bloquear” as versões do pacote no tempo, então a mesma instalação que você tem pode ser replicada em outro servidor. A pasta `vendor` contém a biblioteca recém-instalada e suas dependências.
 
-Now in the `index.php` file we can add this code at the top:
+Agora no arquivo `index.php` podemos adicionar este código no topo:
 ```php
 <?php
 require 'vendor/autoload.php';
@@ -2353,7 +2353,7 @@ require 'vendor/autoload.php';
 use Carbon\Carbon;
 ```
 
-and then we can use the library!
+e então podemos usar a biblioteca!
 ```php
 echo Carbon::now();
 ```
