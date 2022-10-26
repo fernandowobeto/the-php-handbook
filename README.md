@@ -2360,9 +2360,9 @@ echo Carbon::now();
 
 ![Screen Shot 2022-06-27 at 16.34.47.jpg](images/browser_carbon_now.jpg)
 
-See? We didn’t have to manually download a package from the internet and install it somewhere...it was all fast, quick, and well organized.
+Viu? Não precisávamos baixar manualmente um pacote da internet e instalá-lo em algum lugar... foi tudo rápido, rápido e bem organizado.
 
-The `require 'vendor/autoload.php';` line is what enables **autoloading**. Remember when we talked about `require_once()` and `include_once()`? This solves all of that – we don’t need to manually search for the file to include, we just use the `use` keyword to import the library into our code.
+A linha `require 'vendor/autoload.php';` é o que habilita o **autoloading**. Lembra quando falamos sobre `require_once()` e `include_once()`? Isso resolve tudo isso – não precisamos procurar manualmente o arquivo a ser incluído, apenas usamos a palavra-chave `use` para importar a biblioteca para o nosso código.
 
 How to Deploy a PHP Application
 -------------------------------
