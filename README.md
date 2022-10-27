@@ -2364,87 +2364,87 @@ Viu? Não precisávamos baixar manualmente um pacote da internet e instalá-lo e
 
 A linha `require 'vendor/autoload.php';` é o que habilita o **autoloading**. Lembra quando falamos sobre `require_once()` e `include_once()`? Isso resolve tudo isso – não precisamos procurar manualmente o arquivo a ser incluído, apenas usamos a palavra-chave `use` para importar a biblioteca para o nosso código.
 
-How to Deploy a PHP Application
+Como implantar uma aplicação PHP
 -------------------------------
 
-When you’ve got an application ready, it’s time to deploy it and make it accessible from anyone on the Web.
+Quando você tiver uma aplicação pronta, é hora de implantá-la e torná-la acessível a qualquer pessoa na Web.
 
-PHP is the programming language with the best deployment _story_ across the Web.
+PHP é a linguagem de programação com a melhor _história_ de implantação na Web.
 
-Trust me, every single other programming language and ecosystem wishes they were as easy as PHP.
+Confie em mim, todas as outras linguagens de programação e ecossistemas desejam ser tão fáceis quanto o PHP.
 
-The great thing about PHP, the thing it got _right_ and allowed it to have the incredible success it has had, is the instant deploy.
+A grande coisa sobre o PHP, a coisa que ele tem _certo_ e permitiu que ele tivesse o incrível sucesso que teve, é o deploy instantâneo.
 
-You put a PHP file on a folder served by a Web server, and _voilà_ – it just works.
+Você coloca um arquivo PHP em uma pasta servida por um servidor Web e _voilà_ – simplesmente funciona.
 
-No need to restart the server, run an executable, nothing.
+Não há necessidade de reiniciar o servidor, executar um executável, nada.
 
-This is still something that a lot of people do. You get a shared hosting for $3/month, upload your files via FTP, and you're done.
+Isso ainda é algo que muitas pessoas fazem. Você ganha uma hospedagem compartilhada por $3/mês, carrega seus arquivos via FTP e pronto.
 
-These days, though, I think Git deploy is something that should be baked into every project, and shared hosting should be a thing of the past.
+Hoje em dia, porém, acho que a implantação via Git é algo que deve ser incorporado a todos os projetos, e a hospedagem compartilhada deveria ser coisa do passado.
 
-One solution is always having your own private VPS (Virtual Private Server), which you can get from services like DigitalOcean or Linode.
+Uma solução é sempre ter seu próprio VPS privado (Virtual Private Server), que você pode obter de serviços como DigitalOcean ou Linode.
 
-But managing your own VPS is no joke. It requires serious knowledge and time investment, and constant maintenance.
+Mas gerenciar seu próprio VPS não é brincadeira. Requer conhecimento sério e investimento de tempo e manutenção constante.
 
-You can also use the so-called PaaS (Platform as a Service), which are platforms that focus on taking care of all the boring stuff (managing servers) and you just upload your app and it runs.
+Você também pode usar o chamado PaaS (Platform as a Service), que são plataformas que se concentram em cuidar de todas as coisas chatas (gerenciar servidores) e você apenas carrega sua aplicação e ele roda.
 
-Solutions like **DigitalOcean App Platform** (which is different from a DigitalOcean VPS), Heroku, and many others are great for your first tests.
+Soluções como **DigitalOcean App Platform** (que é diferente de um VPS DigitalOcean), Heroku e muitas outras são ótimas para seus primeiros testes.
 
-These services allow you to connect your GitHub account and deploy any time you push a new change to your [Git](https://flaviocopes.com/git/) repository.
+Esses serviços permitem que você conecte sua conta do GitHub e implemente sempre que você enviar uma nova alteração para seu repositório [Git](https://flaviocopes.com/git/).
 
-You can learn [how to setup Git and GitHub from zero here](https://flaviocopes.com/github-setup-from-zero/).
+Você pode aprender [como configurar o Git e o GitHub do zero aqui](https://flaviocopes.com/github-setup-from-zero/).
 
-This is a much better workflow compared to FTP uploads.
+Este é um fluxo de trabalho muito melhor em comparação com uploads de FTP.
 
-Let’s do a bare bones example.
+Vamos fazer um exemplo básico.
 
-I created a simple PHP application with just an `index.php` file:
+Eu criei uma aplicação PHP simples com apenas um arquivo `index.php`:
 ```php
 <?php
 echo 'Hello!';
 ?>
 ```
 
-I add the parent folder to my GitHub Desktop app, I initialize a Git repo, and I push it to GitHub:
+Eu adiciono a pasta pai ao meu aplicativo GitHub Desktop, inicializo um repositório Git e o envio para o GitHub:
 
 ![Screen Shot 2022-06-27 at 17.26.24.jpg](images/github_desktop_app.jpg)
 
-Now go on [digitalocean.com](http://digitalocean.com).
+Agora vá em frente [digitalocean.com](http://digitalocean.com).
 
-If you don’t have an account yet, [use my referral code to sign up get $100 free credits over the next 60 days](https://m.do.co/c/bd0657b4877c) and you can work on your PHP app for free.
+Se você ainda não tem uma conta, [use meu código de referência para se inscrever e receba $ 100 em créditos grátis nos próximos 60 dias](https://m.do.co/c/bd0657b4877c) e você pode trabalhar em sua aplicação PHP de graça.
 
-I connect to my DigitalOcean account and I go to Apps → Create App.
+Eu me conecto à minha conta DigitalOcean e vou para Apps → Create App.
 
-I connect my GitHub Account and select the repo of my app.
+Eu conecto minha conta do GitHub e seleciono o repositório da minha aplicação
 
-Make sure “Autodeploy” is checked, so the app will automatically redeploy on changes:
+Certifique-se de que “Autodeploy” esteja marcado, para que a aplicação seja reimplantada automaticamente nas alterações:
 
 ![Screen Shot 2022-06-27 at 17.31.54.jpg](images/digital_ocean_create_app.jpg)
 
-Click “Next” then Edit Plan:
+Clique em “Next” e depois em Editar Plano:
 
 ![Screen Shot 2022-06-27 at 17.32.24.jpg](images/digital_ocean_create_app_resource.jpg)
 
-By default the Pro plan is selected.
+Por padrão, o plano Pro é selecionado.
 
-Use Basic and pick the $5/month plan.
+Use o Basic e escolha o plano de $5/mês.
 
-Note that you pay $5 per month, but billing is per hour – so you can stop the app any time you want.
+Observe que você paga $5 por mês, mas o faturamento é por hora - para que você possa interromper a aplicação a qualquer momento.
 
 ![Screen Shot 2022-06-27 at 17.32.28.jpg](images/digital_ocean_billing.jpg)
 
 ![Screen Shot 2022-06-27 at 17.33.15.jpg](images/digital_ocean_billing_plans.jpg)
 
-Then go back and press “Next” until the “Create Resources” button appears to create the app. You don’t need any database, otherwise that would be another $7/month on top.
+Em seguida, volte e pressione “Next” até que o botão “Create Resources” apareça para criar a aplicação. Você não precisa de nenhum banco de dados, caso contrário, seriam mais $7 / mês no topo.
 
 ![Screen Shot 2022-06-27 at 17.33.46.jpg](images/digital_ocean_total.jpg)
 
-Now wait until the deployment is ready:
+Agora espere até que a implantação esteja pronta:
 
 ![Screen Shot 2022-06-27 at 17.35.00.jpg](images/digital_ocean_plan_overview.jpg)
 
-The app is now up and running!
+A aplicação já está funcionando!
 
 ![Screen Shot 2022-06-27 at 17.35.31.jpg](images/digital_ocean_app_browser_running.jpg)
 
