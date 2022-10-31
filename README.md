@@ -2448,11 +2448,11 @@ A aplicação já está funcionando!
 
 ![Screen Shot 2022-06-27 at 17.35.31.jpg](images/digital_ocean_app_browser_running.jpg)
 
-Conclusion
+Conclusão
 ----------
 
-You’ve reached the end of the PHP Handbook!
+Você chegou ao fim do Manual do PHP!
 
-Thank you for reading through this introduction to the wonderful world of PHP development. I hope it will help you get your web development job, become better at your craft, and empower you to work on your next big idea.
+Obrigado por ler esta introdução ao maravilhoso mundo do desenvolvimento PHP. Espero que isso o ajude a conseguir seu trabalho de desenvolvimento web, a se tornar melhor em seu ofício e a capacitá-lo a trabalhar em sua próxima grande ideia.
 
-Note: you can get a [PDF, ePub, or Mobi](https://thevalleyofcode.com/download/php/) version of this handbook for easier reference, or for reading on your Kindle or tablet.
+Observação: você pode obter uma versão [PDF, ePub ou Mobi](https://thevalleyofcode.com/download/php/) deste manual para referência mais fácil ou para leitura em seu Kindle ou tablet.
