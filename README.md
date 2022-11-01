@@ -8,24 +8,24 @@ PHP é uma incrível e popular linguagem de programação.
 
 As estatísticas dizem que ela é usada por 80% de todos os sites. 
 
-É a linguagem que alimenta o WordPress, o sistema de gerenciamento de conteúdo amplamente utilizado para sites.
+É a linguagem utilizada pelo WordPress, o sistema de gerenciamento de conteúdo amplamente utilizado para sites.
 
-E também alimenta muitos frameworks diferentes que facilitam o desenvolvimento da Web, como o Laravel. Falando em Laravel, pode ser uma das razões mais convincentes para aprender PHP nos dias de hoje.
+E também utilizada em muitos frameworks diferentes que facilitam o desenvolvimento da Web, como o Laravel. Falando em Laravel, pode ser uma das razões mais convincentes para aprender PHP nos dias de hoje.
 
 Porque aprender PHP?
 --------------
 
 PHP é uma linguagem bastante polarizadora. Algumas pessoas adoram, e algumas pessoas odeiam. Se dermos um passo acima das emoções e olharmos para a linguagem como uma ferramenta, o PHP tem muito a oferecer.
 
-Claro que não é perfeita. Mas deixe-me dizer-lhe – nenhuma linguagem é.
+Claro que não é perfeita. Mas deixe-me dizer-lhe uma coisa, nenhuma linguagem é.
 
 Neste manual, vou ajudá-lo a aprender PHP.
 
 Este manual é uma introdução perfeita se você é novo na linguagem. Também é perfeito se você já fez “algum PHP” no passado e deseja voltar a ele.
 
-Eu vou explicar PHP moderno, versão 8+.
+Vou explicar PHP moderno, versão 8+.
 
-O PHP evoluiu muito nos últimos anos. Então, se a última vez que você tentou foi PHP 5 ou mesmo PHP 4, você ficará surpreso com todas as coisas boas que o PHP oferece agora.
+O PHP evoluiu muito nos últimos anos. Então, se a última vez que você utilizou foi PHP 5 ou mesmo PHP 4, você ficará surpreso com todas as coisas boas que o PHP oferece agora.
 
 Vamos lá!
 
@@ -50,13 +50,13 @@ Aqui está o que abordaremos neste manual:
 17.  [Como lidar com exceções em PHP](#how-to-handle-exceptions-in-php)
 18.  [Como trabalhar com datas no PHP](#how-to-work-with-dates-in-php)
 19.  [Como usar constantes e enumeradores no PHP](#how-to-use-constants-and-enums-in-php)
-20.  [Como usar o PHP como uma plataforma de desenvolvimento de aplicativos da Web](#how-to-use-php-as-a-web-app-development-platform)
+20.  [Como usar o PHP como uma plataforma de desenvolvimento de aplicações Web](#how-to-use-php-as-a-web-app-development-platform)
 21.  [Como usar Composer e Packagist](#how-to-use-composer-and-packagist)
 22.  [Como efetuar deploy de uma aplicação PHP](#how-to-deploy-a-php-application)
 23.  [Conclusão](#conclusion)
 
 
-Note que você por pegar uma versão em [PDF, ePub, or Mobi](https://thevalleyofcode.com/download/php/) desse manual para referência mais fácil, ou para leitura no seu Kindle ou table.
+Note que você pode pegar uma versão em [PDF, ePub, or Mobi](https://thevalleyofcode.com/download/php/) desse manual para referência mais fácil, ou para leitura no seu Kindle ou tablet.
 
 Introdução ao PHP
 -------------------
@@ -119,7 +119,7 @@ Então, para fazer qualquer coisa não trivial, você precisará de um banco de 
 
 O MAMP é um pacote que fornece tudo isso e muito mais, e oferece uma interface agradável para iniciar/parar tudo de uma vez.
 
-Claro, você pode configurar cada peça por conta própria, se quiser, e muitos tutoriais explicam como fazer isso. Mas eu gosto de ferramentas simples e práticas, e o MAMP é uma delas.
+Claro, você pode configurar cada coisa por conta própria, se quiser, e muitos tutoriais explicam como fazer isso. Mas eu gosto de ferramentas simples e práticas, e o MAMP é uma delas.
 
 Você pode seguir este manual com qualquer tipo de método de instalação PHP, não apenas MAMP.
 
@@ -215,7 +215,7 @@ echo 'World';
 
 Para o usuário final, que olha para o navegador e não tem ideia do código nos bastidores, não há diferença alguma.
 
-A página é tecnicamente uma página HTML, embora não contenha tags HTML, mas apenas uma string `Hello World`. Mas o navegador pode descobrir como exibir isso na janela.
+A página é tecnicamente uma página HTML, embora não contenha tags HTML, mas apenas uma string `Hello World`. Mas o navegador sabe como exibir isso na tela.
 
 Fundamentos da Linguagem PHP
 -------------------
