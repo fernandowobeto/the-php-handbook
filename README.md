@@ -220,7 +220,7 @@ A página é tecnicamente uma página HTML, embora não contenha tags HTML, mas 
 Fundamentos da Linguagem PHP
 -------------------
 
-Após o primeiro “Hello World”, é hora de mergulhar nos recursos do idioma com mais detalhes.
+Após o primeiro “Hello World”, é hora de mergulhar nos recursos da linguagem com mais detalhes.
 
 ### Como as variáveis funcionam no PHP
 
@@ -283,13 +283,13 @@ isto é um comentário
 
 ### O que são tipos em PHP?
 
-Eu mencionei strings e numéros.
+Eu mencionei strings e números.
 
 PHP tem os seguintes tipos:
 
 *   `bool` valores boleanos (true/false)
-*   `int` números inteiros (no decimals)
-*   `float` números de ponto flutuante (decimals)
+*   `int` números inteiros (não decimais)
+*   `float` números de ponto flutuante (decimais)
 *   `string` strings
 *   `array` arrays
 *   `object` objetos
