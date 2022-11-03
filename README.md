@@ -337,7 +337,7 @@ Para começar, aqui estão os operadores aritméticos: `+`, `-`, `*`, `/` (divis
 
 Temos o operador de atribuição `=`, que já usamos para atribuir um valor a uma variável.
 
-Em seguida, temos operadores de comparação, como `<`, `>`, `<=`, `>=`. Aqueles funcionam como eles fazem em matemática.
+Em seguida, temos operadores de comparação, como `<`, `>`, `<=`, `>=`. Eles funcionam da mesma forma como utilizamos em matemática.
 
 ```php
 2 < 1; //false
@@ -352,7 +352,7 @@ Em seguida, temos operadores de comparação, como `<`, `>`, `<=`, `>=`. Aqueles
 
 Qual a diferença?
 
-Você vai encontrá-lo com experiência, mas por exemplo:
+Você vai entendê-lo com a prática, mas por exemplo:
 
 ```php
 1 == '1'; //true
@@ -474,7 +474,7 @@ $lastName = 'Copes';
 $fullName = $firstName . ' ' . $lastName;
 ```
 
-Podemos verificar o comprimento de uma string usando a função `strlen()`:
+Podemos verificar o tamanho de uma string usando a função `strlen()`:
 ```php
 $name = 'Flavio';
 strlen($name); //6
@@ -484,7 +484,7 @@ Esta é a primeira vez que usamos uma função.
 
 Uma função é composta por um identificador (`strlen` neste caso) seguido por parênteses. Dentro desses parênteses, passamos um ou mais argumentos para a função. Neste caso, temos um argumento.
 
-A função faz faz alguma coisa e quando termina pode retornar um valor. Neste caso, ele retorna o número `6`. Se não houver valor retornado, a função retornará `null`.
+A função faz alguma coisa e quando termina pode retornar um valor. Neste caso, ele retorna o número `6`. Se não houver valor retornado, a função retornará `null`.
 
 Veremos como definir nossas próprias funções mais tarde.
 
