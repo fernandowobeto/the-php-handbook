@@ -674,8 +674,7 @@ Como funcionam as condicionais em PHP
 
 Anteriormente, apresentei operadores de comparação: `<`, `>`, `<=`, `>=`, `==`, `===` , `!=`, `!==`... e assim sobre.
 
-Esses operadores serão super úteis para uma coisa:
- **condicionais**.
+Esses operadores serão super úteis para uma coisa: **condicionais**.
 
 As condicionais são a primeira estrutura de controle que vemos.
 
@@ -686,7 +685,7 @@ Por exemplo:
 $age = 17;
 
 if ($age > 18) {
-  echo 'You can enter the pub';
+  echo 'Você pode entrar no bar';
 }
 ```    
 
@@ -837,8 +836,6 @@ for ($i = 0; $i < 10; $i++) {
 //resultado: 0123456789
 ```    
 
-62 / 5.000
-Resultados de tradução
 Você pode usar o loop for para iterar sobre um array desta maneira:
 ```php
 $list = ['a', 'b', 'c'];
@@ -978,7 +975,7 @@ var_dump($test); //PHP Warning:  Undefined variable $test
 
 Variáveis definidas fora da função **não** são acessíveis dentro da função.
 
-Isso impõe uma boa prática de programação, pois podemos ter certeza de que a função não modifica variáveis externas e causa “efeitos colaterais”.
+Isso impõe uma boa prática de programação, pois podemos ter certeza de que a função não modifica variáveis externas causando “efeitos colaterais”.
 
 Em vez disso, você retorna um valor da função e o código externo que chama a função assumirá a responsabilidade de atualizar a variável externa.
 
@@ -1038,7 +1035,7 @@ $myfunction()
 
 Observe que você precisa de um ponto e vírgula após a definição da função, mas eles funcionam como funções nomeadas para valores de retorno e parâmetros.
 
-Curiosamente, eles oferecem uma maneira de acessar uma variável definida fora da função através de `use()`:
+Curiosamente, o PHP oferece uma maneira de acessar uma variável definida fora da função através de `use()`:
 ```php
 $test = 'test';
 
@@ -1050,7 +1047,7 @@ $myfunction = function() use ($test) {
 $myfunction()
 ```    
 
-Outro tipo de função é uma **função de seta**.
+Outro tipo de função é uma **função de seta** ou **arrow function**.
 
 Uma função de seta é uma função anônima que é apenas uma expressão (uma linha) e retorna implicitamente o valor dessa expressão.
 
