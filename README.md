@@ -1219,7 +1219,7 @@ class Dog {
 
 Os métodos são muito úteis para anexar um comportamento a um objeto. Neste caso, podemos fazer um cachorro latir.
 
-Observe que eu uso a palavra-chave `public`. Isso quer dizer que você pode invocar um método de fora da classe. Assim como para propriedades, você também pode marcar métodos como `privados`, ou `protegidos`, para restringir seu acesso.
+Observe que eu uso a palavra-chave `public`. Isso quer dizer que você pode invocar um método de fora da classe. Assim como para propriedades, você também pode marcar métodos como `private`, ou `protected`, para restringir seu acesso.
 
 Você invoca um método na instância do objeto assim:
 ```php
@@ -1622,7 +1622,7 @@ Como lidar com erros em PHP
 
 Todo programador comete erros. Somos humanos, afinal.
 
-Podemos esquecer um ponto e vírgula. Ou use o nome de variável errado. Ou passe o argumento errado para uma função.
+Podemos esquecer um ponto e vírgula. Ou usar o nome de variável errado. Ou passar o argumento errado para uma função.
 
 Em PHP temos:
 
