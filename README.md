@@ -1697,7 +1697,7 @@ Você define este local em seu `php.ini`:
 
 ![Screen Shot 2022-06-27 at 12.17.12.jpg](images/php_ini_php_errors_log_path.jpg)
 
-O log de erros conterá todas as mensagens de erro que seu aplicativo gera:
+O log de erros conterá todas as mensagens de erro que sua aplicação gera:
 
 ![Screen Shot 2022-06-27 at 12.17.55.jpg](images/php_errors_log_data.jpg)
 
@@ -1889,7 +1889,7 @@ Como usar o PHP como uma plataforma de desenvolvimento de aplicações Web
 
 PHP é uma linguagem do lado do servidor e normalmente é usada de duas maneiras.
 
-Um está dentro de uma página HTML, então o PHP é usado para “adicionar” coisas ao HTML que é definido manualmente no arquivo `.php`. Esta é uma maneira perfeitamente boa de usar o PHP.
+Uma forma é dentro de uma página HTML, então o PHP é usado para “adicionar” coisas ao HTML que é definido manualmente no arquivo `.php`. Esta é uma maneira perfeitamente boa de usar o PHP.
 
 Outra forma considera o PHP mais como o motor que é responsável por gerar uma “aplicação”. Você não escreve o HTML em um arquivo `.php`, mas usa uma linguagem de modelagem para gerar o HTML, e tudo é gerenciado pelo que chamamos de **framework**.
 
