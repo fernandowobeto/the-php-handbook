@@ -1931,7 +1931,7 @@ Há também `$_REQUEST` que contém todos os `$_GET` e `$_POST` combinados em um
 
 Também temos a variável superglobal `$_SERVER`, que você usa para obter muitas informações úteis.
 
-Você viu como usar `phpinfo()` antes. Vamos usá-lo novamente para ver o que $\_SERVER nos oferece.
+Você viu como usar `phpinfo()` antes. Vamos usá-lo novamente para ver o que $_SERVER nos oferece.
 
 No seu arquivo `index.php` na raiz do MAMP execute:
 ```php
@@ -1944,7 +1944,7 @@ Em seguida, gere a página em [localhost:8888](http://localhost:8888) e pesquise
 
 ![Screen Shot 2022-06-27 at 13.46.50.jpg](images/php_ini_variables.jpg)
 
-Os importantes que você pode usar são:
+Os mais importantes que você pode usar são:
 
 *   `$_SERVER['HTTP_HOST']`
 *   `$_SERVER['HTTP_USER_AGENT']`
@@ -1970,7 +1970,7 @@ Aqui está um formulário simples em HTML:
 
 Você pode colocar isso em seu arquivo `index.php` como se chamasse `index.html`.
 
-Um arquivo PHP assume que você escreve HTML nele com alguns “sprinkles PHP” usando `<?php ?>` para que o Servidor Web possa postar isso para o cliente. Às vezes, a parte do PHP ocupa toda a página, e é aí que você gera todo o HTML via PHP – é o oposto da abordagem que estamos adotando aqui agora.
+Um arquivo PHP assume que você escreve HTML nele com alguns “pedaços PHP” usando `<?php ?>` para que o Servidor Web possa postar isso para o cliente. Às vezes, a parte do PHP ocupa toda a página, e é aí que você gera todo o HTML via PHP – é o oposto da abordagem que estamos adotando aqui agora.
 
 Então temos este arquivo `index.php` que gera este formulário usando HTML simples:
 
