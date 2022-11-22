@@ -2218,7 +2218,7 @@ Você pode abrir um arquivo usando `fopen()`. Aqui, abrimos o arquivo `test.txt`
 $file = fopen('test.txt', 'r')
 ```
 
-Podemos encerrar o acesso ao arquivo chamando `fclose($fd)`.
+Podemos encerrar o acesso ao arquivo chamando `fclose($file)`.
 
 Leia o conteúdo de um arquivo em uma variável como esta:
 ```php
