@@ -2260,17 +2260,17 @@ unlink('test.txt')
 
 Esses são os básicos, mas é claro que existem [mais funções para trabalhar com arquivos](https://www.php.net/manual/en/ref.filesystem.php).
 
-### PHP and Databases
+### PHP e banco de dados
 
-PHP offers various built-in libraries to work with databases, for example:
+PHP oferece várias bibliotecas internas para trabalhar com bancos de dados, por exemplo:
 
 *   [PostgreSQL](https://www.php.net/manual/en/book.pgsql.php)
 *   [MySQL](https://www.php.net/manual/en/set.mysqlinfo.php) / MariaDB
 *   [MongoDB](https://www.php.net/manual/en/set.mongodb.php)
 
-I won't cover this in the handbook because I think this is a big topic and one that would also require you to learn SQL.
+Não abordarei isso no manual porque acho que é um tópico grande e que também exigiria que você aprendesse SQL.
 
-I am also tempted to say that if you need a database you should use a framework or ORM that would save you security issues with SQL injection. [Laravel’s Eloquent](https://laravel.com/docs/eloquent) is a great example.
+Também estou tentado dizer que, se você precisa de um banco de dados, deve usar uma estrutura ou ORM que evite problemas de segurança com injeção de SQL. [Laravel's Eloquent](https://laravel.com/docs/eloquent) é um ótimo exemplo.
 
 ### Como trabalhar com JSON em PHP
 
