@@ -2309,7 +2309,7 @@ mail('test@test.com', 'o assunto', 'o corpo');
 
 Para enviar e-mails em escala, não podemos contar com essa solução, pois esses e-mails tendem a chegar à pasta de spam com mais frequência. Mas para testes rápidos, isso é apenas útil.
 
-Biblioteca como [https://github.com/PHPMailer/PHPMailer](https://github.com/PHPMailer/PHPMailer) será super útil para necessidades mais sólidas, usando um servidor SMTP.
+Bibliotecas como [https://github.com/PHPMailer/PHPMailer](https://github.com/PHPMailer/PHPMailer) será super útil para necessidades mais sólidas, usando um servidor SMTP.
 
 Como usar o Composer e o Packagist
 ---------------------------------
@@ -2331,7 +2331,7 @@ Ele vai fazer algum trabalho:
 
 ![Screen Shot 2022-06-27 at 16.27.11.jpg](images/composer_require_carbon.jpg)
 
-Feito isso, você encontrará algumas coisas novas na pasta `composer.json` que lista a nova configuração para as dependências:
+Feito isso, você encontrará algumas coisas novas no arquivo `composer.json` que lista a nova configuração para as dependências:
 ```json
 {
     "require": {
@@ -2357,7 +2357,7 @@ echo Carbon::now();
 
 ![Screen Shot 2022-06-27 at 16.34.47.jpg](images/browser_carbon_now.jpg)
 
-Viu? Não precisávamos baixar manualmente um pacote da internet e instalá-lo em algum lugar... foi tudo rápido, rápido e bem organizado.
+Viu? Não precisávamos baixar manualmente um pacote da internet e instalá-lo em algum lugar... foi tudo rápido e bem organizado.
 
 A linha `require 'vendor/autoload.php';` é o que habilita o **autoloading**. Lembra quando falamos sobre `require_once()` e `include_once()`? Isso resolve tudo isso – não precisamos procurar manualmente o arquivo a ser incluído, apenas usamos a palavra-chave `use` para importar a biblioteca para o nosso código.
 
