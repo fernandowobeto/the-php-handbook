@@ -2409,11 +2409,11 @@ Eu adiciono a pasta pai ao meu aplicativo GitHub Desktop, inicializo um reposit�
 
 Agora vá em frente [digitalocean.com](http://digitalocean.com).
 
-Se você ainda não tem uma conta, [use meu código de referência para se inscrever e receba $ 100 em créditos grátis nos próximos 60 dias](https://m.do.co/c/bd0657b4877c) e você pode trabalhar em sua aplicação PHP de graça.
+Se você ainda não tem uma conta, [use meu código de referência para se inscrever e receba $100 em créditos grátis nos próximos 60 dias](https://m.do.co/c/bd0657b4877c) e você pode trabalhar em sua aplicação PHP de graça.
 
 Eu me conecto à minha conta DigitalOcean e vou para Apps → Create App.
 
-Eu conecto minha conta do GitHub e seleciono o repositório da minha aplicação
+Eu conecto minha conta do GitHub e seleciono o repositório da minha aplicação.
 
 Certifique-se de que “Autodeploy” esteja marcado, para que a aplicação seja reimplantada automaticamente nas alterações:
 
@@ -2433,7 +2433,7 @@ Observe que você paga $5 por mês, mas o faturamento é por hora - para que voc
 
 ![Screen Shot 2022-06-27 at 17.33.15.jpg](images/digital_ocean_billing_plans.jpg)
 
-Em seguida, volte e pressione “Next” até que o botão “Create Resources” apareça para criar a aplicação. Você não precisa de nenhum banco de dados, caso contrário, seriam mais $7 / mês no topo.
+Em seguida, volte e pressione “Next” até que o botão “Create Resources” apareça para criar a aplicação. Você não precisa de nenhum banco de dados, caso contrário, seriam mais $7 / mês.
 
 ![Screen Shot 2022-06-27 at 17.33.46.jpg](images/digital_ocean_total.jpg)
 
